@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>歸去如風</title>
+  
+  <subtitle>一個自由自在的互聯網民工</subtitle>
+  <link href="https://yjz.hk/atom.xml" rel="self"/>
+  
+  <link href="https://yjz.hk/"/>
+  <updated>2022-07-25T02:58:18.093Z</updated>
+  <id>https://yjz.hk/</id>
+  
+  <author>
+    <name>小澤</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2022提前“結束”啦～</title>
+    <link href="https://yjz.hk/articles/20220417.html"/>
+    <id>https://yjz.hk/articles/20220417.html</id>
+    <published>2022-04-17T15:14:22.000Z</published>
+    <updated>2022-07-25T02:58:18.093Z</updated>
+    
+    <content type="html"><![CDATA[<p>還從來沒在自己的博客上寫過日記，今天是第一篇～<br>先寫一段流水賬哈哈：<br>4月14日，RIPE批准了我的ASN申請，我獲得了人生中第一個屬於自己的自治系統編號AS205794，8日，我通過vultr的私有ASN(15日換成了我自己的)廣播了一段自己的IPv6地址2a0f:9400:7700::&#x2F;48，在法蘭克福、盧森堡、東京、拉斯維加斯、紐約、邁阿密均有節點，淺淺的看了一下Anycast長的甚麼樣，7日我把web伺服器從Caddy又切換回了Nginx(不過今次是quic分支)，上個月用開發版在內網搭建了一個遞歸dns，折騰了一下bind9、unbound、 powerdns，最後發現還是Public dns香，再稍早一些把博客從本地扔到了Github並使用Actions自動構建……<br>嗯…步入正題哈哈：<br>似乎自打進入2022年以來，一直都在各種折騰，有些還是折騰來折騰去的，似乎看起來好像也沒甚麼意義(bushi)&amp;消耗了大量的時間和精力，可能也影響到了一些正常的學習生活，當興趣愛好已經影響到原本該做的事情時，那可能就會有一定的問題了，也該反思一下了，雖說No zuo No die，但不是還也有句話講的是No zuo No huo嘛哈哈，話雖如此，但卻是應該停一下了，所以，經過了幾天的思考，決定還是先放下這些吧，那，2022年就提前結束吧！接下來的重點主要放在學習上啦，嗯…還有Socialwiki的兩個共建項目“愚公移山”和“好好睡覺”，以及DNSPod用戶群的日常維護，為愛發電哈哈～不管怎麼說，接下來這一年還是以穩為主，不再折騰了哈哈，生命不息，折騰已止！但奮鬥不止。<br>2022年4月17日夜<br>寫於歸去如風</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;還從來沒在自己的博客上寫過日記，今天是第一篇～&lt;br&gt;先寫一段流水賬哈哈：&lt;br&gt;4月14日，RIPE批准了我的ASN申請，我獲得了人生中第一個屬於自己的自治系統編號AS205794，8日，我通過vultr的私有ASN(15日換成了我自己的)廣播了一段自己的IPv6地址2a</summary>
+      
+    
+    
+    
+    <category term="日記" scheme="https://yjz.hk/categories/%E6%97%A5%E8%A8%98/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>AS205794</title>
+    <link href="https://yjz.hk/articles/20220416.html"/>
+    <id>https://yjz.hk/articles/20220416.html</id>
+    <published>2022-04-16T12:57:49.000Z</published>
+    <updated>2022-07-25T02:58:18.093Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="AS205794"><a href="#AS205794" class="headerlink" title="AS205794"></a>AS205794</h2><p>一個由JINZE YANG運營的個人和實驗網絡,目前在阿姆斯特丹、巴黎、莫斯科、新加坡、香港、西雅圖、邁阿密均有節點。</p><h3 id="聯繫-amp-投訴"><a href="#聯繫-amp-投訴" class="headerlink" title="聯繫&amp;投訴"></a>聯繫&amp;投訴</h3><p>您可通過<a href="mailto:&#121;&#x6a;&#x7a;&#x40;&#114;&#x32;&#119;&#x69;&#110;&#x64;&#46;&#x6f;&#114;&#x67;">&#121;&#x6a;&#x7a;&#x40;&#114;&#x32;&#119;&#x69;&#110;&#x64;&#46;&#x6f;&#114;&#x67;</a>與我聯繫，或whois訊息中的其他郵箱。</p><h3 id="對等互聯"><a href="#對等互聯" class="headerlink" title="對等互聯"></a>對等互聯</h3><p>暫時不考慮進行任何對等互聯，還在折騰ing，較不穩定。</p><h2 id="AS205794-1"><a href="#AS205794-1" class="headerlink" title="AS205794"></a>AS205794</h2><p>A personal and experimental network operated by JINZE YANG, It has PoPs in Amsterdam, Paris, Moscow, Singapore, Hong Kong, Seattle and Miami.</p><h3 id="Contact-amp-Abuse"><a href="#Contact-amp-Abuse" class="headerlink" title="Contact &amp; Abuse"></a>Contact &amp; Abuse</h3><p>You can contact me at <a href="mailto:&#x79;&#106;&#122;&#x40;&#114;&#50;&#119;&#105;&#x6e;&#x64;&#46;&#x6f;&#114;&#x67;">&#x79;&#106;&#122;&#x40;&#114;&#50;&#119;&#105;&#x6e;&#x64;&#46;&#x6f;&#114;&#x67;</a>.</p><h3 id="Peering"><a href="#Peering" class="headerlink" title="Peering"></a>Peering</h3><p>I’m not considering any peering for now, due to various experiments still going on.</p><h2 id="Other"><a href="#Other" class="headerlink" title="Other"></a>Other</h2><p><a href="https://bgp.tools/as/205794">@BGP.Tools</a>|<a href="https://bgp.he.net/AS205794">@HE</a>|<a href="https://www.peeringdb.com/asn/205794">PeeringDB</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;AS205794&quot;&gt;&lt;a href=&quot;#AS205794&quot; class=&quot;headerlink&quot; title=&quot;AS205794&quot;&gt;&lt;/a&gt;AS205794&lt;/h2&gt;&lt;p&gt;一個由JINZE YANG運營的個人和實驗網絡,目前在阿姆斯特丹、巴黎、莫斯科、新加坡、香港</summary>
+      
+    
+    
+    
+    <category term="公告" scheme="https://yjz.hk/categories/%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="BGP" scheme="https://yjz.hk/tags/BGP/"/>
+    
+    <category term="AS" scheme="https://yjz.hk/tags/AS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用Caddy搭建輕量的Web伺服器</title>
+    <link href="https://yjz.hk/articles/20220412.html"/>
+    <id>https://yjz.hk/articles/20220412.html</id>
+    <published>2022-04-12T04:41:53.000Z</published>
+    <updated>2022-07-25T02:58:18.093Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>本來很早就想寫這篇文章了，但一直沒有機會，藉着今次Lighthouse徵文的機會順便寫一下，怎麼購買Lighthouse服務在這裏就不再多說了，去騰訊雲官網秒殺頁面購買即可，這裏不再過多介紹了,本文系統鏡像為Debian11.1,其他系統環境請勿參考本教程（PS：尤其是新手~）</p></blockquote><h2 id="關於Caddy"><a href="#關於Caddy" class="headerlink" title="關於Caddy"></a>關於Caddy</h2><p>一個簡單，輕量，且對新手友好的web伺服器，甚至可以自動幫你部署SSL證書，對於新手來說相對友好。</p><blockquote><p>PS:不過我現在並不用它了，Caddy當前版本對HTTP&#x2F;3支持存在一定的問題，所以我現在使用Nginx-quic了，哪天有機會再另寫教程~</p></blockquote><h2 id="安裝Caddy"><a href="#安裝Caddy" class="headerlink" title="安裝Caddy"></a>安裝Caddy</h2><h3 id="配置軟件源"><a href="#配置軟件源" class="headerlink" title="配置軟件源"></a>配置軟件源</h3><p>安裝必要依賴：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install -y debian-keyring debian-archive-keyring apt-transport-https</span><br></pre></td></tr></table></figure><p>安裝密鑰及鏡像源：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -1sLf &#x27;https://dl.cloudsmith.io/public/caddy/stable/gpg.key&#x27; | sudo tee /etc/apt/trusted.gpg.d/caddy-stable.asc</span><br><span class="line">curl -1sLf &#x27;https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt&#x27; | sudo tee /etc/apt/sources.list.d/caddy-stable.list</span><br></pre></td></tr></table></figure><p>最後更新軟件源並安裝Caddy即可：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt update</span><br><span class="line">apt install caddy</span><br></pre></td></tr></table></figure><p>看到如下提示就完成啦：<br><img src="https://resources.r2wind.cn/img/202204/20220412140018.png" alt="安裝完成"></p><h2 id="配置Caddy"><a href="#配置Caddy" class="headerlink" title="配置Caddy"></a>配置Caddy</h2><h3 id="創建網站及證書目錄"><a href="#創建網站及證書目錄" class="headerlink" title="創建網站及證書目錄"></a>創建網站及證書目錄</h3><h4 id="創建證書目錄"><a href="#創建證書目錄" class="headerlink" title="創建證書目錄"></a>創建證書目錄</h4><p>其實Caddy可以自動申請證書的，不過如果你要用自己的證書就需要創建一個文件夾來證書啦~</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/ssl</span><br><span class="line">mkdir caddy</span><br></pre></td></tr></table></figure><h4 id="創建網站目錄"><a href="#創建網站目錄" class="headerlink" title="創建網站目錄"></a>創建網站目錄</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd /</span><br><span class="line">mkdir www</span><br><span class="line">cd www</span><br><span class="line">mkdir wwwroot</span><br><span class="line">mkdir log</span><br></pre></td></tr></table></figure><p>其中wwwroot用了放置網站根目錄，log用來存儲網站日誌。</p><h4 id="賦予權限"><a href="#賦予權限" class="headerlink" title="賦予權限"></a>賦予權限</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R www-data:root /www</span><br><span class="line">sudo chmod 0777 /www/log</span><br></pre></td></tr></table></figure><h3 id="編輯Caddy配置文件"><a href="#編輯Caddy配置文件" class="headerlink" title="編輯Caddy配置文件"></a>編輯Caddy配置文件</h3><p>Caddy的配置文件Caddyfile在&#x2F;etc&#x2F;caddy中，可以下載後編輯完再上傳或直接用vim來進行編輯，看個人喜好，Mobaxterm軟件左側其實是個文件瀏覽器，可以在此處進行文件的瀏覽和上傳下載，下面是一份示例文件，更多使用方法請參考<a href="https://caddyserver.com/docs/getting-started">官方文檔</a>:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br></pre></td><td class="code"><pre><span class="line">// 此處的配置是用來支持HTTP3的,若不需要刪除即可</span><br><span class="line">&#123;</span><br><span class="line">servers &#123;</span><br><span class="line">protocol &#123;</span><br><span class="line">experimental_http3</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">// 一個普通的網站示例，r2wind.com替換成你喜歡的域名</span><br><span class="line">r2wind.com &#123;</span><br><span class="line">  // 此處配置網站根目錄，請將頁面文件上傳至網站根目錄</span><br><span class="line">root * /www/wwwroot/r2wind.com/public</span><br><span class="line">  // 配置SSL證書路徑，若不配置，Caddy會幫你自動申請並配上</span><br><span class="line">tls /etc/ssl/caddy/r2wind.cn.crt /etc/ssl/caddy/r2wind.cn.key</span><br><span class="line">  // 自定義錯誤頁文件，若不需要刪除即可</span><br><span class="line">handle_errors &#123;</span><br><span class="line">rewrite * /&#123;http.error.status_code&#125;.html</span><br><span class="line">file_server</span><br><span class="line">&#125;</span><br><span class="line">  // 日誌保存路徑，如不需要保存訪問日誌可刪除</span><br><span class="line">log &#123;</span><br><span class="line">output file /www/log/r2wind_com.log</span><br><span class="line">&#125;</span><br><span class="line">  // 開啟Gzip壓縮，若不需要可刪除</span><br><span class="line">encode gzip</span><br><span class="line">file_server</span><br><span class="line">  // 用來添加響應頭</span><br><span class="line">header &#123;</span><br><span class="line">    // 禁用了客戶端的 MIME 類型嗅探行為，若不需要請刪除</span><br><span class="line">X-content-type-tptions nosniff</span><br><span class="line">    // 拒絕嵌入其他網站，若不需要請刪除</span><br><span class="line">X-frame-options DENY</span><br><span class="line">    // HSTS響應頭，若不需要請刪除</span><br><span class="line">Strict-Transport-Security max-age=63072000;includeSubDomains;preload</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">// 一個反向代理示意配置</span><br><span class="line">yjz.hk &#123;</span><br><span class="line">  // 指定代理網頁訪問地址https://xx.r2w.dev</span><br><span class="line">reverse_proxy https://xx.r2w.dev &#123;</span><br><span class="line">    // 指定請求域名hk.r2w.dev</span><br><span class="line">header_up Host &#123;hk.r2w.dev&#125;</span><br><span class="line">&#125;</span><br><span class="line">  // 下面的配置在上面已經介紹過了，這裏不再過多贅述</span><br><span class="line">tls /etc/ssl/caddy/r2wind.cn.crt /etc/ssl/caddy/r2wind.cn.key</span><br><span class="line">handle_errors &#123;</span><br><span class="line">rewrite * /&#123;http.error.status_code&#125;.html</span><br><span class="line">file_server</span><br><span class="line">&#125;</span><br><span class="line">log &#123;</span><br><span class="line">output file /www/log/yjz_hk.log</span><br><span class="line">&#125;</span><br><span class="line">encode gzip</span><br><span class="line">file_server</span><br><span class="line">header &#123;</span><br><span class="line">X-content-type-tptions nosniff</span><br><span class="line">x-xss-protection: 1; mode=block</span><br><span class="line">Strict-Transport-Security max-age=63072000;includeSubDomains;preload</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">// 一個重定向示例配置</span><br><span class="line">www.yjz.hk &#123;</span><br><span class="line">  // 指定重定向後的網站地址並攜帶相關參數</span><br><span class="line">redir https://yjz.hk&#123;uri&#125;</span><br><span class="line">&#125;</span><br><span class="line">// 一個多域名重定向示例配置，多個域名記得用&quot;,&quot;隔開，逗號後記得先打空格再輸入域名</span><br><span class="line">dnstest.cc, www.dnstest.cc, r2wind.net, www.r2wind.net &#123;</span><br><span class="line">redir https://r2wind.cn</span><br><span class="line">&#125;</span><br><span class="line">// 一個多域名網站示例配置，和普通網站配置一樣，只不過多了幾個域名</span><br><span class="line">r2wind.com，r2wind.net, r2wind.cn &#123;</span><br><span class="line">  // 此處配置網站根目錄，請將頁面文件上傳至網站根目錄</span><br><span class="line">root * /www/wwwroot/r2wind.com/public</span><br><span class="line">  // 配置SSL證書路徑，若不配置，Caddy會幫你自動申請並配上,注意：此處最好不要指定SSL證書，除非你的證書是多域名的</span><br><span class="line">tls /etc/ssl/caddy/r2wind.cn.crt /etc/ssl/caddy/r2wind.cn.key</span><br><span class="line">  // 自定義錯誤頁文件，若不需要刪除即可</span><br><span class="line">handle_errors &#123;</span><br><span class="line">rewrite * /&#123;http.error.status_code&#125;.html</span><br><span class="line">file_server</span><br><span class="line">&#125;</span><br><span class="line">  // 日誌保存路徑，如不需要保存訪問日誌可刪除</span><br><span class="line">log &#123;</span><br><span class="line">output file /www/log/r2wind_com.log</span><br><span class="line">&#125;</span><br><span class="line">  // 開啟Gzip壓縮，若不需要可刪除</span><br><span class="line">encode gzip</span><br><span class="line">file_server</span><br><span class="line">  // 用來添加響應頭</span><br><span class="line">header &#123;</span><br><span class="line">    // 禁用了客戶端的 MIME 類型嗅探行為，若不需要請刪除</span><br><span class="line">X-content-type-tptions nosniff</span><br><span class="line">    // 拒絕嵌入其他網站，若不需要請刪除</span><br><span class="line">X-frame-options DENY</span><br><span class="line">    // HSTS響應頭，若不需要請刪除</span><br><span class="line">Strict-Transport-Security max-age=63072000;includeSubDomains;preload</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="重新加載配置文件"><a href="#重新加載配置文件" class="headerlink" title="重新加載配置文件"></a>重新加載配置文件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl reload caddy</span><br></pre></td></tr></table></figure><p>若配置沒錯則回車後不會出現任何提示</p><h3 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h3><p>這裏就不展示了哈哈哈，將網站文件上傳至網站根目錄修改一下配置的文件重加載Caddy就好啦，然後配置域名解析後訪問對應的域名即可。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;本來很早就想寫這篇文章了，但一直沒有機會，藉着今次Lighthouse徵文的機會順便寫一下，怎麼購買Lighthouse服務在這裏就不再多說了，去騰訊雲官網秒殺頁面購買即可，這裏不再過多介紹了,本文系統鏡像為Debian11.1,其他系統環境請勿參</summary>
+      
+    
+    
+    
+    <category term="教程" scheme="https://yjz.hk/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="Caddy" scheme="https://yjz.hk/tags/Caddy/"/>
+    
+    <category term="Web伺服器" scheme="https://yjz.hk/tags/Web%E4%BC%BA%E6%9C%8D%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>關於騰訊雲免費SSL證書在IIS部署中提示&quot;證書鏈中的一個或多個中間證書丟失&quot;的解決辦法</title>
+    <link href="https://yjz.hk/articles/20220328.html"/>
+    <id>https://yjz.hk/articles/20220328.html</id>
+    <published>2022-03-28T14:42:34.000Z</published>
+    <updated>2022-07-25T02:58:18.093Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>2022年03月03日22:00:00起，TrustAsia 根證書籤發由 Digicert 根證書變更為 Sectigo 根證書後,有部分同學在Windows Server IIS上部署證書時會遇到”證書鏈中的一個或多個中間證書”的提示，下面簡單記錄下問題的解決辦法。</p></blockquote><h2 id="下載對應算法的中間證書"><a href="#下載對應算法的中間證書" class="headerlink" title="下載對應算法的中間證書"></a>下載對應算法的中間證書</h2><blockquote><p>注意：下載前請確認證書加密算法。</p></blockquote><h3 id="查看證書加密算法"><a href="#查看證書加密算法" class="headerlink" title="查看證書加密算法"></a>查看證書加密算法</h3><p>登錄<a href="https://console.cloud.tencent.com/ssl">騰訊雲SSL證書控制台</a>查看，一般為RSA。<br><img src="https://resources.r2wind.cn/img/202203/20220328225628.png" alt="加密算法"></p><h3 id="下載"><a href="#下載" class="headerlink" title="下載"></a>下載</h3><p>可點擊下方傳送門直接下載：<br>RSA格式：<a href="https://dl.r2wind.cn/ssl/TrustAsia%20RSA%20DV%20TLS%20CA%20G2.crt">傳送門</a><br>ECC格式：<a href="https://dl.r2wind.cn/ssl/TrustAsia%20ECC%20DV%20TLS%20CA%20G2.crt">傳送門</a></p><blockquote><p>PS：請將證書下載至伺服器或下載後複製到伺服器</p></blockquote><h2 id="安裝中間證書"><a href="#安裝中間證書" class="headerlink" title="安裝中間證書"></a>安裝中間證書</h2><h3 id="在伺服器雙擊打開中間證書並點擊安裝證書"><a href="#在伺服器雙擊打開中間證書並點擊安裝證書" class="headerlink" title="在伺服器雙擊打開中間證書並點擊安裝證書"></a>在伺服器雙擊打開中間證書並點擊安裝證書</h3><p><img src="https://resources.r2wind.cn/img/202203/20220328232115.png" alt="打開證書"></p><h3 id="存儲位置選擇本地計算機"><a href="#存儲位置選擇本地計算機" class="headerlink" title="存儲位置選擇本地計算機"></a>存儲位置選擇本地計算機</h3><p><img src="https://resources.r2wind.cn/img/202203/20220328232416.png" alt="安裝證書"></p><h3 id="選擇存儲位置"><a href="#選擇存儲位置" class="headerlink" title="選擇存儲位置"></a>選擇存儲位置</h3><p>點擊”將所有的證書都放入下列存儲”後點擊瀏覽選擇”中間證書頒發機構”後單擊下一頁<br><img src="https://resources.r2wind.cn/img/202203/20220328232626.png" alt="選擇存儲位置"></p><h3 id="完成導入"><a href="#完成導入" class="headerlink" title="完成導入"></a>完成導入</h3><p>確認訊息後單擊完成：<br><img src="https://resources.r2wind.cn/img/202203/20220328233009.png" alt="完成導入"><br>顯示導入成功即可：<br><img src="https://resources.r2wind.cn/img/202203/20220328233021.png" alt="導入成功"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;2022年03月03日22:00:00起，TrustAsia 根證書籤發由 Digicert 根證書變更為 Sectigo 根證書後,有部分同學在Windows Server IIS上部署證書時會遇到”證書鏈中的一個或多個中間證書”的提示，下面簡單</summary>
+      
+    
+    
+    
+    <category term="教程" scheme="https://yjz.hk/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="DNSPOD" scheme="https://yjz.hk/tags/DNSPOD/"/>
+    
+    <category term="騰訊雲" scheme="https://yjz.hk/tags/%E9%A8%B0%E8%A8%8A%E9%9B%B2/"/>
+    
+    <category term="域名" scheme="https://yjz.hk/tags/%E5%9F%9F%E5%90%8D/"/>
+    
+    <category term="SSL" scheme="https://yjz.hk/tags/SSL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>BuyVM配置AnyCast IP</title>
+    <link href="https://yjz.hk/articles/20220217.html"/>
+    <id>https://yjz.hk/articles/20220217.html</id>
+    <published>2022-02-17T05:21:37.000Z</published>
+    <updated>2022-07-25T02:58:18.093Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>本來打算去申請ASN+IPv6&#x2F;44自己去配置一個Anycast，後來發現申請ASN的費用超出了預算（奈何囊中羞澀），所以只能轉向成本更低的BuyVM家的Anycast VPS。</p></blockquote><h2 id="準備階段"><a href="#準備階段" class="headerlink" title="準備階段"></a>準備階段</h2><p>首先你購買三台他們家的VPS，分別位於盧森堡-歐洲，拉斯維加斯-美西，紐約或邁阿密-美東（我買的紐約）。</p><blockquote><p>關於配置：任何配置的VPS都可以，只要你買得到（盧森堡經常會缺貨，我購買的時候到是很順利）。<br>關於位置：官方要求用戶在四個區域都要有VPS，但是或許兩台也可以？（我沒去試，但是一台肯定沒有甚麼意義<br>關於路由：官方介紹的是歐洲訪問者將被路由到盧森堡節點；美國訪問者將根據他們的位置分別路由到拉斯維加斯，紐約或邁阿密節點；亞洲的訪問者將被路由到拉斯維加斯節點，南美訪問者將被路由到邁阿密節點等。（PS：實際使用中並不一定是官方介紹的那樣，一般會根據路由表來選擇路由最近的節點）<br>關於DDOS防禦：可以提工單為AnyCast開啟DDOS保護，每月5.00美元，由Cloudflare Magic Transit提供支持。</p></blockquote><h2 id="進行階段"><a href="#進行階段" class="headerlink" title="進行階段"></a>進行階段</h2><h3 id="申請AnyCast-IP"><a href="#申請AnyCast-IP" class="headerlink" title="申請AnyCast IP"></a>申請AnyCast IP</h3><p>登錄Stallion控制台點擊”聯網(networking)”<br><img src="https://resources.r2wind.cn/img/202202/20220217105943.png" alt="networking"><br>點擊”Assign Anycast IP Addresses”,並選擇申請IP數量（每人最多五個）後點擊”Okay”<br><img src="https://resources.r2wind.cn/img/202202/20220217110600.png" alt="Assign Anycast IP Addresses"><br>申請完成後即可看到剛剛申請的Anycast IP<br><img src="https://resources.r2wind.cn/img/202202/20220217110930.png" alt="申請完成"></p><h3 id="配置AnyCast-IP"><a href="#配置AnyCast-IP" class="headerlink" title="配置AnyCast IP"></a>配置AnyCast IP</h3><p>登錄SSH編輯&#x2F;etc&#x2F;network&#x2F;interfaces文件（用vim或者nano都可以，不過記得提前安裝對應的軟件；還有一種便捷的做法是將配置文件下載到本地編輯然後在上傳）<br>這裏以vim為例：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/network/interfaces</span><br></pre></td></tr></table></figure><p>按”i”編輯，編輯完按”ESC”並輸入”:wq”保存即可<br><img src="https://resources.r2wind.cn/img/202202/20220217112646.png" alt="vim"><br>配置文件示例：（注釋為了方便說明，實際配置中建議直接刪掉這極其潦草的注釋）</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># This file describes the network interfaces available on your system</span></span><br><span class="line"><span class="comment"># and how to activate them. For more information, see interfaces(5).</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">source</span> /etc/network/interfaces.d/*</span><br><span class="line"></span><br><span class="line"><span class="comment"># The loopback network interface</span></span><br><span class="line">auto lo</span><br><span class="line">iface lo inet loopback</span><br><span class="line"></span><br><span class="line"><span class="comment"># The primary network interface</span></span><br><span class="line">allow-hotplug eth0</span><br><span class="line">iface eth0 inet static</span><br><span class="line">address         198.98.xxx.xx       <span class="comment"># 公網IPv4地址                                                                                            </span></span><br><span class="line">network         198.98.xxx.0        <span class="comment"># 把公網IPv4地址最後一個點後面改成0即可                                                                                          </span></span><br><span class="line">gateway         198.98.xxx.1        <span class="comment"># 把公網IPv4地址最後一個點後面改成1即可                                                                                          </span></span><br><span class="line">broadcast       198.98.xxx.255      <span class="comment"># 把公網IPv4地址最後一個點後面改成255即可                                                                                        </span></span><br><span class="line">netmask         255.255.255.0       <span class="comment"># 默認即可                                                                                               </span></span><br><span class="line"></span><br><span class="line"><span class="comment"># IPv6配置，要是沒開啟IPv6把這部分注釋掉或者直接刪掉即可，address和gateway可在VPS控制台查看</span></span><br><span class="line">auto eth0:v6</span><br><span class="line">allow-hotplug eth0:v6</span><br><span class="line">iface eth0:v6 inet6 static</span><br><span class="line">address         2605:6400:10:58b::1 <span class="comment"># VPS IPv6地址</span></span><br><span class="line">gateway         2605:6400:0010::1   <span class="comment"># gateway可在控制台網絡配置查看</span></span><br><span class="line">netmask         48</span><br><span class="line">      </span><br><span class="line"><span class="comment"># AnyCast IP配置      </span></span><br><span class="line">auto eth0:anycast</span><br><span class="line">allow-hotplug eth0:anycast</span><br><span class="line">iface eth0:anycast inet static</span><br><span class="line">address         198.251.86.138  <span class="comment"># 更改為你的AnyCast IP</span></span><br><span class="line">netmask         255.255.255.0   <span class="comment"># 默認即可</span></span><br></pre></td></tr></table></figure><p>配置完成後reboot重啟伺服器即可</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure><blockquote><p>注意：所有伺服器均需進行配置</p></blockquote><h2 id="驗證階段"><a href="#驗證階段" class="headerlink" title="驗證階段"></a>驗證階段</h2><p>可以通過多地點的在線traceroute或在線ping等方式來進行驗證是否完成配置，若配置錯誤會導致空路由或ping不可達。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;本來打算去申請ASN+IPv6&amp;#x2F;44自己去配置一個Anycast，後來發現申請ASN的費用超出了預算（奈何囊中羞澀），所以只能轉向成本更低的BuyVM家的Anycast VPS。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;準備階</summary>
+      
+    
+    
+    
+    <category term="教程" scheme="https://yjz.hk/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="BuyVM" scheme="https://yjz.hk/tags/BuyVM/"/>
+    
+    <category term="AnyCast" scheme="https://yjz.hk/tags/AnyCast/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>群暉設置DDNS並實現騰訊雲免費SSL證書的自動申請與部署</title>
+    <link href="https://yjz.hk/articles/20220215.html"/>
+    <id>https://yjz.hk/articles/20220215.html</id>
+    <published>2022-02-15T05:29:12.000Z</published>
+    <updated>2022-07-25T02:58:18.093Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>本教程僅適用於DSM7.0及以上版本且域名解析託管在騰訊雲DNSPod的用戶,DSM6.X用戶請參考：<a href="https://yjz.hk/articles/20211030.html#%E7%BE%A4%E6%99%96-Synology-NAS%E8%AE%BE%E7%BD%AEDDNS">在DNSPod解析的域名如何設置DDNS(動態域名解析)</a>和<a href="https://yjz.hk/articles/20220214.html">群暉部署SSL證書實現HTTPS安全訪問</a>進行DDNS設置以及SSL證書部署。</p></blockquote><h2 id="獲取騰訊雲API密鑰"><a href="#獲取騰訊雲API密鑰" class="headerlink" title="獲取騰訊雲API密鑰"></a>獲取騰訊雲API密鑰</h2><p>1、打開並登錄<a href="https://console.dnspod.cn/account/token/apikey">控制台-API密鑰</a></p><blockquote><p>注意這裏一定要選擇”騰訊雲API密鑰”而非”DNSPod Token”。</p></blockquote><p>2、點擊新建密鑰，這裏可能會進行安全驗證，按照提示驗證即可。<br><img src="https://resources.r2wind.cn/img/202202/20220215134245.png" alt="新建密鑰"><br>3、記錄密鑰SecretId及SecretKey<br><img src="https://resources.r2wind.cn/img/202202/20220215134456.png" alt="完成創建密鑰"></p><h2 id="添加解析記錄"><a href="#添加解析記錄" class="headerlink" title="添加解析記錄"></a>添加解析記錄</h2><p>1、打開並登錄<a href="https://console.dnspod.cn/dns/list">解析控制台</a><br><img src="https://resources.r2wind.cn/img/20211026213516.png" alt="解析控制台"><br>2、找到對應的域名點擊管理，這裏以oed.im為例<br><img src="https://resources.r2wind.cn/img/20211026214224.png" alt="設置解析"><br>3、設置解析記錄<br>點擊添加記錄填寫對應訊息後點擊保存完成添加。</p><blockquote><p>主機記錄：若直接解析主域名，請填@，若解析<a href="https://docs.dnspod.cn/dns/5f4768888ae73e11c5b01a05/">子域名</a>，請填對應的值例如www。<br>記錄值：隨便填一個IPv4，例如127.0.0.1(若使用IPv6,請隨便填一個IPv6地址，例如fe80::0)<br>記錄類型：默認為A即可(若使用IPv6請選擇AAAA記錄)<br>線路類型：無特殊需求默認即可<br>權重：默認不用填<br>TTL：無特殊需要默認即可<br><img src="https://resources.r2wind.cn/img/20211026215253.png" alt="添加解析記錄"></p></blockquote><h2 id="設置DDNS並部署證書"><a href="#設置DDNS並部署證書" class="headerlink" title="設置DDNS並部署證書"></a>設置DDNS並部署證書</h2><h3 id="打開控制面板"><a href="#打開控制面板" class="headerlink" title="打開控制面板"></a>打開控制面板</h3><p>登陸後打開控制面板，點擊外部訪問→DDNS<br><img src="https://resources.r2wind.cn/img/202202/20220215135338.png" alt="控制面板"></p><h3 id="新增DDNS"><a href="#新增DDNS" class="headerlink" title="新增DDNS"></a>新增DDNS</h3><p>按提示填寫相關訊息並勾選“從Tencent cloud獲取證書並將其設置為默認證書”後點擊測試聯機，正常情況下狀態會顯示“正常”<br><img src="https://resources.r2wind.cn/img/202202/20220215140655.png" alt="新增DDNS"></p><blockquote><p>服務供應商：騰訊雲<br>主機名稱：填寫你要設置DDNS的域名<br>用戶名&#x2F;電子郵件：填寫SecretId，參照教程第一節獲取<br>密碼或密鑰：填寫SecretKey，參照教程第一節獲取</p></blockquote><p>設置完成後點擊確定，這時會彈出一個提示，點擊確定即可<br><img src="https://resources.r2wind.cn/img/202202/20220215140852.png" alt="設置證書"></p><h3 id="後續操作"><a href="#後續操作" class="headerlink" title="後續操作"></a>後續操作</h3><p>設置完成後通過域名+端口訪問即可，若需設置自動重定向到HTTPS，可參考<a href="https://r2wind.cn/articles/20220214.html#DSM7-0">群暉部署SSL證書實現HTTPS安全訪問</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;本教程僅適用於DSM7.0及以上版本且域名解析託管在騰訊雲DNSPod的用戶,DSM6.X用戶請參考：&lt;a href=&quot;https://yjz.hk/articles/20211030.html#%E7%BE%A4%E6%99%96-Synolog</summary>
+      
+    
+    
+    
+    <category term="教程" scheme="https://yjz.hk/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="DNSPOD" scheme="https://yjz.hk/tags/DNSPOD/"/>
+    
+    <category term="騰訊雲" scheme="https://yjz.hk/tags/%E9%A8%B0%E8%A8%8A%E9%9B%B2/"/>
+    
+    <category term="域名" scheme="https://yjz.hk/tags/%E5%9F%9F%E5%90%8D/"/>
+    
+    <category term="解析" scheme="https://yjz.hk/tags/%E8%A7%A3%E6%9E%90/"/>
+    
+    <category term="SSL" scheme="https://yjz.hk/tags/SSL/"/>
+    
+    <category term="群暉" scheme="https://yjz.hk/tags/%E7%BE%A4%E6%9A%89/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>群晖部署SSL证书实现HTTPS安全访问</title>
+    <link href="https://yjz.hk/articles/20220214.html"/>
+    <id>https://yjz.hk/articles/20220214.html</id>
+    <published>2022-02-14T02:00:00.000Z</published>
+    <updated>2022-02-15T03:48:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>若已經申請過證書，可跳過申請SSL證書部分，DSM7.0及以上版本建議使用騰訊雲API設置DDNS並自動部署SSL免費證書，具體可參考：<a href="https://r2wind.cn/articles/20220215.html">群暉設置DDNS並實現騰訊雲免費SSL證書的自動申請與部署</a><br>PS:群暉可一鍵申請Let’s的免費證書，但家寬一般默認封禁了80&#x2F;443端口，導致證書無法辦法，所以不推薦此方法。</p></blockquote><h2 id="申請SSL證書"><a href="#申請SSL證書" class="headerlink" title="申請SSL證書"></a>申請SSL證書</h2><h3 id="前往SSL控制台，並填寫相關訊息"><a href="#前往SSL控制台，並填寫相關訊息" class="headerlink" title="前往SSL控制台，並填寫相關訊息"></a>前往<a href="https://console.cloud.tencent.com/ssl">SSL控制台</a>，並填寫相關訊息</h3><p>打開<a href="https://console.cloud.tencent.com/ssl">SSL控制台</a>點擊申請免費證書，並填寫域名和郵箱<br><img src="https://resources.r2wind.cn/img/20211204185352.png" alt="填寫域名郵箱"><br>PS：這裏建議大家選擇RSA算法</p><h3 id="選擇驗證方式"><a href="#選擇驗證方式" class="headerlink" title="選擇驗證方式"></a>選擇驗證方式</h3><p>選擇驗證方式，建議選擇自動添加DNS（若解析在其他服務商請選擇DNS驗證並自行前往解析服務商添加驗證記錄）<br><img src="https://resources.r2wind.cn/img/20211204185621.png" alt="自動添加DNS"></p><h3 id="等待簽發"><a href="#等待簽發" class="headerlink" title="等待簽發"></a>等待簽發</h3><p>點擊查看域名驗證等待簽發即可<br><img src="https://resources.r2wind.cn/img/20211204185845.png" alt="查看域名驗證"><br>PS：域名在其他服務商請在添加完驗證記錄後再執行此步驟</p><h3 id="下載證書"><a href="#下載證書" class="headerlink" title="下載證書"></a>下載證書</h3><p>簽發後點擊證書詳情進行下載<br>注意：選擇Nginx下載<br><img src="https://resources.r2wind.cn/img/20211204190405.png" alt="下載證書"><br>PS：下載後請將壓縮包解壓</p><h2 id="上傳證書並部署"><a href="#上傳證書並部署" class="headerlink" title="上傳證書並部署"></a>上傳證書並部署</h2><h3 id="打開控制面板"><a href="#打開控制面板" class="headerlink" title="打開控制面板"></a>打開控制面板</h3><p>打開控制面板，找到安全性→證書<br><img src="https://resources.r2wind.cn/img/202202/20220215112517.png" alt="證書"></p><h3 id="上傳證書"><a href="#上傳證書" class="headerlink" title="上傳證書"></a>上傳證書</h3><p>1、點擊新增，選擇添加新證書<br><img src="https://resources.r2wind.cn/img/202202/20220215114245.png" alt="新增證書"><br>2、導入證書<br>選擇導入證書並勾選設為默認證書<br><img src="https://resources.r2wind.cn/img/202202/20220215120031.png" alt="導入證書"><br>3、導入證書文件<br><img src="https://resources.r2wind.cn/img/202202/20220215120757.png" alt="導入證書文件"><br>私鑰為證書文件夾中.key結尾的文件，證書為證書文件夾中.pem結尾的文件，上傳完成後點擊確定保存<br>5、點擊配置，將所有證書都選擇成我們上傳的SSL證書<br><img src="https://resources.r2wind.cn/img/202202/20220215121424.png" alt="配置證書"></p><blockquote><p>到此就基本已經結束了，訪問域名即可看到安全小鎖啦</p></blockquote><h2 id="設置HTTP重定向HTTPS"><a href="#設置HTTP重定向HTTPS" class="headerlink" title="設置HTTP重定向HTTPS"></a>設置HTTP重定向HTTPS</h2><h3 id="DSM7-0"><a href="#DSM7-0" class="headerlink" title="DSM7.0"></a>DSM7.0</h3><p>打開控制面板找到登錄門戶，在網頁服務處勾選自動將DSM桌面的HTTP連接重定向到HTTPS後點擊保存。<br><img src="https://resources.r2wind.cn/img/202202/20220215124700.png" alt="重定向"></p><h3 id="DSM6-x"><a href="#DSM6-x" class="headerlink" title="DSM6.x"></a>DSM6.x</h3><p>打開控制面板找到網絡並點擊DSM設置，在DSM端口處勾選自動將DSM桌面的HTTP連接重定向到HTTPS和啟用HTTP&#x2F;2後點擊應用。<br><img src="https://resources.r2wind.cn/img/202202/20220215125219.png" alt="重定向"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;若已經申請過證書，可跳過申請SSL證書部分，DSM7.0及以上版本建議使用騰訊雲API設置DDNS並自動部署SSL免費證書，具體可參考：&lt;a href=&quot;https://r2wind.cn/articles/20220215.html&quot;&gt;群暉設置D</summary>
+      
+    
+    
+    
+    <category term="教程" scheme="https://yjz.hk/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="DNSPOD" scheme="https://yjz.hk/tags/DNSPOD/"/>
+    
+    <category term="騰訊雲" scheme="https://yjz.hk/tags/%E9%A8%B0%E8%A8%8A%E9%9B%B2/"/>
+    
+    <category term="域名" scheme="https://yjz.hk/tags/%E5%9F%9F%E5%90%8D/"/>
+    
+    <category term="解析" scheme="https://yjz.hk/tags/%E8%A7%A3%E6%9E%90/"/>
+    
+    <category term="SSL" scheme="https://yjz.hk/tags/SSL/"/>
+    
+    <category term="群暉" scheme="https://yjz.hk/tags/%E7%BE%A4%E6%9A%89/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何使用騰訊雲COS+CDN搭建一個屬於自己的圖床</title>
+    <link href="https://yjz.hk/articles/20211214.html"/>
+    <id>https://yjz.hk/articles/20211214.html</id>
+    <published>2021-12-14T08:52:52.000Z</published>
+    <updated>2021-12-14T08:52:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>寫這篇文章主要目的是為了解決一些使用建站產品的友友因上傳的圖片太多導致空間爆滿的問題，這裏採用騰訊雲COS+CDN的方式進行搭建，以便節約成本和風險控制。</p></blockquote><h1 id="創建存儲桶"><a href="#創建存儲桶" class="headerlink" title="創建存儲桶"></a>創建存儲桶</h1><blockquote><p>一般來講新用戶開通都會贈送免費額度，詳情可查看對象存儲：<a href="https://cloud.tencent.com/document/product/436/6240">免費額度</a>,若免費額度不夠請自行購買，具體可以諮詢官網客服。<br>注意：COS回源流量貌似不提供免費額度，請自行前往活動頁面或<a href="https://console.cloud.tencent.com/cos5/package/buy">流量包管理頁面</a>購買CDN回源流量包，此過程中遇到任何問題均請諮詢官網客服。</p></blockquote><h2 id="創建存儲桶-1"><a href="#創建存儲桶-1" class="headerlink" title="創建存儲桶"></a>創建存儲桶</h2><p>前往<a href="https://console.cloud.tencent.com/cos5/bucket">控制台</a>點擊“創建存儲桶”進行創建。<br><img src="https://resources.r2wind.cn/img/20211214133613.png" alt="創建存儲桶"></p><blockquote><p>所屬地域：根據需要選擇，這裏以廣州為例<br>名稱：根據需要填寫，這裏以tuchuang為例<br>訪問權限：私有讀寫<br>填寫完上述訊息點擊下一步後再點擊下一步（高級設置一般無需填寫默認即可）確認訊息創建存儲桶即可。</p></blockquote><h1 id="創建CDN服務"><a href="#創建CDN服務" class="headerlink" title="創建CDN服務"></a>創建CDN服務</h1><blockquote><p>一般來講新用戶開通會贈送一定量免費額度，若額度不夠請前往活動頁面或<a href="https://console.cloud.tencent.com/cdn/package">CDN流量包</a>管理頁面進行購買。</p></blockquote><h2 id="創建CDN服務-1"><a href="#創建CDN服務-1" class="headerlink" title="創建CDN服務"></a>創建CDN服務</h2><p>前往<a href="https://console.cloud.tencent.com/cdn/domains">CDN控制台</a>點擊添加域名進行創建。<br><img src="https://resources.r2wind.cn/img/20211214140523.png" alt="添加域名"></p><blockquote><p>加速區域：中國境內<br>域名：根據需要填寫，可以是主域名下任意域名,不要和網站域名相同。<br>加速類型：CDN網頁小文件、<br>IPV6訪問：建議開啟<br>所屬項目：默認即可<br>標籤：若無需要不用管<br>源站類型：COS源<br>回源協議：HTTPS<br>源站地址：選擇剛剛創建的存儲桶<br>私有存儲桶訪問：點擊添加授權服務授權後開啟<br><img src="https://resources.r2wind.cn/img/20211214141254.png" alt="開啟授權服務"><br>服務配置：默認即可</p></blockquote><p>完成配置後點擊確認提交進行提交。<br><img src="https://resources.r2wind.cn/img/20211214141716.png" alt="完成配置"></p><h2 id="添加解析"><a href="#添加解析" class="headerlink" title="添加解析"></a>添加解析</h2><p>完成後需要添加解析指向CNAME地址，可參考：<a href="https://r2wind.cn/articles/20211204.html#CDN">如何添加解析-CDN</a></p><h2 id="配置SSL"><a href="#配置SSL" class="headerlink" title="配置SSL"></a>配置SSL</h2><h3 id="配置證書"><a href="#配置證書" class="headerlink" title="配置證書"></a>配置證書</h3><p>在CDN域名管理控制台，找到剛剛創建的域名並點擊管理→HTTPS配置→配置證書<br><img src="https://resources.r2wind.cn/img/20211214142336.png" alt="配置證書"><br>選擇騰訊雲託管證書→選擇對應的證書完成配置，也可通過自有證書上傳。若無證書可前往<a href="https://console.cloud.tencent.com/ssl">SSL控制台</a>申請免費證書。<br><img src="https://resources.r2wind.cn/img/20211214144132.png" alt="選擇證書"></p><h3 id="開啟HTTP2-0"><a href="#開啟HTTP2-0" class="headerlink" title="開啟HTTP2.0"></a>開啟HTTP2.0</h3><p><img src="https://resources.r2wind.cn/img/20211214144532.png" alt="HTTPS"></p><h3 id="開啟強制跳轉"><a href="#開啟強制跳轉" class="headerlink" title="開啟強制跳轉"></a>開啟強制跳轉</h3><p>選擇HTTP→HTTPS，301，如同所示：<br><img src="https://resources.r2wind.cn/img/20211214144532.png" alt="HTTPS"></p><h3 id="開啟HSTS"><a href="#開啟HSTS" class="headerlink" title="開啟HSTS"></a>開啟HSTS</h3><p>開啟HSTS，過期時間根據需要填寫，我這裏以最大時間31536000為準<br><img src="https://resources.r2wind.cn/img/20211214144532.png" alt="HTTPS"><br>這裏就不介紹這些有甚麼用了，有興趣可以看看控制台提示的相關文檔。</p><h3 id="修改TLS版本"><a href="#修改TLS版本" class="headerlink" title="修改TLS版本"></a>修改TLS版本</h3><p>將TLS1.0關閉，開啟TLS1.3<br><img src="https://resources.r2wind.cn/img/20211214145702.png" alt="設置TLS版本"></p><h3 id="開啟OSCP裝訂"><a href="#開啟OSCP裝訂" class="headerlink" title="開啟OSCP裝訂"></a>開啟OSCP裝訂</h3><p>可以提高加載速度，建議開啟。</p><h2 id="配置圖片優化"><a href="#配置圖片優化" class="headerlink" title="配置圖片優化"></a>配置圖片優化</h2><p>這裏我們要開啟Webp自適應，可以提高網站圖片加載速度，Webp圖片壓縮產生的費用歸屬於數據萬象-基礎圖片處理費用，每月有10TB免費額度，一般情況下用不了，具體參考：<a href="https://cloud.tencent.com/document/product/460/36381">數據萬象：免費額度</a><br><img src="https://resources.r2wind.cn/img/20211214151226.png" alt="webp"></p><h2 id="配置防盜鏈"><a href="#配置防盜鏈" class="headerlink" title="配置防盜鏈"></a>配置防盜鏈</h2><p>在CDN域名控制台具體域名管理頁面找到訪問控制配置防盜鏈<br><img src="https://resources.r2wind.cn/img/20211214151757.png" alt="防盜鏈"></p><blockquote><p>類型選擇白名單，然後填寫你網站域名，注意是你網站域名並非圖床域名。<br>如果是網站建設產品用戶，請將網站建設後台域名，小程序業務域名(若配置小程序則需添加，域名可以在配置小程序時查看)一併加入白名單，否則可能導致圖片無法正常顯示。<br><img src="https://resources.r2wind.cn/img/20211214160748.png" alt="後台管理域名"><br>允許空refer：不建議大家勾選</p></blockquote><h2 id="配置用量封頂"><a href="#配置用量封頂" class="headerlink" title="配置用量封頂"></a>配置用量封頂</h2><p>在CDN域名管理控制台→高級配置，配置用量封頂。數值根據業務量和文件大小配置即可。<br><img src="https://resources.r2wind.cn/img/20211214152352.png" alt="CDN用量封頂"></p><h2 id="防刷配置"><a href="#防刷配置" class="headerlink" title="防刷配置"></a>防刷配置</h2><p>騰訊雲CDN防刷配置可以參考<a href="https://cloud.tencent.com/document/product/228/51813">攻擊風險</a></p><h1 id="上傳照片"><a href="#上傳照片" class="headerlink" title="上傳照片"></a>上傳照片</h1><p>到這裏就基本已經配置完了，我們可以前往<a href="https://console.cloud.tencent.com/cos5/bucket">COS控制台</a>找到並點擊對應的存儲桶名稱上傳資源並獲取鏈接啦。</p><h2 id="上傳文件並點擊詳情"><a href="#上傳文件並點擊詳情" class="headerlink" title="上傳文件並點擊詳情"></a>上傳文件並點擊詳情</h2><p><img src="https://resources.r2wind.cn/img/20211214155203.png" alt="文件詳情"></p><h2 id="選擇自定義加速域名並複製對象地址"><a href="#選擇自定義加速域名並複製對象地址" class="headerlink" title="選擇自定義加速域名並複製對象地址"></a>選擇自定義加速域名並複製對象地址</h2><p><img src="https://resources.r2wind.cn/img/20211214155400.png" alt="複製地址"></p><blockquote><p>其實到此就已經結束啦，你可以把對象地址插入到你想引用的任何網站，<a href="https://cloud.tencent.com/product/wds">網站建設</a>用戶可以繼續往下看哦~</p></blockquote><h1 id="插入引用資源"><a href="#插入引用資源" class="headerlink" title="插入引用資源"></a>插入引用資源</h1><p>在插入圖片時選擇網絡資源，在網絡資源地址中填寫對象地址確定即可<br><img src="https://resources.r2wind.cn/img/20211214161107.png" alt="引用圖片"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;寫這篇文章主要目的是為了解決一些使用建站產品的友友因上傳的圖片太多導致空間爆滿的問題，這裏採用騰訊雲COS+CDN的方式進行搭建，以便節約成本和風險控制。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;創建存儲桶&quot;&gt;&lt;a href=&quot;#創建存</summary>
+      
+    
+    
+    
+    <category term="教程" scheme="https://yjz.hk/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="DNSPOD" scheme="https://yjz.hk/tags/DNSPOD/"/>
+    
+    <category term="騰訊雲" scheme="https://yjz.hk/tags/%E9%A8%B0%E8%A8%8A%E9%9B%B2/"/>
+    
+    <category term="域名" scheme="https://yjz.hk/tags/%E5%9F%9F%E5%90%8D/"/>
+    
+    <category term="解析" scheme="https://yjz.hk/tags/%E8%A7%A3%E6%9E%90/"/>
+    
+    <category term="建站" scheme="https://yjz.hk/tags/%E5%BB%BA%E7%AB%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在DNSPod解析的域名如何添加DNS解析（新手教學）</title>
+    <link href="https://yjz.hk/articles/20211204.html"/>
+    <id>https://yjz.hk/articles/20211204.html</id>
+    <published>2021-12-04T05:27:52.000Z</published>
+    <updated>2021-12-19T02:27:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>本教程從兩個方面說明如何添加解析記錄，分別是網站相關（伺服器建站、<a href="https://cloud.tencent.com/product/ssl">SSL證書</a>申請、<a href="https://cloud.tencent.com/product/wds">網站建設產品</a>、<a href="https://cloud.tencent.com/document/product/400/58062">一鍵HTTTPS</a>、<a href="https://cloud.tencent.com/product/cdn">CDN</a>、<a href="https://app.cloud.tencent.com/">開源應用</a>、DDNS）、企業郵箱相關（騰訊企業郵、網易企業郵箱、網易免費企業郵箱、阿里郵箱等）。<br>本教程添加解析所有操作均在<a href="https://console.dnspod.cn/dns/list">DNSPod解析控制台</a>完成，操作前請登錄並點擊要操作的域名。<br>本教程僅適用於解析託管在騰訊雲(DNSPod)上的域名，只談如何設置解析，不談建站、開通郵箱。<br>操作過程中遇到任何問題可前往<a href="https://cloud.tencent.com/document/product/242/57608">官方群</a>尋求幫助</p></blockquote><h1 id="網站相關"><a href="#網站相關" class="headerlink" title="網站相關"></a>網站相關</h1><h2 id="伺服器建站"><a href="#伺服器建站" class="headerlink" title="伺服器建站"></a>伺服器建站</h2><p>伺服器建站在這裏指使用雲伺服器或輕量應用伺服器進行建站，需要將域名解到伺服器或輕量應用伺服器的公網IP，獲取公網IP方法如下:</p><blockquote><p>此處僅演示騰訊雲伺服器獲取方法，其他服務商伺服器請自行諮詢服務商</p></blockquote><h3 id="獲取輕量應用伺服器公網IP"><a href="#獲取輕量應用伺服器公網IP" class="headerlink" title="獲取輕量應用伺服器公網IP"></a>獲取輕量應用伺服器公網IP</h3><p><img src="https://resources.r2wind.cn/img/20211114141233.png" alt="輕量應用伺服器公網IP"></p><h3 id="雲伺服器公網IP"><a href="#雲伺服器公網IP" class="headerlink" title="雲伺服器公網IP"></a>雲伺服器公網IP</h3><p><img src="https://resources.r2wind.cn/img/20211114141532.png" alt="雲伺服器公網IP"><br>獲取到IP後即可添加解析</p><h3 id="添加解析"><a href="#添加解析" class="headerlink" title="添加解析"></a>添加解析</h3><p>若伺服器提供的是IPv4地址，則添加A記錄；若提供IPv6地址，則添加AAAA記錄；若兩者都提供，建議兩個紀錄均添加。 （通常伺服器僅提供IPv4記錄）<br><img src="https://resources.r2wind.cn/img/20211204104407.png" alt="添加解析"></p><blockquote><p>主機記錄：若直接解析主域名，請填@，若解析<a href="https://docs.dnspod.cn/dns/5f4768888ae73e11c5b01a05/">子域名</a>，請填對應的值例如www。<br>記錄值：伺服器公網IP<br>記錄類型：默認為A即可(若使用IPv6請選擇AAAA記錄)<br>線路類型：無特殊需求默認即可<br>權重：默認不用填<br>TTL：無特殊需要默認即可<br>友情提示：解析到大陸境內伺服器請先完成網站備案。</p></blockquote><h2 id="SSL證書申請"><a href="#SSL證書申請" class="headerlink" title="SSL證書申請"></a>SSL證書申請</h2><p>一般來講在申請證書時，當解析所在的賬號和申請證書賬號相同時，可以使用自動添加DNS驗證的方式進行驗證，無需手動進行操作，建議大家選擇此方法，在這裏我介紹另一種方法，DNS驗證（自動DNS驗證）。<br>申請證書後系統會提示您添加一條解析記錄來驗證域名所有權，如下圖：<br><img src="https://resources.r2wind.cn/img/20211204105109.png" alt="SSL驗證"><br>這是我們需要前往解析控制台按照提示添加記錄：（添加完成後點擊查看域名驗證狀態，一般來講會進入等待簽發的流程）<br><img src="https://resources.r2wind.cn/img/20211204105510.png" alt="驗證記錄"></p><blockquote><p>主機記錄：_dnsauth<br>記錄值：按照SSL控制台提示填寫<br>記錄類型：一般為TXT，若為自動續期，則為CNAME，請根據SSL控制台提示選擇<br>線路類型：默認<br>權重：默認不用填<br>TTL：默認即可</p></blockquote><h2 id="網站建設產品"><a href="#網站建設產品" class="headerlink" title="網站建設產品"></a>網站建設產品</h2><p>開通網站建設產品後在<a href="https://console.cloud.tencent.com/wds/info">控制台</a>綁定域名並到解析控制台添加記錄。 （注意：體驗版不支持綁定域名）<br>開通後點擊管理進行域名的綁定，並按頁面提示進行解析，如下圖：<br><img src="https://resources.r2wind.cn/img/20211204110834.png" alt="綁定域名"><br>綁定完成後按照頁面提示添加解析：<br>一般來講需要分別添加@和WWW記錄，如下圖:<br><img src="https://resources.r2wind.cn/img/20211204111437.png" alt="網站建設記錄"></p><blockquote><p>主機記錄：分別添加@記錄和WWW記錄<br>記錄值：控制台提示CNAME地址<br>記錄類型：CNAME<br>線路類型：無特殊需求默認即可<br>權重：默認不用填<br>TTL：無特殊需要默認即可<br>友情提示：使用網站建設產品請先完成網站備案。</p></blockquote><h2 id="一鍵HTTPS"><a href="#一鍵HTTPS" class="headerlink" title="一鍵HTTPS"></a>一鍵HTTPS</h2><p>其實這裏可以一鍵添加的，但是如果遇到問題可能要手動添加，建議優先使用一鍵添加<br><a href="https://console.cloud.tencent.com/https">一鍵HTTPS控制台</a>添加域名後會顯示CNAME記錄，如下圖：<br><img src="https://resources.r2wind.cn/img/20211204120203.png" alt="一鍵HTTPS記錄"><br>PS:點擊‘+’可以一鍵添加<br>前往解析控制台添加記錄：<br><img src="https://resources.r2wind.cn/img/20211204121147.png" alt="https記錄"></p><blockquote><p>主機記錄：若直接解析主域名，請填@，若解析<a href="https://docs.dnspod.cn/dns/5f4768888ae73e11c5b01a05/">子域名</a>，請填對應的值例如www或圖中所示https。<br>記錄值：控制台提示CNAME地址<br>記錄類型：CNAME<br>線路類型：無特殊需求默認即可<br>權重：默認不用填<br>TTL：無特殊需要默認即可<br>友情提示：使用前請先完成網站備案。</p></blockquote><h2 id="開源應用"><a href="#開源應用" class="headerlink" title="開源應用"></a>開源應用</h2><p>在<a href="https://console.cloud.tencent.com/oac/list">開源應用控制台</a>開通對應的應用後，在控制台點擊管理→自定義域名，綁定域名並前往解析控制台添加記錄。若域名託管在DNSPod且賬號相同會自動添加,如下圖所示：<br><a href="https://resources.r2wind.cn/img/20211204130425.png">開源應用</a><br>域名配置完成後會提示CNAME地址，前往控制台添加即可，若自動完成添加，則無需手動。<br>前往解析控制台添加記錄：<br><img src="https://resources.r2wind.cn/img/20211204122935.png" alt="CDN記錄"></p><blockquote><p>主機記錄：若直接解析主域名，請填@，若解析<a href="https://docs.dnspod.cn/dns/5f4768888ae73e11c5b01a05/">子域名</a>，請填對應的值例如www或圖中所示cdn。<br>記錄值：控制台提示CNAME地址<br>記錄類型：CNAME<br>線路類型：無特殊需求默認即可<br>權重：默認不用填<br>TTL：無特殊需要默認即可<br>友情提示：使用前請先完成網站備案。</p></blockquote><h2 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h2><p>在CDN控制台添加域名後按照頁面提示前往解析控制台添加解析，也可以一鍵添加（推薦）。<br>添加域名後會顯示CNAME記錄，如下圖：<br><img src="https://resources.r2wind.cn/img/20211204122419.png" alt="CDN"><br>PS：點擊‘一鍵配置’可一鍵添加<br>前往解析控制台添加記錄：<br><img src="https://resources.r2wind.cn/img/20211204122935.png" alt="CDN記錄"></p><blockquote><p>主機記錄：若直接解析主域名，請填@，若解析<a href="https://docs.dnspod.cn/dns/5f4768888ae73e11c5b01a05/">子域名</a>，請填對應的值例如www或圖中所示cdn。<br>記錄值：控制台提示CNAME地址<br>記錄類型：CNAME<br>線路類型：無特殊需求默認即可<br>權重：默認不用填<br>TTL：無特殊需要默認即可<br>友情提示：使用前請先完成網站備案。</p></blockquote><h2 id="DDNS"><a href="#DDNS" class="headerlink" title="DDNS"></a>DDNS</h2><p>這個可能有點點複雜，留一個教程大家自行參考:<a href="https://r2wind.cn/articles/20211030.html">如何設置DDNS(動態域名解析)</a></p><h1 id="企業郵箱相關"><a href="#企業郵箱相關" class="headerlink" title="企業郵箱相關"></a>企業郵箱相關</h1><p>DNSPod提供一鍵添加的方式，點擊快速添加記錄按照提示添加即可,如下圖所示:<br><img src="https://resources.r2wind.cn/img/20211204125009.png" alt="企業郵箱"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;本教程從兩個方面說明如何添加解析記錄，分別是網站相關（伺服器建站、&lt;a href=&quot;https://cloud.tencent.com/product/ssl&quot;&gt;SSL證書&lt;/a&gt;申請、&lt;a href=&quot;https://cloud.tencent.</summary>
+      
+    
+    
+    
+    <category term="教程" scheme="https://yjz.hk/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="DNSPOD" scheme="https://yjz.hk/tags/DNSPOD/"/>
+    
+    <category term="騰訊雲" scheme="https://yjz.hk/tags/%E9%A8%B0%E8%A8%8A%E9%9B%B2/"/>
+    
+    <category term="域名" scheme="https://yjz.hk/tags/%E5%9F%9F%E5%90%8D/"/>
+    
+    <category term="解析" scheme="https://yjz.hk/tags/%E8%A7%A3%E6%9E%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何搭建一個屬於自己的網站（超詳細）</title>
+    <link href="https://yjz.hk/articles/20211114.html"/>
+    <id>https://yjz.hk/articles/20211114.html</id>
+    <published>2021-11-14T12:52:52.000Z</published>
+    <updated>2020-12-05T05:52:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>寫這個教程一方面是為了剛入坑的新人們一個指引也是給自己留個備份(萬一哪天忘了呢哈哈哈)，在這裏以騰訊雲為例，文內的鏈接就不帶CPS推廣了，文章較長，可以點擊右側目錄跳轉到你想看的地方，嗯，就這樣。</p></blockquote><h1 id="前期準備"><a href="#前期準備" class="headerlink" title="前期準備"></a>前期準備</h1><p>1、考慮好是否想折騰下去，因為建站的途中可能會遇到各種各樣的坑。<br>2、註冊一個騰訊雲賬號並完成實名認證，本文所有操作均基於騰訊雲，註冊地址：<a href="https://cloud.tencent.com/register">傳送門</a>。 （<strong>必須</strong>）</p><h1 id="註冊域名"><a href="#註冊域名" class="headerlink" title="註冊域名"></a>註冊域名</h1><blockquote><p>其實這個不是必須的，不過都建站了，還是註冊個玩吧。如果不知道域名是甚麼可參考：<a href="https://cloud.tencent.com/document/product/242/8569">甚麼是域名？ </a></p></blockquote><h2 id="找到活動頁面"><a href="#找到活動頁面" class="headerlink" title="找到活動頁面"></a>找到活動頁面</h2><p>一般來講不建議直接在控制台直接註冊域名，因為那樣會比在活動頁面註冊貴，雖然貴不了幾元，但是能省則省。<br>這裏留下兩個當前還有效的活動頁面給到大家，當然大家也可以去官網自己找。</p><blockquote><p>下述活動均在2021年12月31日結束<br><a href="https://www.dnspod.cn/promo/domainscarnival">DNSPod年終回饋感恩有你</a><br><a href="https://cloud.tencent.com/act/domainsales">域名專場特惠</a><br>這裏使用DNSPod年終回饋感恩有你頁面進行演示，實際操作中大家請自行對比。</p></blockquote><h2 id="登錄域名控制台創建域名訊息模板"><a href="#登錄域名控制台創建域名訊息模板" class="headerlink" title="登錄域名控制台創建域名訊息模板"></a>登錄<a href="https://console.cloud.tencent.com/domain/template">域名控制台</a>創建域名訊息模板</h2><p>1、打開<a href="https://console.cloud.tencent.com/domain/template">域名控制台</a>訊息模板頁面<br><img src="https://resources.r2wind.cn/img/20211107220823.png" alt="域名訊息模板"><br>2、點擊新建模板並填寫相應訊息<br>根據實際需要選擇類型並填寫訊息，一般來講選個人即可，選擇類型後選擇使用賬號訊息填寫併校對補充相關訊息，完成後選擇證件類型(一般來講選擇身份證)並上傳證件照片。<br><img src="https://resources.r2wind.cn/img/20211107221116.png" alt="填寫實名訊息"><br>注意：提交後無需等待審核成功即可註冊域名。</p><blockquote><p>證件照片推薦使用彩色掃描件，但如果條件不允許可以使用手機拍攝，注意不要傾斜拍攝，不要留太大空白，不要缺邊少角。<br>PS：很多人上傳時可能會超出大小限制，這時可以用微信把照片發給另一個人(不要選原圖)然後保存傳到電腦即可。<br>實名過程中遇到任何問題可前往<a href="https://cloud.tencent.com/document/product/242/57608">官方群</a>尋求幫助。</p></blockquote><h2 id="註冊喜歡的域名"><a href="#註冊喜歡的域名" class="headerlink" title="註冊喜歡的域名"></a>註冊喜歡的域名</h2><p>選擇合適的後綴並註冊域名，選擇後綴主要從兩方面考慮，一方面是自己是否喜歡，另一方面則是<a href="https://buy.cloud.tencent.com/domain?price=1&from=console">續費價格</a>，一般來講推薦com&#x2F;cn。<br>今天這裏主要以演示為目的就選一個註冊最便宜的註冊了。</p><h3 id="選擇合適的後綴點擊立即搶購"><a href="#選擇合適的後綴點擊立即搶購" class="headerlink" title="選擇合適的後綴點擊立即搶購"></a>選擇合適的後綴點擊立即搶購</h3><p><img src="https://resources.r2wind.cn/img/20211107224808.png" alt="立即搶購"></p><h3 id="輸入心儀的前綴查詢是否可用"><a href="#輸入心儀的前綴查詢是否可用" class="headerlink" title="輸入心儀的前綴查詢是否可用"></a>輸入心儀的前綴查詢是否可用</h3><p><img src="https://resources.r2wind.cn/img/20211107225531.png" alt="查詢域名是否可用"></p><h3 id="點擊立即購買並選擇合適的方式支付"><a href="#點擊立即購買並選擇合適的方式支付" class="headerlink" title="點擊立即購買並選擇合適的方式支付"></a>點擊立即購買並選擇合適的方式支付</h3><p><img src="https://resources.r2wind.cn/img/20211107230136.png" alt="確認付款"><br>支付完成後進入控制台即可看見域名，等待實名審核及命名審核完成後即可正常使用<br><img src="https://resources.r2wind.cn/img/20211107230546.png" alt="域名審核"></p><h3 id="收到實名認證成功的提示後說明註冊成功"><a href="#收到實名認證成功的提示後說明註冊成功" class="headerlink" title="收到實名認證成功的提示後說明註冊成功"></a>收到實名認證成功的提示後說明註冊成功</h3><p><img src="https://resources.r2wind.cn/img/20211107231229.jpg" alt="註冊成功"></p><h1 id="進行網站備案"><a href="#進行網站備案" class="headerlink" title="進行網站備案"></a>進行網站備案</h1><blockquote><p>備案需要賬號實名認證滿48小時且域名完成認證3個自然日後才可以操作，這裏可先跳過等到了時間後再進行備案。</p></blockquote><h2 id="為甚麼要備案？"><a href="#為甚麼要備案？" class="headerlink" title="為甚麼要備案？"></a>為甚麼要備案？</h2><p><a href="https://cloud.tencent.com/document/product/243/18905">為甚麼要備案?</a></p><h2 id="如何備案？"><a href="#如何備案？" class="headerlink" title="如何備案？"></a>如何備案？</h2><p><a href="https://cloud.tencent.com/document/product/243/37402">如何備案?</a></p><h2 id="技術支持"><a href="#技術支持" class="headerlink" title="技術支持"></a>技術支持</h2><p>備案中遇到任何問題請加入<a href="https://cloud.tencent.com/document/product/243/61708">官方群</a>尋求幫助。</p><h1 id="伺服器建站"><a href="#伺服器建站" class="headerlink" title="伺服器建站"></a>伺服器建站</h1><h2 id="購買雲伺服器"><a href="#購買雲伺服器" class="headerlink" title="購買雲伺服器"></a>購買雲伺服器</h2><p>這裏建議大家購買伺服器，因為後面ICP備案也要用到，開網站還是備個案吧，當然如果不想備案可以使用大陸以外地區的伺服器。</p><blockquote><p>一般來講建站都需要伺服器，當然也可以考慮使用雲開發搭建，或者使用Webify、COS、Github等進行託管，如果你不想使用伺服器建站，那就不用買伺服器了哦~可以直接<strong>跳過</strong><br>另外根據相關規定對中國大陸境內提供服務的網站服務需要完成ICP備案，如果不想備案可以使用大陸以外地區的伺服器。<br>一般來講推薦個人站長購買輕量應用伺服器，這裏由於我有一張代金券就買雲伺服器了。</p></blockquote><h3 id="找到活動頁面-1"><a href="#找到活動頁面-1" class="headerlink" title="找到活動頁面"></a>找到活動頁面</h3><p>首先去還是官網找一個活動秒殺頁面，尤其是新用戶，因為這樣比直接購買會便宜好多好多(一般70左右一年，配置還很高)，這裏我就不留連接了，自己去找吧。</p><h3 id="點擊購買-新建-伺服器"><a href="#點擊購買-新建-伺服器" class="headerlink" title="點擊購買(新建)伺服器"></a>點擊購買(新建)伺服器</h3><p>活動頁面九點直接購買，然後選擇一個Linux系統付費即可，我這裏是在控制台創建所以情況步驟會略微複雜一點。<br><img src="https://resources.r2wind.cn/img/20211108215826.png" alt="新建伺服器"></p><h3 id="選擇合適的配置"><a href="#選擇合適的配置" class="headerlink" title="選擇合適的配置"></a>選擇合適的配置</h3><p>伺服器區域根據自己的需求選即可，一般來講哪裏離用戶近就選哪裏，實在不知道選甚麼就選廣州吧。<br>系統的話建議選擇Linux(除了Windows都是Linux),在這裏我以TencentOS為例</p><h3 id="設置安全組及密碼"><a href="#設置安全組及密碼" class="headerlink" title="設置安全組及密碼"></a>設置安全組及密碼</h3><p>設置安全組及伺服器密碼後，點擊下一步：確認配置訊息<br><img src="https://resources.r2wind.cn/img/20211108221840.png" alt="設置相關訊息"></p><h3 id="確認配置訊息"><a href="#確認配置訊息" class="headerlink" title="確認配置訊息"></a>確認配置訊息</h3><p>最後確認一下配置訊息並點擊立即購買<br><img src="https://resources.r2wind.cn/img/20211108222304.png" alt="確認配置訊息"></p><h3 id="提交訂單並付款"><a href="#提交訂單並付款" class="headerlink" title="提交訂單並付款"></a>提交訂單並付款</h3><p><img src="https://resources.r2wind.cn/img/20211108222554.png" alt="確認訂單並付款"></p><h3 id="等待伺服器開通"><a href="#等待伺服器開通" class="headerlink" title="等待伺服器開通"></a>等待伺服器開通</h3><p>付款完成後靜待服務開通即可，當收到相關訊息後即表示購買成功<br><img src="https://resources.r2wind.cn/img/20211108223727.jpg" alt="購買成功"></p><h2 id="安裝寶塔"><a href="#安裝寶塔" class="headerlink" title="安裝寶塔"></a>安裝寶塔</h2><p>寶塔面板是一款比較簡單方便的伺服器管理面板，上手很容易，所以接下來我們使用寶塔面板進行建站，不想使用伺服器建站的可以直接跳過哦~</p><h3 id="通過SSH登錄伺服器"><a href="#通過SSH登錄伺服器" class="headerlink" title="通過SSH登錄伺服器"></a>通過SSH登錄伺服器</h3><blockquote><p>這裏我使用的是<a href="https://www.netsarang.com/zh/xshell/">Xshell</a>工具進行登錄，當然大家也可以在控制台直接登錄或使用其他工具，具體可以參考:<a href="https://cloud.tencent.com/document/product/213/16515">登錄Linux實例</a>。</p></blockquote><h4 id="獲取伺服器公網IP"><a href="#獲取伺服器公網IP" class="headerlink" title="獲取伺服器公網IP"></a>獲取伺服器公網IP</h4><p>在雲伺服器或輕量應用伺服器控制台獲取伺服器公網IP</p><h5 id="獲取輕量應用伺服器公網IP"><a href="#獲取輕量應用伺服器公網IP" class="headerlink" title="獲取輕量應用伺服器公網IP"></a>獲取輕量應用伺服器公網IP</h5><p><img src="https://resources.r2wind.cn/img/20211114141233.png" alt="輕量應用伺服器公網IP"></p><h5 id="雲伺服器公網IP"><a href="#雲伺服器公網IP" class="headerlink" title="雲伺服器公網IP"></a>雲伺服器公網IP</h5><p><img src="https://resources.r2wind.cn/img/20211114141532.png" alt="雲伺服器公網IP"></p><h4 id="打開Xshell並新建會話"><a href="#打開Xshell並新建會話" class="headerlink" title="打開Xshell並新建會話"></a>打開Xshell並新建會話</h4><p>打開並點擊新建會話<br><img src="https://resources.r2wind.cn/img/20211114142028.png" alt="打開並新建"><br>配置伺服器訊息<br><img src="https://resources.r2wind.cn/img/20211204134335.png" alt="配置伺服器訊息"></p><h4 id="連接會話"><a href="#連接會話" class="headerlink" title="連接會話"></a>連接會話</h4><p>配置完成後再左側的側邊欄雙擊剛剛創建的會話並連接，會提示未知的主機密鑰，點擊接受並保存即可。<br><img src="https://resources.r2wind.cn/img/20211204135255.png" alt="SSHKey"></p><h5 id="輸入用戶名"><a href="#輸入用戶名" class="headerlink" title="輸入用戶名"></a>輸入用戶名</h5><p>此時會提示輸入用戶名，一般為root<br><img src="https://resources.r2wind.cn/img/20211204135443.png" alt="輸入用戶名"></p><h5 id="輸入密碼"><a href="#輸入密碼" class="headerlink" title="輸入密碼"></a>輸入密碼</h5><p>此時會提示輸入密碼或選擇密鑰，取決於你自己設置的驗證方式<br><img src="https://resources.r2wind.cn/img/20211204135635.png" alt="輸入密碼"></p><h5 id="登錄成功"><a href="#登錄成功" class="headerlink" title="登錄成功"></a>登錄成功</h5><p>當你看到如下界面的時候就說明已經登錄成功了。<br><img src="https://resources.r2wind.cn/img/20211204135845.png" alt="login"></p><h3 id="更新系統及軟件"><a href="#更新系統及軟件" class="headerlink" title="更新系統及軟件"></a>更新系統及軟件</h3><p>輸入相關命令並進行更新：<br>TencentOS或CentOS:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum update</span><br></pre></td></tr></table></figure><p>Debian或Ubuntu:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt update</span><br><span class="line">apt upgrade</span><br></pre></td></tr></table></figure><p>遇到確認選項輸入y回車即可<br><img src="https://resources.r2wind.cn/img/20211204140711.png" alt="系統更新"><br>輸入y回車後靜靜等待更新，更新完成後如下圖所示：<br><img src="https://resources.r2wind.cn/img/20211204140916.png" alt="Success"></p><h3 id="安裝寶塔-1"><a href="#安裝寶塔-1" class="headerlink" title="安裝寶塔"></a>安裝寶塔</h3><p>前往<a href="https://www.bt.cn/bbs/thread-19376-1-1.html">官網</a>選擇對應版本安裝方式複製後黏貼到終端回車即可，安裝中會要求確認，輸入y回車即可。<br>安裝完如下圖所示:<br><img src="https://resources.r2wind.cn/img/20211204141518.png" alt="寶塔安裝完成"></p><h4 id="登錄面板"><a href="#登錄面板" class="headerlink" title="登錄面板"></a>登錄面板</h4><p>安裝完成後會告知面板地址及賬號密碼，複製到瀏覽器登錄即可，若無法登錄，請參考<a href="https://www.bt.cn/bbs/thread-19376-1-1.html">寶塔官方教程</a>放開安全組端口。<br>閱讀並同意協議<br><img src="https://resources.r2wind.cn/img/20211204142144.png" alt="閱讀協議"><br>登陸後會提示安裝套件，這裏我們先不管<br><img src="https://resources.r2wind.cn/img/20211204142939.png" alt="安裝套件"><br>此處會提示登錄寶塔賬號，若無可按提示前往註冊<br><img src="https://resources.r2wind.cn/img/20211204143317.png" alt="登錄寶塔賬號"><br>登錄後點擊設置，根據需要修改密碼、用戶名、安全入口、端口等<br><img src="https://resources.r2wind.cn/img/20211204143650.png" alt="修改默認配置"></p><h2 id="配置相關環境"><a href="#配置相關環境" class="headerlink" title="配置相關環境"></a>配置相關環境</h2><p>安裝Web伺服器及其他相關服務：<br>一般來講安裝下面這幾個就夠了，如下圖：<br><img src="https://resources.r2wind.cn/img/20211204144618.png" alt="安裝環境"><br>安裝時建議大家盡量選擇編譯安裝<br><img src="https://resources.r2wind.cn/img/20211204145201.png" alt="編譯安裝"><br>提交後耐心等待安裝完成<br><img src="https://resources.r2wind.cn/img/20211204145409.png" alt="安裝ing"></p><h2 id="使用雲伺服器搭建WordPress站點"><a href="#使用雲伺服器搭建WordPress站點" class="headerlink" title="使用雲伺服器搭建WordPress站點"></a>使用雲伺服器搭建WordPress站點</h2><h3 id="創建站點"><a href="#創建站點" class="headerlink" title="創建站點"></a>創建站點</h3><p><img src="https://resources.r2wind.cn/img/20211204182904.png" alt="CREATE"></p><blockquote><p>域名：填寫網站域名<br>資料庫：Mysql，密碼用戶名默認即可<br>PHP版本：選擇你安裝的版本，這裏為8.0</p></blockquote><h3 id="前往官網下載程序包"><a href="#前往官網下載程序包" class="headerlink" title="前往官網下載程序包"></a>前往官網下載程序包</h3><p>1、打開官網，找到下載按鈕，右鍵單擊複製鏈接<br>2、進入網站根目錄<br><img src="https://resources.r2wind.cn/img/20211204183521.png" alt="進入網站目錄"><br>3、下載程序文件<br><img src="https://resources.r2wind.cn/img/20211204184010.png" alt="下載文件"><br>4、解壓下載後的壓縮包<br><img src="https://resources.r2wind.cn/img/20211204184305.png" alt="解壓安裝包"><br>5、進入解壓後的文件夾將所有文件剪切到網站根目錄<br><img src="https://resources.r2wind.cn/img/20211204184542.png" alt="剪切"><br>剪切後進入根目錄點擊黏貼，並刪除壓縮包和解壓後的文件夾<br><img src="https://resources.r2wind.cn/img/20211204184811.png" alt="Paste"></p><h3 id="前往SSL控制台申請免費證書並部署"><a href="#前往SSL控制台申請免費證書並部署" class="headerlink" title="前往SSL控制台申請免費證書並部署"></a>前往SSL控制台申請免費證書並部署</h3><p>1、打開<a href="https://console.cloud.tencent.com/ssl">SSL控制台</a>點擊申請免費證書，並填寫域名和郵箱<br><img src="https://resources.r2wind.cn/img/20211204185352.png" alt="填寫域名郵箱"><br>PS：這裏建議大家選擇ECC算法<br>2、選擇驗證方式，建議選擇自動添加DNS<br><img src="https://resources.r2wind.cn/img/20211204185621.png" alt="自動添加DNS"><br>3、點擊查看域名驗證等待簽發即可<br><img src="https://resources.r2wind.cn/img/20211204185845.png" alt="查看域名驗證"><br>4、簽發後點擊證書詳情進行下載<br>注意：選擇Nginx下載<br><img src="https://resources.r2wind.cn/img/20211204190405.png" alt="下載證書"><br>5、下載後解壓<br>6、將.key和.pem結尾的文件用記事本打開按照提示黏貼<br><img src="https://resources.r2wind.cn/img/20211204192840.png" alt="黏貼證書"><br>7、點擊保存即可</p><h3 id="添加解析"><a href="#添加解析" class="headerlink" title="添加解析"></a>添加解析</h3><p>前往解析控制台添加A記錄解析到伺服器的公網IP，獲取方式上文已經提到：<br><img src="https://resources.r2wind.cn/img/20211204194232.png" alt="Record"></p><h3 id="在瀏覽器打開域名，開始建站"><a href="#在瀏覽器打開域名，開始建站" class="headerlink" title="在瀏覽器打開域名，開始建站"></a>在瀏覽器打開域名，開始建站</h3><p>1、地址欄輸入域名並回車<br><img src="https://resources.r2wind.cn/img/20211204200121.png" alt="打開站點"><br>2、輸入資料庫密碼、用戶名、資料庫名稱，其他默認<br><img src="https://resources.r2wind.cn/img/20211204200421.png" alt="輸入資料庫密碼"><br>上述訊息可在寶塔面板獲取，如下圖：<br><img src="https://resources.r2wind.cn/img/20211204200722.png" alt="獲取資料庫訊息"><br>保存後應該會看到下面的界面<br><img src="https://resources.r2wind.cn/img/20211204200955.png" alt="鏈接成功"><br>3、設置站點相關訊息並安裝<br><img src="https://resources.r2wind.cn/img/20211204201202.png" alt="安裝"><br>4、安裝好就可以登錄設置站點了<br>登錄：<br><img src="https://resources.r2wind.cn/img/20211204201715.png" alt="登錄"><br>站點控制台（儀表盤）：<br><img src="https://resources.r2wind.cn/img/20211204201909.png" alt="儀表盤"><br>網站首頁：<br><img src="https://resources.r2wind.cn/img/20211204202021.png" alt="首頁"></p><h2 id="使用Ghost建站"><a href="#使用Ghost建站" class="headerlink" title="使用Ghost建站"></a>使用Ghost建站</h2><p>這個有點難度，建議新手直接放棄，想安裝的同學可以參照<a href="https://ghost.org/docs/install/local/">官方教程</a>安裝，安裝後寶塔反代一下即可。</p><p>先寫到這裏，過段時間再更新</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;寫這個教程一方面是為了剛入坑的新人們一個指引也是給自己留個備份(萬一哪天忘了呢哈哈哈)，在這裏以騰訊雲為例，文內的鏈接就不帶CPS推廣了，文章較長，可以點擊右側目錄跳轉到你想看的地方，嗯，就這樣。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=</summary>
+      
+    
+    
+    
+    <category term="教程" scheme="https://yjz.hk/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="DNSPOD" scheme="https://yjz.hk/tags/DNSPOD/"/>
+    
+    <category term="騰訊雲" scheme="https://yjz.hk/tags/%E9%A8%B0%E8%A8%8A%E9%9B%B2/"/>
+    
+    <category term="域名" scheme="https://yjz.hk/tags/%E5%9F%9F%E5%90%8D/"/>
+    
+    <category term="解析" scheme="https://yjz.hk/tags/%E8%A7%A3%E6%9E%90/"/>
+    
+    <category term="建站" scheme="https://yjz.hk/tags/%E5%BB%BA%E7%AB%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在DNSPod解析的域名如何設置DDNS(動態域名解析)</title>
+    <link href="https://yjz.hk/articles/20211030.html"/>
+    <id>https://yjz.hk/articles/20211030.html</id>
+    <published>2021-10-30T03:52:52.000Z</published>
+    <updated>2021-10-31T14:18:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>本教程僅適用於解析託管在DNSPod平台上的域名，其他平台託管的域名請自行通過搜尋引擎查找教程。</p></blockquote><blockquote><p>本教程前兩個步驟通用，通過第三方插件或NAS&amp;路由器自帶插件設置可參考前兩步獲取Token&amp;添加記錄。</p></blockquote><blockquote><p>2022年2月15日：補充群暉設置教程</p></blockquote><h1 id="獲取DNSPod-Token"><a href="#獲取DNSPod-Token" class="headerlink" title="獲取DNSPod Token"></a>獲取DNSPod Token</h1><p>1、打開並登錄<a href="https://console.dnspod.cn/account/token/token">控制台-API密鑰</a></p><blockquote><p>注意這裏一定要選擇”DNSPod Token”而非”騰訊雲API密鑰”。</p></blockquote><p>2、點擊創建密鑰，這裏可能會進行安全驗證，按照提示驗證即可。<br><img src="https://resources.r2wind.cn/img/20211026212204.png" alt="安全驗證"><br>3、設置密鑰名稱，這裏根據需要隨便填就好。<br><img src="https://resources.r2wind.cn/img/20211026212429.png" alt="設置名稱"><br>4、記錄密鑰ID及Token</p><blockquote><p>注意：Token僅在創建時展示一次，忘記的話請重新創建<br><img src="https://resources.r2wind.cn/img/20211026212914.png" alt="完成創建密鑰"><br>如果用於DDNS請不要設置IP白名單</p></blockquote><h1 id="添加解析記錄"><a href="#添加解析記錄" class="headerlink" title="添加解析記錄"></a>添加解析記錄</h1><p>1、打開並登錄<a href="https://console.dnspod.cn/dns/list">解析控制台</a><br><img src="https://resources.r2wind.cn/img/20211026213516.png" alt="解析控制台"><br>2、找到對應的域名點擊管理，這裏以oed.im為例<br><img src="https://resources.r2wind.cn/img/20211026214224.png" alt="設置解析"><br>3、設置解析記錄<br>點擊添加記錄填寫對應訊息後點擊保存完成添加。</p><blockquote><p>主機記錄：若直接解析主域名，請填@，若解析<a href="https://docs.dnspod.cn/dns/5f4768888ae73e11c5b01a05/">子域名</a>，請填對應的值例如www。<br>記錄值：隨便填一個IPv4，例如127.0.0.1(若使用IPv6,請隨便填一個IPv6地址，例如fe80::0)<br>記錄類型：默認為A即可(若使用IPv6請選擇AAAA記錄)<br>線路類型：無特殊需求默認即可<br>權重：默認不用填<br>TTL：無特殊需要默認即可<br><img src="https://resources.r2wind.cn/img/20211026215253.png" alt="添加解析記錄"></p></blockquote><h1 id="設置DDNS"><a href="#設置DDNS" class="headerlink" title="設置DDNS"></a>設置DDNS</h1><h2 id="通過定時任務設置"><a href="#通過定時任務設置" class="headerlink" title="通過定時任務設置"></a>通過定時任務設置</h2><h2 id="通過騰訊雲DDNS插件設置-OpenWrt"><a href="#通過騰訊雲DDNS插件設置-OpenWrt" class="headerlink" title="通過騰訊雲DDNS插件設置(OpenWrt)"></a>通過騰訊雲DDNS插件設置(OpenWrt)</h2><p>1、登錄OpenWrt,找到系統(System)→軟件包(Software)，將下方軟件包的地址放入從網絡安裝的輸入框中，點擊確認(ok)完成安裝。 ipk安裝地址：<a href="https://openwrt-tencentddns-1301800460.cos.ap-guangzhou.myqcloud.com/luci-app-tencentddns_0.1.0-1_all.ipk">https://openwrt-tencentddns-1301800460.cos.ap-guangzhou.myqcloud.com/luci-app-tencentddns_0.1.0-1_all.ipk</a><br><img src="https://resources.r2wind.cn/img/20211027094621.png" alt="網絡安裝"><br><img src="https://resources.r2wind.cn/img/20211027094821.png" alt="安裝確認"><br>如果安裝過程中報錯255，請通過ssh登錄OpenWrt執行以下命令，執行前請先前往軟件包安裝wget(wget-ssl)<br><img src="https://resources.r2wind.cn/img/20211027095617.png" alt="安裝wget"></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate https://openwrt-tencentddns-1301800460.cos.ap-guangzhou.myqcloud.com/luci-app-tencentddns_0.1.0-1_all.ipk</span><br><span class="line">opkg install luci-app-tencentddns_0.1.0-1_all.ipk</span><br></pre></td></tr></table></figure><p>安裝或執行完成後即可在後台看到插件<br><img src="https://resources.r2wind.cn/img/20211027100217.png" alt="插件界面"><br>2、勾選啟用，填寫相關訊息，並選擇相應配置，最後點擊保存並應用<br><img src="https://resources.r2wind.cn/img/20211027102125.jpg" alt="配置訊息"><br>3、應用後等待一會刷新，當看到UPDATED(x.x.x.x)後說明配置成功<br><img src="https://resources.r2wind.cn/img/20211027123027.png" alt="配置成功"></p><h2 id="群暉-Synology-NAS設置DDNS"><a href="#群暉-Synology-NAS設置DDNS" class="headerlink" title="群暉(Synology)NAS設置DDNS"></a>群暉(Synology)NAS設置DDNS</h2><blockquote><p>DSM7.0及以上建議通過騰訊雲API設置DDNS並自動部署免費證書，具體可參考：<a href="https://r2wind.cn/articles/20220215.html">群暉設置DDNS並實現騰訊雲免費SSL證書的自動申請與部署</a></p></blockquote><h3 id="打開控制面板"><a href="#打開控制面板" class="headerlink" title="打開控制面板"></a>打開控制面板</h3><p>登陸後打開控制面板，點擊外部訪問→DDNS<br><img src="https://resources.r2wind.cn/img/202202/20220215103252.png" alt="控制面板"></p><h3 id="新增DDNS"><a href="#新增DDNS" class="headerlink" title="新增DDNS"></a>新增DDNS</h3><p>按提示填寫相關訊息後點擊測試聯機，正常情況下狀態會顯示“正常”，然後點擊確定保存即可<br><img src="https://resources.r2wind.cn/img/202202/20220215104351.png" alt="新增DDNS"></p><blockquote><p>服務供應商：DNSPod.cn(若國際站選擇DNSPod.com)<br>主機名稱：填寫你要設置DDNS的域名<br>用戶名&#x2F;電子郵件：填寫密鑰ID，參照教程第一節獲取<br>密碼或密鑰：填寫Token，參照教程第一節獲取</p></blockquote><h2 id="愛快設置DDNS教程"><a href="#愛快設置DDNS教程" class="headerlink" title="愛快設置DDNS教程"></a>愛快設置DDNS教程</h2><p>1、登錄愛快後台，點擊高級應用→動態域名→添加<br><img src="https://resources.r2wind.cn/img/20211028203721.png" alt="愛快動態域名"><br>2、按照界面提示填寫相關訊息<br><img src="https://resources.r2wind.cn/img/20211028203736.png" alt="愛快DDNS"></p><h2 id="通過定時任務設置DDNS"><a href="#通過定時任務設置DDNS" class="headerlink" title="通過定時任務設置DDNS"></a>通過定時任務設置DDNS</h2><blockquote><p>通過定時任務+curl訪問接口設置DDNS,受接口限制，暫不支持IPv6</p></blockquote><h3 id="獲取域名ID"><a href="#獲取域名ID" class="headerlink" title="獲取域名ID"></a>獲取域名ID</h3><p>登錄<a href="https://console.dnspod.cn/dns/list">控制台</a>,找到並點擊對應的域名，在管理頁面找到並點擊域名設置獲取域名ID<br><img src="https://resources.r2wind.cn/img/20211028212431.png" alt="域名ID"></p><h3 id="獲取記錄ID"><a href="#獲取記錄ID" class="headerlink" title="獲取記錄ID"></a>獲取記錄ID</h3><p>1)、通過控制台獲取<br>在管理頁面找到操作日誌，“值”後面括號內數字極為記錄ID<br><img src="https://resources.r2wind.cn/img/20211028213052.png" alt="控制台獲取記錄ID"><br>2)、通過<a href="https://docs.dnspod.cn/api/5f562ae4e75cf42d25bf689e/">記錄列表</a>接口獲取<br>ssh連接伺服器通過curl請求接口獲取</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -X POST https://dnsapi.cn/Record.List -d <span class="string">&#x27;login_token=LOGIN_TOKEN&amp;format=json&amp;domain_id=域名ID&amp;sub_domain=子域名&amp;record_type=A&#x27;</span></span><br></pre></td></tr></table></figure><blockquote><p>LOGIN_TOKEN：是由 ID,Token 組合而成的，用英文的逗號分割。<br>若設置IPv6記錄，請將record_type&#x3D;A改為record_type&#x3D;AAAA<br>(暫不支持IPv6，先寫着，畢竟馬上就支持了)</p></blockquote><p>例如：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -X POST https://dnsapi.cn/Record.List -d <span class="string">&#x27;login_token=TokenID,Token&amp;format=json&amp;domain_id=86025807&amp;sub_domain=test&amp;record_type=A&#x27;</span></span><br></pre></td></tr></table></figure><p>2、在返回數據中找到記錄ID<br><img src="https://resources.r2wind.cn/img/20211031210857.png" alt="返回記錄ID"></p><h3 id="測試DDNS接口相關參數是否正確"><a href="#測試DDNS接口相關參數是否正確" class="headerlink" title="測試DDNS接口相關參數是否正確"></a>測試<a href="https://docs.dnspod.cn/api/5f562b21e75cf42d25bf68b6/">DDNS接口</a>相關參數是否正確</h3><p>ssh連接伺服器通過curl請求接口測試</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -X POST https://dnsapi.cn/Record.Ddns -d <span class="string">&#x27;login_token=LOGIN_TOKEN&amp;format=json&amp;domain_id=域名ID&amp;record_id=記錄ID&amp;record_line=線路類型&amp;sub_domain=子域名&amp;lang=en&#x27;</span></span><br></pre></td></tr></table></figure><blockquote><p>線路類型若無特殊需求默認即可</p></blockquote><p>例如：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -X POST https://dnsapi.cn/Record.Ddns -d <span class="string">&#x27;login_token=TokenID,Token&amp;format=json&amp;domain_id=86025807&amp;record_id=953765245&amp;record_line=默認&amp;sub_domain=test&amp;=en&#x27;</span></span><br></pre></td></tr></table></figure><blockquote><p>LOGIN_TOKEN：是由 ID,Token 組合而成的，用英文的逗號分割。</p></blockquote><p>當返回狀態碼為1時說明操作成功。<br><img src="https://resources.r2wind.cn/img/20211031212658.png" alt="ddns操作成功"></p><h3 id="設置定時任務"><a href="#設置定時任務" class="headerlink" title="設置定時任務"></a>設置定時任務</h3><blockquote><p>這裏以centos為例，其他系統除安裝方式外配置方式大體相同，大家可自行通過搜尋引擎查找。</p></blockquote><h4 id="安裝crontabs服務並設置開機自啟"><a href="#安裝crontabs服務並設置開機自啟" class="headerlink" title="安裝crontabs服務並設置開機自啟"></a>安裝crontabs服務並設置開機自啟</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum install crontabs</span><br><span class="line">systemctl <span class="built_in">enable</span> crond</span><br><span class="line">systemctl start crond</span><br></pre></td></tr></table></figure><h4 id="配置定時規則"><a href="#配置定時規則" class="headerlink" title="配置定時規則"></a>配置定時規則</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/crontab</span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*/5 * * * * root curl -X POST https://dnsapi.cn/Record.Ddns -d <span class="string">&#x27;login_token=TokenID,Token&amp;format=json&amp;domain_id=86025807&amp;record_id=953765245&amp;record_line=默認&amp;sub_domain=test&amp;=en&#x27;</span></span><br></pre></td></tr></table></figure><p><img src="https://resources.r2wind.cn/img/20211031220619.png" alt="配置規則"></p><blockquote><p>腳本內容根據實際情況填寫，上面只是示例<br>規則很簡單，從注釋中可以看到左到右分別是 分鐘（0<del>59）、小時（0</del>23）、天（1<del>31）、月(1</del>12)、星期(0~6)、用戶名、要定時執行的命令或者腳本。<br>每多長時間記得在前面加一個’*&#x2F;‘如上面的示例<br>注意：不要忘記中間的空格</p></blockquote><h4 id="保存生效"><a href="#保存生效" class="headerlink" title="保存生效"></a>保存生效</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crontab /etc/crontab</span><br></pre></td></tr></table></figure><h4 id="查看任務"><a href="#查看任務" class="headerlink" title="查看任務"></a>查看任務</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crontab -l</span><br></pre></td></tr></table></figure><p><img src="https://resources.r2wind.cn/img/20211031215106.png" alt="查看任務"></p><h4 id="查看結果"><a href="#查看結果" class="headerlink" title="查看結果"></a>查看結果</h4><p>不出意外的話應該已經更新成功了，大家可以前往控制台查看效果。<br><img src="https://resources.r2wind.cn/img/20211031221718.png" alt="更新成功詳情"><br><img src="https://resources.r2wind.cn/img/20211031221535.png" alt="更新成功日誌"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;本教程僅適用於解析託管在DNSPod平台上的域名，其他平台託管的域名請自行通過搜尋引擎查找教程。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本教程前兩個步驟通用，通過第三方插件或NAS&amp;amp;路由器自帶插件設置可參考前兩</summary>
+      
+    
+    
+    
+    <category term="教程" scheme="https://yjz.hk/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="DNSPOD" scheme="https://yjz.hk/tags/DNSPOD/"/>
+    
+    <category term="騰訊雲" scheme="https://yjz.hk/tags/%E9%A8%B0%E8%A8%8A%E9%9B%B2/"/>
+    
+    <category term="域名" scheme="https://yjz.hk/tags/%E5%9F%9F%E5%90%8D/"/>
+    
+    <category term="解析" scheme="https://yjz.hk/tags/%E8%A7%A3%E6%9E%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>騰訊待辦-入門教程</title>
+    <link href="https://yjz.hk/articles/20211017.html"/>
+    <id>https://yjz.hk/articles/20211017.html</id>
+    <published>2021-10-17T02:00:00.000Z</published>
+    <updated>2021-10-17T02:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="產品教程"><a href="#產品教程" class="headerlink" title="產品教程"></a>產品教程</h1><blockquote><p>大致寫一下以下幾個方面：創建待辦、分享待辦、待辦分組、共享分組、訂閱待辦</p></blockquote><h2 id="創建待辦"><a href="#創建待辦" class="headerlink" title="創建待辦"></a>創建待辦</h2><h3 id="如何快速創建一個待辦？"><a href="#如何快速創建一個待辦？" class="headerlink" title="如何快速創建一個待辦？"></a>如何快速創建一個待辦？</h3><h4 id="通過小程序或App創建"><a href="#通過小程序或App創建" class="headerlink" title="通過小程序或App創建"></a>通過小程序或App創建</h4><p><img src="https://resources.r2wind.cn/img/20210911150045s.jpg" alt="img"><br>創建完成後在列表中點擊剛剛創建的待辦可以查看或設置任務詳情。</p><h4 id="通過公眾號創建待辦"><a href="#通過公眾號創建待辦" class="headerlink" title="通過公眾號創建待辦"></a>通過公眾號創建待辦</h4><blockquote><p>通過公眾號創建待辦時我們首先要綁定公眾號，然後才能繼續操作</p></blockquote><h5 id="綁定公眾號"><a href="#綁定公眾號" class="headerlink" title="綁定公眾號"></a>綁定公眾號</h5><p><img src="https://resources.r2wind.cn/img/20210911160917s.jpg" alt="img"></p><h5 id="通過文字創建待辦"><a href="#通過文字創建待辦" class="headerlink" title="通過文字創建待辦"></a>通過文字創建待辦</h5><p>直接在公眾號對話框輸入待辦內容（例如：“下午三點喝咖啡”）後發送就會自動創建一條待辦了，創建後點擊查看詳情可以查看或設置任務詳情。</p><h5 id="通過語音創建待辦"><a href="#通過語音創建待辦" class="headerlink" title="通過語音創建待辦"></a>通過語音創建待辦</h5><p>可通過向公眾號發送語音的方式創建新的待辦，具體請參考：<br><img src="https://resources.r2wind.cn/img/20210929221928.gif" alt="img"></p><h3 id="如何創建週期性任務？"><a href="#如何創建週期性任務？" class="headerlink" title="如何創建週期性任務？"></a>如何創建週期性任務？</h3><p><img src="https://resources.r2wind.cn/img/20210911223635s.jpg" alt="img"></p><h2 id="分享待辦"><a href="#分享待辦" class="headerlink" title="分享待辦"></a>分享待辦</h2><h3 id="待辦詳情頁分享"><a href="#待辦詳情頁分享" class="headerlink" title="待辦詳情頁分享"></a>待辦詳情頁分享</h3><p>在待辦詳情點擊參與人後通過添加聯繫人或分享（也可以在待辦詳情頁直接分享）的方式添加參與人<br><img src="https://resources.r2wind.cn/img/20210911163419s.jpg" alt="img"></p><blockquote><p><strong>注意</strong>：<br>1、首次請先通過分享的方式添加參與人，好友接收同時會成為你的聯繫人，下次可直接通過添加聯繫人的方式添加參與人。<br>2、通過添加聯繫人方式添加好友為參與人時好友會收到公眾號發出的提醒，只有當好友點擊提醒進入小程序接收後方可算完成添加。<br><img src="https://resources.r2wind.cn/img/20210915115941.jpg" alt="img"><br><strong>成員權限說明</strong>：<br>只讀：成員僅可以查看待辦內容<br>可編輯：成員可編輯待辦內容l<br>成員權限可以在參與人頁面編輯，除此之外在參與人頁面還可以查看成員完成情況。</p></blockquote><h3 id="今天頁面分享"><a href="#今天頁面分享" class="headerlink" title="今天頁面分享"></a>今天頁面分享</h3><p>通過在今天頁麵點擊一鍵分享按鈕將一天的待辦內容分享給好友<br><img src="https://resources.r2wind.cn/img/20210911170217.jpg" alt="img"></p><h2 id="待辦分組"><a href="#待辦分組" class="headerlink" title="待辦分組"></a>待辦分組</h2><h3 id="添加或刪除分組"><a href="#添加或刪除分組" class="headerlink" title="添加或刪除分組"></a>添加或刪除分組</h3><p>點擊添加分組即可添加一個分組，按住分組向右滑動選擇編輯或刪除分組<br><img src="https://resources.r2wind.cn/img/20210911100851.jpg" alt="img"></p><h2 id="共享分組"><a href="#共享分組" class="headerlink" title="共享分組"></a>共享分組</h2><p>發起人：<br>① 創建「共享分組」和待辦清單<br>② 選擇「協同共享」將該分組分享給協作人<br><img src="https://resources.r2wind.cn/img/20211017185629.jpg" alt="img"><br>③ 收到協作人申請後，設置其分組權限並通過審核<br><img src="https://resources.r2wind.cn/img/20211017190631.jpg" alt="img"><br>參與人：<br>① 收到發起人的「共享分組」邀請併申請加入分組<br>② 審核通過後接受待辦即可共享分組清單<br><img src="https://resources.r2wind.cn/img/20211017190046.jpg" alt="img"></p><h2 id="訂閱待辦"><a href="#訂閱待辦" class="headerlink" title="訂閱待辦"></a>訂閱待辦</h2><h3 id="生成訂閱鏈接"><a href="#生成訂閱鏈接" class="headerlink" title="生成訂閱鏈接"></a>生成訂閱鏈接</h3><blockquote><p>後續所有指引均基於此操作，請勿跳過</p></blockquote><p>打開騰訊待辦小程序，在我的頁面找到在其他日曆應用中訂閱騰訊待辦，選擇對應的分組並生成鏈接複製<br><img src="https://resources.r2wind.cn/img/20210912095216.jpg" alt="img"></p><h3 id="安卓"><a href="#安卓" class="headerlink" title="安卓"></a>安卓</h3><p>這裏以小米手機為例，其他品牌可參考，部分機型系統日曆或其他第三方日曆應用可能不支持URL訂閱，請參考<a href="#%E4%B8%8D%E6%94%AF%E6%8C%81%E9%80%9A%E9%81%8EURL%E6%9B%B4%E6%96%B0%E7%9A%84%E6%A9%9F%E5%9E%8B%E6%88%96%E6%87%89%E7%94%A8">不支持通過URL更新的機型或應用</a><br><img src="https://resources.r2wind.cn/img/20210912095821s.jpg" alt="img"></p><h3 id="IOS"><a href="#IOS" class="headerlink" title="IOS"></a>IOS</h3><p><img src="https://resources.r2wind.cn/img/20210915195805s.jpg" alt="img"><br><img src="https://resources.r2wind.cn/img/20210915200756s.jpg" alt="img"></p><h3 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h3><p>1、登錄網頁版<a href="https://outlook.live.com/calendar/">Outlook日曆</a><br>2、點擊添加日曆<br><img src="https://resources.r2wind.cn/img/20210912103135.png" alt="img"><br>3、選擇從Web訂閱，黏貼在騰訊待辦中生成的訂閱鏈接並設置日曆名稱後點擊導入<br><img src="https://resources.r2wind.cn/img/20210912103543.png" alt="img"><br>3、訂閱後即可在Outlook日曆Windows日曆應用中看到待辦日程<br>Outlook日曆網頁版<br><img src="https://resources.r2wind.cn/img/20210912104750.png" alt="img"><br>日曆客戶端<br><img src="https://resources.r2wind.cn/img/20210912104117.png" alt="img"></p><h3 id="Mac"><a href="#Mac" class="headerlink" title="Mac"></a>Mac</h3><p>1、打開“日曆”應用找到左上角“文件”選擇“新增日曆應用”並且黏貼已複製的鏈接點擊“訂閱”<br><img src="https://resources.r2wind.cn/img/20210916162222.png" alt="img"><br>2、設置好名稱以及自動刷新頻率後點擊“好“<br><img src="https://resources.r2wind.cn/img/20210916162656.png" alt="img"><br>3、訂閱後即可在日曆中看見已創建的待辦<br><img src="https://resources.r2wind.cn/img/20210916163039.png" alt="img"></p><h3 id="Google日曆"><a href="#Google日曆" class="headerlink" title="Google日曆"></a>Google日曆</h3><p>在這裏暫只演示網頁版本訂閱<br>1、登錄網頁版<a href="https://calendar.google.com/">Google日曆</a><br>2、在其他日曆處點擊添加，並選擇通過網址添加<br><img src="https://resources.r2wind.cn/img/20210912110803.png" alt="img"><br>3、黏貼在騰訊待辦中生成的訂閱鏈接後點擊添加日曆<br><img src="https://resources.r2wind.cn/img/20210912110811.png" alt="img"><br>4、訂閱後即可在Google日曆中看到待辦日程</p><h3 id="不支持通過URL更新的機型或應用"><a href="#不支持通過URL更新的機型或應用" class="headerlink" title="不支持通過URL更新的機型或應用"></a>不支持通過URL更新的機型或應用</h3><p>點擊我的頁面→找到在其他日曆應用中訂閱騰訊待辦→選擇對應的分組並生成鏈接→複製鏈接到手機瀏覽器下載→下載完成後打開下載的文件即可導入系統日曆<br><img src="https://resources.r2wind.cn/img/20210911105837.jpg" alt="img"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;產品教程&quot;&gt;&lt;a href=&quot;#產品教程&quot; class=&quot;headerlink&quot; title=&quot;產品教程&quot;&gt;&lt;/a&gt;產品教程&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;大致寫一下以下幾個方面：創建待辦、分享待辦、待辦分組、共享分組、訂閱待辦&lt;/p&gt;
+&lt;/blockq</summary>
+      
+    
+    
+    
+    <category term="教程" scheme="https://yjz.hk/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="騰訊待辦" scheme="https://yjz.hk/tags/%E9%A8%B0%E8%A8%8A%E5%BE%85%E8%BE%A6/"/>
+    
+    <category term="效率工具" scheme="https://yjz.hk/tags/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>騰訊待辦-一款待辦事項和日程管理的效率工具</title>
+    <link href="https://yjz.hk/articles/20210911.html"/>
+    <id>https://yjz.hk/articles/20210911.html</id>
+    <published>2021-09-11T02:00:00.000Z</published>
+    <updated>2021-10-17T02:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>騰訊待辦是一款待辦事項和日程管理的效率工具，能夠幫助您高效完成任務和規劃時間。支持管理日程、 分類分組、智能識別時間、重複提醒、便攜共享協作等高效且實用功能。</p></blockquote><h1 id="產品功能"><a href="#產品功能" class="headerlink" title="產品功能"></a>產品功能</h1><h2 id="輕鬆添加待辦"><a href="#輕鬆添加待辦" class="headerlink" title="輕鬆添加待辦"></a>輕鬆添加待辦</h2><p>您可在騰訊待辦小程序&#x2F;公眾號&#x2F;App中方便且快速地創建待辦任務，並且快捷設置時間、提醒、待辦地點、分類分組、參與人等關鍵訊息，創建待辦任務時將智能識別您輸入的時間，並為您主動設置時間及提醒，免去冗餘的創建步驟。如：下午3點喝咖啡。將為您自動設置當天下午3點準時提醒任務。<br><img src="https://resources.r2wind.cn/img/20210911095326.jpg" alt="img"></p><h2 id="多種分享方式"><a href="#多種分享方式" class="headerlink" title="多種分享方式"></a>多種分享方式</h2><p>創建待辦任務時，您可 @ 好友與您共同協作。同時也支持好友 @ 您共同協作。創建待辦後可以輕鬆分享到微信群或聊天中，邀請他人一起參與任務事項，其他人可以選擇接受或者拒絕，接受的參與人將會自動接收提醒。同時，您也可以看到參與人的實時任務狀態（已完成或未完成）。只要他曾經接收過您的待辦，在騰訊待辦中您們將成為好友。例如，當您想請他人幫您做一件事項時，怕他人忘記，您可在騰訊待辦中創建待辦，並將待辦事項分享到微信群、朋友圈或聊天中，他人接受後便可收到提醒。此外，還支持分享“我的一天”，與他人分享您今天一天的安排。<br><img src="https://resources.r2wind.cn/img/20210911100258.jpg" alt="img"></p><h2 id="輕鬆管理查看"><a href="#輕鬆管理查看" class="headerlink" title="輕鬆管理查看"></a>輕鬆管理查看</h2><p>當您創建的事情越來越多，那麼合理的歸納就尤為重要了。騰訊待辦為您提供多個分組：@我的、今天、最近7天、週期任務、並且支持用戶自動創建多個分組，您可以隨心所欲將任務進行分類整理（添加一個分組或按住分組向右滑動選擇編輯或刪除），方便高效管理及查看待辦任務。<br><img src="https://resources.r2wind.cn/img/20210911100851.jpg" alt="img"></p><h2 id="智能搜索"><a href="#智能搜索" class="headerlink" title="智能搜索"></a>智能搜索</h2><p>您可通過任務的關鍵字、標籤、微信暱稱、時間等訊息精準查詢查看已創建任務。例如，當您搜索對應的微信暱稱，便可查看與好友的所有代辦任務；當您搜索時間，例如“下週”，便可查看所有下週的待辦任務；當您搜索關鍵字，便可查看所有包含當前關鍵字的任務。<br><img src="https://resources.r2wind.cn/img/20210911102740.jpg" alt="img"></p><h2 id="位置定位"><a href="#位置定位" class="headerlink" title="位置定位"></a>位置定位</h2><p>您可為創建的待辦任務創建位置定位訊息，聚會地點一目了然。例如，您邀請朋友週末一起去某家餐廳，創建待辦並分享給您的朋友後，您的朋友將會知曉具體聚會地點、時間、事項等。<br><img src="https://resources.r2wind.cn/img/20210911103953.jpg" alt="img"></p><h2 id="記錄保留"><a href="#記錄保留" class="headerlink" title="記錄保留"></a>記錄保留</h2><p>在騰訊待辦創建的待辦任務若您未進行刪除，無論是已完成還是待完成任務，都將存儲在您的騰訊待辦賬號下，可隨時回溯。<br><img src="https://resources.r2wind.cn/img/20210911104331.jpg" alt="img"></p><h2 id="訂閱待辦"><a href="#訂閱待辦" class="headerlink" title="訂閱待辦"></a>訂閱待辦</h2><p>您可將在待辦中創建的事項通過日程訂閱導入到系統日曆或其他第三方日曆中，以便使用日程提醒，部分機型及其他第三方日曆可實現自動更新。<br><img src="https://resources.r2wind.cn/img/20210911105837.jpg" alt="img"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;騰訊待辦是一款待辦事項和日程管理的效率工具，能夠幫助您高效完成任務和規劃時間。支持管理日程、 分類分組、智能識別時間、重複提醒、便攜共享協作等高效且實用功能。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;產品功能&quot;&gt;&lt;a href=&quot;#產品</summary>
+      
+    
+    
+    
+    <category term="教程" scheme="https://yjz.hk/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="騰訊待辦" scheme="https://yjz.hk/tags/%E9%A8%B0%E8%A8%8A%E5%BE%85%E8%BE%A6/"/>
+    
+    <category term="效率工具" scheme="https://yjz.hk/tags/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>DNS解析出現問題怎麼辦？</title>
+    <link href="https://yjz.hk/articles/20210809.html"/>
+    <id>https://yjz.hk/articles/20210809.html</id>
+    <published>2021-08-09T23:36:52.000Z</published>
+    <updated>2021-08-10T12:26:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>我們在使用DNS解析的過程中難免會遇到各種問題，在這裏以騰訊雲DNSPOD為例，寫一下在遇到解析問題時如何排查，文章較長，可點擊右下方目錄直接跳轉到你想看的地方。</p></blockquote><h1 id="確定是否為解析問題"><a href="#確定是否為解析問題" class="headerlink" title="確定是否為解析問題"></a>確定是否為解析問題</h1><blockquote><p>一些新手會認為網站不能訪問就是解析的鍋，但其實並不一定是，所以我們首先要確定一下是否為解析問題。我們可以使用nslookup或dig等工具去判斷解析是否正常，由於Windows系統基本只帶了nslookup工具，所以接下來我們以nslookup為例。<br>註：<br>1、判斷的前提條件是你已經在<a href="https://console.dnspod.cn/dns/list">解析控制台</a>添加了相應的紀錄，重要的事情說三遍：請確保您已經在控制台添加相應的紀錄！請確保您已經在控制台添加相應的紀錄！請確保您已經在控制台添加相應的紀錄！<br>2、nslookup查詢的域名可以是主域名（example.com）也可以是子域名（<a href="http://www.example.com),在查詢時請以實際設置的主機記錄為準./">www.example.com），在查詢時請以實際設置的主機記錄為準。</a></p></blockquote><h2 id="判斷A記錄、AAAA記錄、CNAME記錄是否正常"><a href="#判斷A記錄、AAAA記錄、CNAME記錄是否正常" class="headerlink" title="判斷A記錄、AAAA記錄、CNAME記錄是否正常"></a>判斷A記錄、AAAA記錄、CNAME記錄是否正常</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nslookup 域名</span><br></pre></td></tr></table></figure><p>例：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nslookup r2wind.com</span><br></pre></td></tr></table></figure><p><img src="https://resources.r2wind.cn/img/20210810082016.png" alt="img"><br>如圖所示，可以正常查詢到A記錄或AAAA記錄，解析正常，若異常，請參照<a href="#%E8%A7%A3%E6%9E%90%E5%95%8F%E9%A1%8C%E6%8E%92%E9%99%A4">解析問題排除</a>。</p><blockquote><p>若查詢CNAME記錄可以正常返回Name:或Aliases:字段，但無法正常返回ip,這種情況請諮詢CNAME提供商。</p></blockquote><h2 id="判斷MX記錄是否正常"><a href="#判斷MX記錄是否正常" class="headerlink" title="判斷MX記錄是否正常"></a>判斷MX記錄是否正常</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">nslookup</span><br><span class="line">set querytype=mx</span><br><span class="line">域名</span><br></pre></td></tr></table></figure><p>例：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">nslookup</span><br><span class="line">set querytype=mx</span><br><span class="line">r2wind.org</span><br></pre></td></tr></table></figure><p><img src="https://resources.r2wind.cn/img/20210810083033.png" alt="img"><br>如圖所示，可以正常查詢到MX記錄，解析正常，若異常，請參照<a href="#%E8%A7%A3%E6%9E%90%E5%95%8F%E9%A1%8C%E6%8E%92%E9%99%A4">解析問題排除</a>。</p><h2 id="判斷TXT記錄是否正常"><a href="#判斷TXT記錄是否正常" class="headerlink" title="判斷TXT記錄是否正常"></a>判斷TXT記錄是否正常</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">nslookup</span><br><span class="line">set querytype=txt</span><br><span class="line">域名</span><br></pre></td></tr></table></figure><p>例：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">nslookup</span><br><span class="line">set querytype=txt</span><br><span class="line">r2wind.org</span><br></pre></td></tr></table></figure><p><img src="https://resources.r2wind.cn/img/20210810090234.png" alt="img"><br>如圖所示，可以正常查詢到txt記錄，解析正常，若異常，請參照<a href="#%E8%A7%A3%E6%9E%90%E5%95%8F%E9%A1%8C%E6%8E%92%E9%99%A4">解析問題排除</a>。</p><h2 id="判斷NS記錄是否正常"><a href="#判斷NS記錄是否正常" class="headerlink" title="判斷NS記錄是否正常"></a>判斷NS記錄是否正常</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">nslookup</span><br><span class="line">set querytype=ns</span><br><span class="line">域名</span><br></pre></td></tr></table></figure><p>例：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">nslookup</span><br><span class="line">set querytype=ns</span><br><span class="line">r2wind.cn</span><br></pre></td></tr></table></figure><p><img src="https://resources.r2wind.cn/img/20210810083545.png" alt="img"><br>如圖所示，可以正常查詢到NS記錄，解析正常，若異常，請參照<a href="#%E8%A7%A3%E6%9E%90%E5%95%8F%E9%A1%8C%E6%8E%92%E9%99%A4">解析問題排除</a>。</p><blockquote><p>若您設置的NS記錄指向您自建的權威解析伺服器，請確認相關服務已經正確配置，並放開對應的端口，否則可能導致無法查詢。</p></blockquote><h2 id="判斷其他記錄是否正常"><a href="#判斷其他記錄是否正常" class="headerlink" title="判斷其他記錄是否正常"></a>判斷其他記錄是否正常</h2><p>這裏只介紹了幾種常用的紀錄判斷，其他的可以去自行搜索。</p><h2 id="判斷域名是否被劫持"><a href="#判斷域名是否被劫持" class="headerlink" title="判斷域名是否被劫持"></a>判斷域名是否被劫持</h2><p>查詢域名是否被劫持，您可以分別進行以下測試：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nslookup 域名</span><br><span class="line">nslookup 域名 119.29.29.29</span><br></pre></td></tr></table></figure><p>如果指定119.29.29.29測試解析正常，未指定119.29.29.29解析到錯誤 IP，基本可以判斷域名被劫持，您可以聯繫劫持指向的對應運營商進行處理。</p><h2 id="修改解析後新設置的紀錄未生效"><a href="#修改解析後新設置的紀錄未生效" class="headerlink" title="修改解析後新設置的紀錄未生效"></a>修改解析後新設置的紀錄未生效</h2><p>請清除本地DNS緩存後再次查詢</p><h1 id="解析問題排除"><a href="#解析問題排除" class="headerlink" title="解析問題排除"></a>解析問題排除</h1><blockquote><p>在排除解析問題之前，請您再次確認是否已經在解析控制台添加相應的紀錄！</p></blockquote><h2 id="域名狀態問題"><a href="#域名狀態問題" class="headerlink" title="域名狀態問題"></a>域名狀態問題</h2><p>請您通過whois工具查詢域名是否屬於以下幾種狀態</p><h3 id="clientHold"><a href="#clientHold" class="headerlink" title="clientHold"></a>clientHold</h3><p>註冊商設置暫停解析，聯繫註冊商解除該狀態。</p><h3 id="serverHold"><a href="#serverHold" class="headerlink" title="serverHold"></a>serverHold</h3><p>註冊局設置暫停解析（大多原因是域名未進行實名認證，該狀態在完成實名審核後自動解除該，更多原因可參考<a href="https://cloud.tencent.com/document/product/242/54080">域名註冊局設置停止解析（serverHold）狀態</a>）。</p><h3 id="pendingVerification"><a href="#pendingVerification" class="headerlink" title="pendingVerification"></a>pendingVerification</h3><p>註冊訊息確認中（域名未完成實名審核，或實名審核未通過，期間會影響解析。如域名註冊後5天內仍未完成實名，則將進入 serverHold 狀態，無法正常解析）。</p><h2 id="域名DNS服務設置問題"><a href="#域名DNS服務設置問題" class="headerlink" title="域名DNS服務設置問題"></a>域名DNS服務設置問題</h2><h3 id="DNS伺服器未正常設置"><a href="#DNS伺服器未正常設置" class="headerlink" title="DNS伺服器未正常設置"></a>DNS伺服器未正常設置</h3><p>DNS地址未修改會影響解析生效，請前往域名註冊商處修改 DNS 伺服器，如您的域名在騰訊雲註冊，可參考<a href="https://docs.dnspod.cn/dns/5f4761438ae73e11c5b019d4/">修改域名 DNS 伺服器</a>進行調整。若為其他域名註冊商請諮詢對應註冊商，通常修改後1~2小時內生效，最長不超過72小時</p><h3 id="DNS服務商為其他"><a href="#DNS服務商為其他" class="headerlink" title="DNS服務商為其他"></a>DNS服務商為其他</h3><p>比如你已經把DNS解析服務轉到阿里雲了然後你還在騰訊雲設置解析，那要是能生效就奇怪了。</p><blockquote><p>暫時想不到其他情況了，等我以後遇到再進行補充，另外如果您使用的時DNSPod的解析服務，可以進入<a href="https://cloud.tencent.com/document/product/242/57608#DNSPod">DNSPod官方用戶群</a>尋求幫助。</p></blockquote><p>封面圖片：該圖片由<a href="https://pixabay.com/zh/users/kanenori-4749850/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=6320288">Kanenori</a>在<a href="https://pixabay.com/zh/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=6320288">Pixabay</a>上發佈</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;我們在使用DNS解析的過程中難免會遇到各種問題，在這裏以騰訊雲DNSPOD為例，寫一下在遇到解析問題時如何排查，文章較長，可點擊右下方目錄直接跳轉到你想看的地方。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;確定是否為解析問題&quot;&gt;&lt;a hr</summary>
+      
+    
+    
+    
+    <category term="教程" scheme="https://yjz.hk/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="DNSPOD" scheme="https://yjz.hk/tags/DNSPOD/"/>
+    
+    <category term="騰訊雲" scheme="https://yjz.hk/tags/%E9%A8%B0%E8%A8%8A%E9%9B%B2/"/>
+    
+    <category term="域名" scheme="https://yjz.hk/tags/%E5%9F%9F%E5%90%8D/"/>
+    
+    <category term="解析" scheme="https://yjz.hk/tags/%E8%A7%A3%E6%9E%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何將在騰訊企業郵箱在線購買/贈送的域名過戶到騰訊雲並在騰訊雲進行解析？</title>
+    <link href="https://yjz.hk/articles/20210803.html"/>
+    <id>https://yjz.hk/articles/20210803.html</id>
+    <published>2021-08-03T09:52:52.000Z</published>
+    <updated>2022-02-03T11:35:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>其實企業郵箱是有給到過戶教程的，但有的用戶過戶後會遇到一些問題，所以又在原基礎上補充了一下<br>2022年1月18日：由於企業郵箱已經全面融入企業微信，操作界面發生變化，故進行部分修改。</p></blockquote><p>1、登錄企業郵管理端-協作-郵件→前往配置，點擊域名詳情<br><img src="https://resources.r2wind.cn/img/20220118154706.png" alt="域名詳情"><br>2、點擊域名詳情頁面，點擊“前往騰訊雲”，騰訊雲完成賬號實名認證後，才可進行域名過戶操作,若沒有賬號請在騰訊雲頁面點擊立即註冊</p><blockquote><p>如果您之前已經註冊騰訊雲賬戶並完成賬號實名認證可忽略這步<br><img src="https://resources.r2wind.cn/img/20220118154854.png" alt="前往騰訊雲"></p></blockquote><p>3、點擊立即過戶<br><img src="https://resources.r2wind.cn/img/20220118154854.png" alt="img"><br>4、出現騰訊雲登錄入口頁面，點擊“登錄”<br><img src="https://resources.r2wind.cn/img/20210803180958.png" alt="img"><br>5、選擇登錄後，頁面跳轉至騰訊雲登錄入口，支持微信&#x2F;企業微信掃碼、郵箱、QQ、公眾號、小程序等方式登錄<br><img src="https://resources.r2wind.cn/img/20210803181941.png" alt="img"><br>6、登錄後，系統將會自動操作，請耐心等待頁面跳轉至企業郵並提示過戶成功。<br><img src="https://resources.r2wind.cn/img/20210803182616.png" alt="img"><br>7、域名詳情過戶狀態顯示“已過戶至騰訊雲”<br><img src="https://resources.r2wind.cn/img/20220118155759.png" alt="img"></p><blockquote><p>如果過戶後發現<a href="https://console.cloud.tencent.com/cns">解析控制台</a>已經有剛剛過戶的域名，那恭喜，您沒有遇到問題。如果發現沒有剛剛過戶的域名，那請繼續往下看</p></blockquote><p>8、登錄騰訊雲控制台：<a href="https://console.cloud.tencent.com/domain">域名註冊</a>，找到剛註冊的域名並點擊管理<br><img src="https://resources.r2wind.cn/img/20210803185546.png" alt="img"><br>9、找到域名資料並進行修改，為甚麼要修改呢？因為你發現除了所有者之外其他訊息都不是你的，所以需要進行更改，否則後續步驟會報錯<br>修改域名訊息可參考：<a href="https://cloud.tencent.com/document/product/242/3648">域名訊息修改</a><br><img src="https://resources.r2wind.cn/img/20210803185849.png" alt="img"><br>10、完成修改後到騰訊雲控制台<a href="https://console.cloud.tencent.com/cns">DNSPOD解析</a>，點擊添加解析<br>這時會提示您 “域名已被其他用戶添加”，需要取回，這時可參照<a href="https://cloud.tencent.com/document/product/302/3467">添加域名時，提示 “域名已被其他用戶添加”</a>解決</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;其實企業郵箱是有給到過戶教程的，但有的用戶過戶後會遇到一些問題，所以又在原基礎上補充了一下&lt;br&gt;2022年1月18日：由於企業郵箱已經全面融入企業微信，操作界面發生變化，故進行部分修改。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;1、登錄企業郵管</summary>
+      
+    
+    
+    
+    <category term="教程" scheme="https://yjz.hk/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="DNSPOD" scheme="https://yjz.hk/tags/DNSPOD/"/>
+    
+    <category term="騰訊雲" scheme="https://yjz.hk/tags/%E9%A8%B0%E8%A8%8A%E9%9B%B2/"/>
+    
+    <category term="域名" scheme="https://yjz.hk/tags/%E5%9F%9F%E5%90%8D/"/>
+    
+    <category term="解析" scheme="https://yjz.hk/tags/%E8%A7%A3%E6%9E%90/"/>
+    
+    <category term="企業郵箱" scheme="https://yjz.hk/tags/%E4%BC%81%E6%A5%AD%E9%83%B5%E7%AE%B1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在騰訊雲（DNSPod）如何對域名進行批量操作，你知道嘛？</title>
+    <link href="https://yjz.hk/articles/20210704.html"/>
+    <id>https://yjz.hk/articles/20210704.html</id>
+    <published>2021-07-04T11:16:55.000Z</published>
+    <updated>2021-07-04T11:16:55.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>你知道在騰訊雲（DNSPod）如何批量進行域名的批量註冊、批量轉入、批量續費、批量DNS修改、批量修改域名訊息、批量開啟或關閉禁止轉移鎖、批量開啟或關閉禁止更新鎖嘛？<br>本文較長，請在右側目錄單擊內容標題直接跳轉<br>PS：如您在操作中存在任何問題可以通過<a href="https://console.cloud.tencent.com/workorder">提交工單</a>解決</p></blockquote><p>下列操作均需在騰訊雲域名註冊控制台批量操作頁面（<a href="https://console.cloud.tencent.com/domain/batch">傳送門</a>）進行操作。</p><h1 id="批量域名註冊"><a href="#批量域名註冊" class="headerlink" title="批量域名註冊"></a>批量域名註冊</h1><blockquote><p>通常來講若無必要的話不建議在此處批量註冊域名，比較騰訊雲域名註冊活動那麼多，在這裏註冊並不划算。</p></blockquote><h2 id="首先在批量操作頁麵點擊域名註冊（進入批量操作頁面一般為域名註冊界面，通常無需點擊）"><a href="#首先在批量操作頁麵點擊域名註冊（進入批量操作頁面一般為域名註冊界面，通常無需點擊）" class="headerlink" title="首先在批量操作頁麵點擊域名註冊（進入批量操作頁面一般為域名註冊界面，通常無需點擊）"></a>首先在批量操作頁麵點擊域名註冊（進入批量操作頁面一般為域名註冊界面，通常無需點擊）</h2><p><img src="https://resources.r2wind.cn/img/20210704132426.png" alt="img"></p><h2 id="輸入域名"><a href="#輸入域名" class="headerlink" title="輸入域名"></a>輸入域名</h2><p><img src="https://resources.r2wind.cn/img/20210704133344.png" alt="img"><br>騰訊雲提供兩種輸入方式：輸入域名和上傳文件<br>輸入域名：通過在文本框中手動輸入或黏貼的方式進行域名的輸入，單次操作最多輸入200個<br>上傳文件：通過上傳文件的方式進行域名的輸入，單次上傳最多支持4000個域名<br><img src="https://resources.r2wind.cn/img/20210704134341.png" alt="img"></p><blockquote><p>注意事項：<br>僅支持 <strong>txt&#x2F;xls&#x2F;xlsx</strong> 格式的文件。<br>上傳的文件大小不得超過2M，超過文件大小將無法進行上傳。<br>可以通過單擊【下載模板】，查看文件模板填寫格式。</p></blockquote><h2 id="選擇統一註冊年限"><a href="#選擇統一註冊年限" class="headerlink" title="選擇統一註冊年限"></a>選擇統一註冊年限</h2><p>騰訊雲提供1-10年的域名註冊年限，可按需選擇</p><h2 id="選擇域名訊息模版"><a href="#選擇域名訊息模版" class="headerlink" title="選擇域名訊息模版"></a>選擇域名訊息模版</h2><p>可以選擇已有的模板也可以選擇新建訊息模板</p><h2 id="選擇支付方式"><a href="#選擇支付方式" class="headerlink" title="選擇支付方式"></a>選擇支付方式</h2><p>騰訊雲提供以下三種支付方式，分別為：<br>使用賬戶餘額：提交後直接從您的賬戶餘額扣除費用，快速完成註冊，無需二次確認，不支持使用代金券<br>手動在線支付：提交後將自動創建訂單，您需要在訂單列表中逐一手動完成支付，支持使用代金券<br>域名特惠包：擇使⽤域名特惠包，僅滿⾜消耗條件的域名才可提交註冊，不⽀持使⽤代⾦券。提交後⽆需再次⽀付，將快速完成註冊（目前域名特惠包處於無貨狀態）</p><h2 id="點擊下一步確認相關訊息並完成註冊"><a href="#點擊下一步確認相關訊息並完成註冊" class="headerlink" title="點擊下一步確認相關訊息並完成註冊"></a>點擊下一步確認相關訊息並完成註冊</h2><h2 id="注意事項"><a href="#注意事項" class="headerlink" title="注意事項"></a>注意事項</h2><blockquote><p>域名為註冊型商品，域名註冊一旦提交並最終註冊成功，不支持退貨、退款，請您確認清楚後提交。<br>域名新註價格，請以<a href="https://buy.cloud.tencent.com/domain?price=1">域名價格頁</a>當前顯示價格為準，請確認價格後再進行註冊。<br>如選擇使用賬戶餘額，將在提交註冊後依次嘗試註冊，一旦註冊成功則直接扣除賬戶餘額，請確保<a href="https://console.cloud.tencent.com/expense/overview">賬戶餘額</a>充足。<br>如選擇手動在線支付，請提交後在<a href="https://console.cloud.tencent.com/expense/deal">訂單列表</a>查看並及時完成支付，最終註冊成功之前將有可能被他人搶注。<br>如提交的域名列表中，部分域名無法完成註冊，剩餘域名將繼續嘗試註冊。<br>本功能僅提供普通域名註冊，暫不支持溢價詞、保留詞等特殊域名註冊。<br>域名註冊任務提交後，騰訊雲將依次向註冊局提交註冊申請。提交成功不代表域名註冊成功，騰訊雲不承諾域名最終註冊成功，是否註冊成功請以最終註冊結果為準。</p></blockquote><h1 id="批量域名轉入"><a href="#批量域名轉入" class="headerlink" title="批量域名轉入"></a>批量域名轉入</h1><h2 id="首先在批量操作頁麵點擊域名轉入"><a href="#首先在批量操作頁麵點擊域名轉入" class="headerlink" title="首先在批量操作頁麵點擊域名轉入"></a>首先在批量操作頁麵點擊域名轉入</h2><p><img src="https://resources.r2wind.cn/img/20210704174119.png" alt="img"></p><h2 id="輸入域名-1"><a href="#輸入域名-1" class="headerlink" title="輸入域名"></a>輸入域名</h2><p><img src="https://resources.r2wind.cn/img/20210704180354.png" alt="img"><br>騰訊雲提供兩種輸入方式：輸入域名和上傳文件<br>輸入域名：通過在文本框中手動輸入或黏貼的方式進行域名和轉移密碼的輸入，單次操作最多輸入200個<br>上傳文件：通過上傳文件的方式進行域名和轉移密碼的輸入，單次上傳最多支持4000個域名<br><img src="https://resources.r2wind.cn/img/20210704180518.png" alt="img"></p><h2 id="選擇域名訊息模版-1"><a href="#選擇域名訊息模版-1" class="headerlink" title="選擇域名訊息模版"></a>選擇域名訊息模版</h2><p>可以選擇已有的模板也可以選擇新建訊息模板</p><blockquote><p>注意：<br>必須已通過實名認證的訊息模版才可使用,騰訊雲新建模板審核一般情況下需要1個工作日內完成審核，部分可能需要等待3 - 7個工作日。</p></blockquote><h2 id="狀態設置"><a href="#狀態設置" class="headerlink" title="狀態設置"></a>狀態設置</h2><p>在 “狀態設置” 欄，請根據您的實際需求勾選以下選項：<br><img src="https://resources.r2wind.cn/img/20210704180936.png" alt="img"></p><blockquote><p>注意：<br>根據國際互聯網域名與地址管理機構（ICANN）的 轉讓政策規定，修改域名訊息後60天內，禁止將域名從當前接入商轉出。<br>如您需將域名轉出騰訊雲，請您在轉入域名時，勾選【關閉 “60天內禁止轉移註冊商鎖定”】，否則轉入域名後60天內不能轉出。<br>PS:一般來講應該不會剛轉入就想轉出吧~</p></blockquote><h2 id="選擇支付方式並完成操作"><a href="#選擇支付方式並完成操作" class="headerlink" title="選擇支付方式並完成操作"></a>選擇支付方式並完成操作</h2><blockquote><p>騰訊雲提供以下兩種支付方式，分別為：<br>使用賬戶餘額：提交後直接從您的賬戶餘額扣除費用，快速完成註冊，無需二次確認，不支持使用代金券<br>手動在線支付：提交後將自動創建訂單，您需要在訂單列表中逐一手動完成支付，支持使用代金券<br>選擇支付方式並勾選 “我已閱讀並同意《騰訊雲域名註冊協議》和《騰訊雲私隱聲明》”後單擊下一步，確認相關訊息並完成操作<br><img src="https://resources.r2wind.cn/img/20210704181457.png" alt="img"></p></blockquote><h2 id="查看操作日誌"><a href="#查看操作日誌" class="headerlink" title="查看操作日誌"></a>查看操作日誌</h2><p>在【批量操作】管理頁面，選擇【操作日誌】頁簽。<br>選擇【操作任務】，並單擊【查看詳情】，即可查看您的域名轉入操作結果。 。</p><h2 id="注意事項："><a href="#注意事項：" class="headerlink" title="注意事項："></a>注意事項：</h2><blockquote><p>域名轉入時必須選擇已實名認證的域名訊息模板。<br>域名轉入一般需要 5~7 個工作日，具體取決於註冊局審核時間。請提交後耐心等待，並留意域名列表。<br>如選擇使用賬戶餘額，將在提交後依次執行域名轉入，一旦轉入成功則直接扣除賬戶餘額，請確保<a href="https://console.cloud.tencent.com/expense/overview">賬戶餘額</a>充足。<br>如選擇手動在線支付，請提交後在<a href="https://console.cloud.tencent.com/expense/deal">訂單列表</a>查看並及時完成支付，避免影響轉入。<br>如域名有效期已達 10 年（最長期限），則轉入時仍需扣除費用但不增加年限。域名續費不足 45 天時不建議轉入，否則可能導致年限減少。<br>提交成功不代表域名轉入成功，是否轉入成功請以最終執行結果為準。域名一旦轉入成功，不支持撤銷、退款。<br>當前域名轉入僅支持非溢價詞轉入，為您帶來的不便敬請諒解。</p></blockquote><h1 id="批量域名續費"><a href="#批量域名續費" class="headerlink" title="批量域名續費"></a>批量域名續費</h1><h2 id="首先在批量操作頁麵點擊域名續費"><a href="#首先在批量操作頁麵點擊域名續費" class="headerlink" title="首先在批量操作頁麵點擊域名續費"></a>首先在批量操作頁麵點擊域名續費</h2><p><img src="https://resources.r2wind.cn/img/20210704182207.png" alt="img"></p><h2 id="輸入域名-2"><a href="#輸入域名-2" class="headerlink" title="輸入域名"></a>輸入域名</h2><p><img src="https://resources.r2wind.cn/img/20210704133344.png" alt="img"><br>騰訊雲提供兩種輸入方式：輸入域名和上傳文件<br>輸入域名：通過在文本框中手動輸入或黏貼的方式進行域名的輸入，單次操作最多輸入200個<br>上傳文件：通過上傳文件的方式進行域名的輸入，單次上傳最多支持4000個域名</p><h2 id="選擇統一註冊年限-1"><a href="#選擇統一註冊年限-1" class="headerlink" title="選擇統一註冊年限"></a>選擇統一註冊年限</h2><p>騰訊雲提供1-9年的域名續費年限，可按需選擇，域名有效期最長不超過10年</p><h2 id="選擇支付方式並完成操作-1"><a href="#選擇支付方式並完成操作-1" class="headerlink" title="選擇支付方式並完成操作"></a>選擇支付方式並完成操作</h2><blockquote><p>騰訊雲提供以下兩種支付方式，分別為：<br>使用賬戶餘額：提交後直接從您的賬戶餘額扣除費用，快速完成註冊，無需二次確認，不支持使用代金券<br>手動在線支付：提交後將自動創建訂單，您需要在訂單列表中逐一手動完成支付，支持使用代金券<br><img src="https://resources.r2wind.cn/img/20210704183216.png" alt="img"></p></blockquote><h2 id="注意事項：-1"><a href="#注意事項：-1" class="headerlink" title="注意事項："></a>注意事項：</h2><blockquote><p>如選擇使用賬戶餘額，將在提交後依次執行域名續費，一旦續費成功則直接扣除賬戶餘額，請確保賬戶餘額充足。<br>如選擇手動在線支付，請提交後在訂單列表查看並及時完成支付。<br>本頁面僅根據普通域名續費價格預估，白金域名存在價格波動情況，請以最終結算價格為準，如介意請勿提交。<br>提交成功不代表域名續費成功，是否續費成功請以最終執行結果為準。域名一旦續費成功，不支持撤銷、退款。<br>域名最長有效期不可超過 10 年。<br>域名續費實際價格請以最終訂單結算價格為準。</p></blockquote><h1 id="批量DNS修改"><a href="#批量DNS修改" class="headerlink" title="批量DNS修改"></a>批量DNS修改</h1><h2 id="首先在批量操作頁麵點擊DNS修改"><a href="#首先在批量操作頁麵點擊DNS修改" class="headerlink" title="首先在批量操作頁麵點擊DNS修改"></a>首先在批量操作頁麵點擊DNS修改</h2><p><img src="https://resources.r2wind.cn/img/20210704183517.png" alt="img"></p><h2 id="輸入域名-3"><a href="#輸入域名-3" class="headerlink" title="輸入域名"></a>輸入域名</h2><p><img src="https://resources.r2wind.cn/img/20210704133344.png" alt="img"><br>騰訊雲提供兩種輸入方式：輸入域名和上傳文件<br>輸入域名：通過在文本框中手動輸入或黏貼的方式輸入需要修改DNS的域名，單次操作最多輸入200個<br>上傳文件：通過上傳文件的方式進行域名的輸入，單次上傳最多支持4000個域名</p><h2 id="選擇或輸入DNS伺服器"><a href="#選擇或輸入DNS伺服器" class="headerlink" title="選擇或輸入DNS伺服器"></a>選擇或輸入DNS伺服器</h2><p>修改 DNS 伺服器可以選擇兩種方式進行操作，分別是<strong>使用 DNSPod （推薦）</strong>和<strong>自定義 DNS</strong>：<br><strong>選擇使用 DNSPod （推薦）</strong>：自動為域名匹配當前套餐的 DNSPod 伺服器的 DNS 地址。</p><blockquote><p>選擇使用 DNSPod 會匹配當前解析所屬套餐的 DNS 地址。</p></blockquote><p><strong>選擇自定義 DNS</strong>：填寫您需要為域名設置的 DNS 伺服器地址。</p><blockquote><p>需要在騰訊雲進行解析的域名，修改 DNS 伺服器地址請參考 <a href="https://cloud.tencent.com/document/product/302/7806#.E6.AD.A5.E9.AA.A43.EF.BC.9A.E4.BF.AE.E6.94.B9-dns-.E6.9C.8D.E5.8A.A1.E5.99.A8">修改 DNS 伺服器</a>。<br>自定義的 DNS 伺服器域名不能是私建的 DNS 伺服器域名，必須是解析商的權威 DNS 伺服器域名。</p></blockquote><h2 id="查看操作日誌-1"><a href="#查看操作日誌-1" class="headerlink" title="查看操作日誌"></a>查看操作日誌</h2><p>在【批量操作】管理頁面，選擇【操作日誌】頁簽。<br>選擇【操作任務】&gt;【DNS 修改】，並單擊【查看詳情】，即可查看您的域名 DNS 修改結果。</p><h2 id="注意事項：-2"><a href="#注意事項：-2" class="headerlink" title="注意事項："></a>注意事項：</h2><blockquote><p>修改 DNS 伺服器，表示更換其他 DNS 伺服器負責當前域名的解析服務。修改錯誤可能影響當前域名正常解析，請謹慎操作。<br>如選擇使用 DNSPod 伺服器，請確保您已在 DNSPod 添加相關域名解析，否則可能導致域名無法正常解析。<br>如選擇使用 DNSPod 伺服器，系統將分別為各個域名匹配當前最佳伺服器地址，如無法識別則使用免費版。是否符合預期，請自行確認。<br>任務提交後系統將開始執行，因域名狀態各異，可能存在部分域名修改失敗。是否修改成功，請以執行結果為準。<br>DNS 伺服器地址修改成功後，因各地運營商 DNS 緩存機制不同，最長需要 72 小時的全球生效時間，請您耐心等待。</p></blockquote><h1 id="批量域名訊息修改"><a href="#批量域名訊息修改" class="headerlink" title="批量域名訊息修改"></a>批量域名訊息修改</h1><h2 id="首先在批量操作頁麵點擊域名訊息修改"><a href="#首先在批量操作頁麵點擊域名訊息修改" class="headerlink" title="首先在批量操作頁麵點擊域名訊息修改"></a>首先在批量操作頁麵點擊域名訊息修改</h2><p><img src="https://resources.r2wind.cn/img/20210704185052.png" alt="img"></p><h2 id="輸入域名-4"><a href="#輸入域名-4" class="headerlink" title="輸入域名"></a>輸入域名</h2><p><img src="https://resources.r2wind.cn/img/20210704133344.png" alt="img"><br>騰訊雲提供兩種輸入方式：輸入域名和上傳文件<br>輸入域名：通過在文本框中手動輸入或黏貼的方式進行域名的輸入，單次操作最多輸入200個<br>上傳文件：通過上傳文件的方式進行域名的輸入，單次上傳最多支持4000個域名</p><h2 id="選擇域名訊息模版-2"><a href="#選擇域名訊息模版-2" class="headerlink" title="選擇域名訊息模版"></a>選擇域名訊息模版</h2><p>可以選擇已有的模板也可以選擇新建訊息模板</p><blockquote><p>注意：<br>必須已通過實名認證的訊息模版才可使用,騰訊雲新建模板審核一般情況下需要1個工作日內完成審核，部分可能需要等待3 - 7個工作日。</p></blockquote><h2 id="勾選同意協議並完成操作"><a href="#勾選同意協議並完成操作" class="headerlink" title="勾選同意協議並完成操作"></a>勾選同意協議並完成操作</h2><p>在 “狀態設置” 欄，您可以實際情況勾選【關閉 “60天內禁止轉移註冊商鎖定”】，並勾選 “我已閱讀並同意《騰訊雲域名註冊協議》和《騰訊雲私隱聲明》”後單擊下一步,確認相關訊息並完成操作<br><img src="https://resources.r2wind.cn/img/20210704185639.png" alt="img"></p><h2 id="注意事項-1"><a href="#注意事項-1" class="headerlink" title="注意事項"></a>注意事項</h2><blockquote><p>域名訊息修改必須選擇已實名認證的域名訊息模板。<br>域名訊息修改審核時間一般需要 3~7 個工作日，具體取決於相關注冊局審核時間。請提交後耐心等待，並留意域名狀態。<br>根據 ICANN 相關政策要求，域名所有者的電子郵箱地址必須確保真實有效。請您確保所選擇的域名訊息模板資料填寫正確。<br>域名訊息修改審核期間不影響該域名的正常使用及 DNS 解析，域名訊息審核結果將通過郵件通知，請您留意。<br>任務提交成功後，系統將依次執行操作，操作完成後需要等待註冊局審核，是否修改成功請以審核結果為準。</p></blockquote><h1 id="批量設置禁止轉移鎖或禁止更新鎖-amp-賬號間轉移"><a href="#批量設置禁止轉移鎖或禁止更新鎖-amp-賬號間轉移" class="headerlink" title="批量設置禁止轉移鎖或禁止更新鎖&amp;賬號間轉移"></a>批量設置禁止轉移鎖或禁止更新鎖&amp;賬號間轉移</h1><blockquote><p>由於過程過於簡單，在這裏不再過多贅述，若有疑問請參考官方文檔<br>禁止更新鎖：<a href="https://cloud.tencent.com/document/product/242/46467">傳送門</a><br>禁止轉移鎖：<a href="https://cloud.tencent.com/document/product/242/46468">傳送門</a><br>賬號間轉移：<a href="https://cloud.tencent.com/document/product/242/46461">傳送門</a></p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;你知道在騰訊雲（DNSPod）如何批量進行域名的批量註冊、批量轉入、批量續費、批量DNS修改、批量修改域名訊息、批量開啟或關閉禁止轉移鎖、批量開啟或關閉禁止更新鎖嘛？&lt;br&gt;本文較長，請在右側目錄單擊內容標題直接跳轉&lt;br&gt;PS：如您在操作中存在任</summary>
+      
+    
+    
+    
+    <category term="教程" scheme="https://yjz.hk/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="DNSPOD" scheme="https://yjz.hk/tags/DNSPOD/"/>
+    
+    <category term="騰訊雲" scheme="https://yjz.hk/tags/%E9%A8%B0%E8%A8%8A%E9%9B%B2/"/>
+    
+    <category term="域名" scheme="https://yjz.hk/tags/%E5%9F%9F%E5%90%8D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>DNSPod出品的DoH客戶端，一鍵為電腦打開DoH服務</title>
+    <link href="https://yjz.hk/articles/20210617.html"/>
+    <id>https://yjz.hk/articles/20210617.html</id>
+    <published>2021-06-17T13:52:52.000Z</published>
+    <updated>2021-10-17T11:00:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>DoT 全稱是 DNS over TLS，它使用 TLS 協議來傳輸 DNS 協議。 TLS 協議是目前互聯網最常用的安全加密協議之一，我們訪問 HTTPS 的安全基礎就是基於 TLS 協議的。相比於之前使用無連接無加密的 UDP 模式， TLS 本身已經實現了保密性與完整性。而DoH 全稱是 DNS over HTTPS，它使用 HTTPS 來傳輸 DNS 協議。 DoH 的安全原理與 DoT 一樣，他們之間的區別只在於：DoH 有了 HTTP 格式封裝，更加通用。</p></blockquote><blockquote><p>DNSPod DoT&amp;Doh服務：<a href="https://dns.pub/">官網傳送門</a><br>DoT地址：dot.pub<br>DoH地址：<a href="https://doh.pub/dns-query">https://doh.pub/dns-query</a><br>專業版：<a href="https://console.dnspod.cn/publicdns/config/install">傳送門</a></p></blockquote><p><a href="https://docs.dnspod.cn/public-dns/5fb5db1462110a2b153a77dd/">DNSPod DoH</a>客戶端的Windows版現已在騰訊電腦管家中上架了，大家可以直接去軟件管家→“網絡”分類下，按照發佈時間排序查找，同時頁面下方提供單文件鏈接，可直接下載。後續這個工具還將持續更新，把公共DNS的最新能力展現出來，歡迎大家體驗！ （部分殺毒軟件可能會提示風險，請忽略！）<br><img src="https://resources.r2wind.cn/img/20210617222903.png" alt="img"><br><img src="https://resources.r2wind.cn/img/20210617223246.png" alt="img"><br>更新紀錄：<br>2021年09月03日<br>v1.0.11<br>更新日誌：Windows DoH客戶端，可錄入授權ID，提供系統級的DoH接入<br>下載地址：<a href="https://console.dnspod.cn/publicdns/config/install">傳送門</a><br>2021年06月17日<br>v1.0.7版本：<br>更新日誌：無<br>下載地址：<a href="https://drivers.cos.r2wind.cn/software/DNSPod_DoH_Setup_v1.0.7.exe">點擊下載DNSPod_DoH_Setup_v1.0.7.exe</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;DoT 全稱是 DNS over TLS，它使用 TLS 協議來傳輸 DNS 協議。 TLS 協議是目前互聯網最常用的安全加密協議之一，我們訪問 HTTPS 的安全基礎就是基於 TLS 協議的。相比於之前使用無連接無加密的 UDP 模式， TLS </summary>
+      
+    
+    
+    
+    <category term="教程" scheme="https://yjz.hk/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="DNSPOD" scheme="https://yjz.hk/tags/DNSPOD/"/>
+    
+    <category term="騰訊雲" scheme="https://yjz.hk/tags/%E9%A8%B0%E8%A8%8A%E9%9B%B2/"/>
+    
+    <category term="域名" scheme="https://yjz.hk/tags/%E5%9F%9F%E5%90%8D/"/>
+    
+    <category term="解析" scheme="https://yjz.hk/tags/%E8%A7%A3%E6%9E%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>電信網絡反詐宣傳</title>
+    <link href="https://yjz.hk/articles/20210428.html"/>
+    <id>https://yjz.hk/articles/20210428.html</id>
+    <published>2021-04-28T02:52:52.000Z</published>
+    <updated>2021-04-28T02:52:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="電信網絡反詐宣傳"><a href="#電信網絡反詐宣傳" class="headerlink" title="電信網絡反詐宣傳"></a>電信網絡反詐宣傳</h1><p>1、社會環境要淨化，防範詐騙靠大家<br>2、電信欠費要核實，大額匯款要當心<br>3、飛來大獎別驚喜，讓您掏錢洞無底<br>4、打擊電詐犯罪，構建平安和諧社會<br>5、遇到恐嚇要冷靜，說你違法莫慌張<br>6、事莫慌多求證，一旦涉錢需謹慎<br>7、謹防，切勿輕易轉賬<br>8、事莫慌多求證，一旦涉錢需謹慎</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;電信網絡反詐宣傳&quot;&gt;&lt;a href=&quot;#電信網絡反詐宣傳&quot; class=&quot;headerlink&quot; title=&quot;電信網絡反詐宣傳&quot;&gt;&lt;/a&gt;電信網絡反詐宣傳&lt;/h1&gt;&lt;p&gt;1、社會環境要淨化，防範詐騙靠大家&lt;br&gt;2、電信欠費要核實，大額匯款要當心&lt;br&gt;3、飛來</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>《文案創作完全手冊》第一章</title>
+    <link href="https://yjz.hk/articles/20210313.html"/>
+    <id>https://yjz.hk/articles/20210313.html</id>
+    <published>2021-03-13T12:52:52.000Z</published>
+    <updated>2020-03-13T12:52:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>一、甚麼是文案寫手？</p><p>文案寫手就是坐在鍵盤後面的銷售人員。 （一個純粹的銷售人員）</p><p>二、廣告是甚麼？</p><p>廣告的目的不是要討好別人、娛樂觀眾、贏得大獎，而是要把產品賣出去。 （最滑稽、最有趣、最特殊、或者最具有煽動性的廣告並不一定是好的廣告，廣告人不應關心大家是否喜歡他的廣告、大家認為他的廣告是否有趣，而是應該在意是否能為廣告主增加產品銷量。）</p><p>三、有藝術性的廣告一定好嘛？</p><p>辭藻優美的廣告文案不表示他就能說服較多消費者付費，低成本製作的廣告，雖然只有簡單的文字，但卻最能吸引消費者埋單。</p><p>四、創意人員和從業人員的區別？</p><p>創意人員：希望自己能寫出獨具巧思的文案，推出令人驚嘆的廣告宣傳。</p><p>從業人員：以最低的預算為客戶增加銷售。</p><p>五、甚麼是銷售？</p><p>路瑟·布魯克將銷售定義為：將100%的重心，放在如何讓讀者跟你交易上。</p><p>六、銷售和藝術表現的困難之處？</p><p>藝術表現：寫出具有美感的文字。</p><p>銷售效果：深入了解產品或服務、挖掘出顧客購買產品的理由，然後將這些概念形諸消費者願意閱讀、能夠了解二期願意予以回應的文案，這樣的文案才會有說服力，能夠讓消費者忍不住想買廣告中的商品。</p><p>七、一些廣告界的專家對廣告、文案、創意、以及銷售的想法？</p><p>1、找到產品獨特之處（賣點），然後將其以適當的方式呈現，直截了當。</p><p>2、直復營銷是唯一能客觀評量效果的廣告形式。 （直復營銷是以盈利為目標，通過個性化的溝通媒介向目標市場成員發佈發盤訊息，以尋求對方直接回應(問詢或訂購）的社會或管理過程。）</p><p>3、文案寫手的任務不是創造大眾的慾望，而是將慾望引導到你要的地方。</p><p>4、尊重消費者的判斷能力，使其打心裏相信商品的價值。</p><p>5、在賣出商品的同時，避免彰顯自我的存在。</p><p>八、文案必須做到以下三點：</p><p>1、吸引注意力</p><p>2、達到溝通效果</p><p>3、說服消費者</p><p>九、網絡的問世是否改變了文案寫作技巧？</p><p>網絡由於交流速度快、容易取得、操作簡單並且成本低廉，使市場營銷發生了較大的改變，由傳統傳單等方式轉變成包括電子郵件、短訊、朋友圈、群聊、網站和app的banner、彈窗等。</p><p>但重點是：互聯網並沒有改變人性。</p><p>十、互聯網到底改變了甚麼？</p><p>1、刪除所有的贅字</p><p>2、我們訊息氾濫，知識卻貧乏。要挖空心思讓你的文案和消費者切身相關，了解消費者關心甚麼，將他們需求、渴望、擔憂、期盼表現在廣告中。</p><p>3、經過網絡的洗禮，消費者已經變得相當老練。他們懂得閃避推銷，更能分辨浮誇的宣傳，變得越來越多疑，而且偏好具有教育價值的廣告素材，因為這種廣告尊重他們的判斷能力，不會把他們當傻瓜，同時傳遞了他們認為有助於解決問題、做出購買決定的訊息。</p><p>4、銷售對象比過去更忙碌、時間更有限，購物的便利性及速度已成為重要的賣點，其重點在於節省消費者的時間。</p><p>十一、文案的寫作技巧為甚麼有增無減？</p><p>1、消費者受教育程度更高</p><p>2、更容易抱有懷疑態度</p><p>隨記：</p><p>尼克·歐斯本在他的著作《網絡文案》中所說：“點進你最喜歡的網站，拿掉光鮮的設計與科技，最後，剩下的只有文字。這是在網絡上做出區隔的最後手段，也是最好的方式。”</p><p>總結：</p><p>1、好的文案並不一定辭藻華麗而是能夠吸引用戶，並讓用戶知道你的產品滿足他的痛點</p><p>2、不要拿用戶當傻子，真誠比任何套路都強</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;一、甚麼是文案寫手？&lt;/p&gt;
+&lt;p&gt;文案寫手就是坐在鍵盤後面的銷售人員。 （一個純粹的銷售人員）&lt;/p&gt;
+&lt;p&gt;二、廣告是甚麼？&lt;/p&gt;
+&lt;p&gt;廣告的目的不是要討好別人、娛樂觀眾、贏得大獎，而是要把產品賣出去。 （最滑稽、最有趣、最特殊、或者最具有煽動性的廣告並不一定是好的</summary>
+      
+    
+    
+    
+    <category term="學習" scheme="https://yjz.hk/categories/%E5%AD%B8%E7%BF%92/"/>
+    
+    <category term="文案" scheme="https://yjz.hk/categories/%E5%AD%B8%E7%BF%92/%E6%96%87%E6%A1%88/"/>
+    
+    
+    <category term="文案" scheme="https://yjz.hk/tags/%E6%96%87%E6%A1%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>本站已經支持IPv6+IPv4雙棧訪問</title>
+    <link href="https://yjz.hk/articles/20201201.html"/>
+    <id>https://yjz.hk/articles/20201201.html</id>
+    <published>2020-12-01T12:52:52.000Z</published>
+    <updated>2020-02-01T12:52:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>本站已經支持IPv6+IPv4雙棧訪問</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;本站已經支持IPv6+IPv4雙棧訪問&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="公告" scheme="https://yjz.hk/categories/%E5%85%AC%E5%91%8A/"/>
+    
+    
+  </entry>
+  
+</feed>
