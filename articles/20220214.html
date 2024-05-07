@@ -1,0 +1,173 @@
+<!DOCTYPE html><html lang="zh-TW" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>群晖部署SSL证书实现HTTPS安全访问 | 歸去如風</title><meta name="author" content="小澤"><meta name="copyright" content="小澤"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="若已經申請過證書，可跳過申請SSL證書部分，DSM7.0及以上版本建議使用騰訊雲API設置DDNS並自動部署SSL免費證書，具體可參考：群暉設置DDNS並實現騰訊雲免費SSL證書的自動申請與部署PS:群暉可一鍵申請Let’s的免費證書，但家寬一般默認封禁了80&#x2F;443端口，導致證書無法辦法，所以不推薦此方法。  申請SSL證書前往SSL控制台，並填寫相關訊息打開SSL控制台點擊申請免費">
+<meta property="og:type" content="article">
+<meta property="og:title" content="群晖部署SSL证书实现HTTPS安全访问">
+<meta property="og:url" content="https://yjz.hk/articles/20220214.html">
+<meta property="og:site_name" content="歸去如風">
+<meta property="og:description" content="若已經申請過證書，可跳過申請SSL證書部分，DSM7.0及以上版本建議使用騰訊雲API設置DDNS並自動部署SSL免費證書，具體可參考：群暉設置DDNS並實現騰訊雲免費SSL證書的自動申請與部署PS:群暉可一鍵申請Let’s的免費證書，但家寬一般默認封禁了80&#x2F;443端口，導致證書無法辦法，所以不推薦此方法。  申請SSL證書前往SSL控制台，並填寫相關訊息打開SSL控制台點擊申請免費">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://resources.r2wind.com/img/202202/hills-2836301_1280.jpg">
+<meta property="article:published_time" content="2022-02-14T02:00:00.000Z">
+<meta property="article:modified_time" content="2022-02-15T03:48:52.000Z">
+<meta property="article:author" content="小澤">
+<meta property="article:tag" content="DNSPOD">
+<meta property="article:tag" content="騰訊雲">
+<meta property="article:tag" content="域名">
+<meta property="article:tag" content="解析">
+<meta property="article:tag" content="SSL">
+<meta property="article:tag" content="群暉">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://resources.r2wind.com/img/202202/hills-2836301_1280.jpg"><link rel="shortcut icon" href="https://resources.r2wind.com/img/logo.ico"><link rel="canonical" href="https://yjz.hk/articles/20220214.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta/><meta/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://mirrors.r2wind.com/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://mirrors.r2wind.com/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-KTYYZFG31D"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-KTYYZFG31D');
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '複製成功',
+    error: '複製錯誤',
+    noSupport: '瀏覽器不支援'
+  },
+  relativeDate: {
+    homepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '剛剛',
+    min: '分鐘前',
+    hour: '小時前',
+    day: '天前',
+    month: '個月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '群晖部署SSL证书实现HTTPS安全访问',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-02-15 11:48:52'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="https://fonts.r2wind.com/fonts.css"><script src="https://cdn-go.cn/aegis/aegis-sdk/latest/aegis.min.js"></script><script src="https://resources.r2wind.com/js/rumhk.js"></script><meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="歸去如風" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://resources.r2wind.com/img/background.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">42</div></a><a href="/tags/"><div class="headline">標籤</div><div class="length-num">33</div></a><a href="/categories/"><div class="headline">分類</div><div class="length-num">10</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/Gallery"><i class="fa-fw fa fa-image"></i><span> 相冊</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 歸檔</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 標籤</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></div><div class="menus_item"><a class="site-page" href="/friends/"><i class="fa-fw fas fa-thumbs-up"></i><span> 友鏈</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-language"></i><span> 語言</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://r2wind.cn"><span> 简体中文</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://r2wind.com"><span> English</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="歸去如風"><span class="site-name">歸去如風</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/Gallery"><i class="fa-fw fa fa-image"></i><span> 相冊</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 歸檔</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 標籤</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></div><div class="menus_item"><a class="site-page" href="/friends/"><i class="fa-fw fas fa-thumbs-up"></i><span> 友鏈</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-language"></i><span> 語言</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://r2wind.cn"><span> 简体中文</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://r2wind.com"><span> English</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">群晖部署SSL证书实现HTTPS安全访问</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">發表於</span><time class="post-meta-date-created" datetime="2022-02-14T02:00:00.000Z" title="發表於 2022-02-14 10:00:00">2022-02-14</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新於</span><time class="post-meta-date-updated" datetime="2022-02-15T03:48:52.000Z" title="更新於 2022-02-15 11:48:52">2022-02-15</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字數總計:</span><span class="word-count">542</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">閱讀時長:</span><span>1分鐘</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="群晖部署SSL证书实现HTTPS安全访问"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">閱讀量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="post-content" id="article-container"><blockquote>
+<p>若已經申請過證書，可跳過申請SSL證書部分，DSM7.0及以上版本建議使用騰訊雲API設置DDNS並自動部署SSL免費證書，具體可參考：<a target="_blank" rel="noopener" href="https://r2wind.cn/articles/20220215.html">群暉設置DDNS並實現騰訊雲免費SSL證書的自動申請與部署</a><br>PS:群暉可一鍵申請Let’s的免費證書，但家寬一般默認封禁了80&#x2F;443端口，導致證書無法辦法，所以不推薦此方法。</p>
+</blockquote>
+<h2 id="申請SSL證書"><a href="#申請SSL證書" class="headerlink" title="申請SSL證書"></a>申請SSL證書</h2><h3 id="前往SSL控制台，並填寫相關訊息"><a href="#前往SSL控制台，並填寫相關訊息" class="headerlink" title="前往SSL控制台，並填寫相關訊息"></a>前往<a target="_blank" rel="noopener" href="https://console.cloud.tencent.com/ssl">SSL控制台</a>，並填寫相關訊息</h3><p>打開<a target="_blank" rel="noopener" href="https://console.cloud.tencent.com/ssl">SSL控制台</a>點擊申請免費證書，並填寫域名和郵箱<br><img src="https://resources.r2wind.com/img/20211204185352.png" alt="填寫域名郵箱"><br>PS：這裏建議大家選擇RSA算法</p>
+<h3 id="選擇驗證方式"><a href="#選擇驗證方式" class="headerlink" title="選擇驗證方式"></a>選擇驗證方式</h3><p>選擇驗證方式，建議選擇自動添加DNS（若解析在其他服務商請選擇DNS驗證並自行前往解析服務商添加驗證記錄）<br><img src="https://resources.r2wind.com/img/20211204185621.png" alt="自動添加DNS"></p>
+<h3 id="等待簽發"><a href="#等待簽發" class="headerlink" title="等待簽發"></a>等待簽發</h3><p>點擊查看域名驗證等待簽發即可<br><img src="https://resources.r2wind.com/img/20211204185845.png" alt="查看域名驗證"><br>PS：域名在其他服務商請在添加完驗證記錄後再執行此步驟</p>
+<h3 id="下載證書"><a href="#下載證書" class="headerlink" title="下載證書"></a>下載證書</h3><p>簽發後點擊證書詳情進行下載<br>注意：選擇Nginx下載<br><img src="https://resources.r2wind.com/img/20211204190405.png" alt="下載證書"><br>PS：下載後請將壓縮包解壓</p>
+<h2 id="上傳證書並部署"><a href="#上傳證書並部署" class="headerlink" title="上傳證書並部署"></a>上傳證書並部署</h2><h3 id="打開控制面板"><a href="#打開控制面板" class="headerlink" title="打開控制面板"></a>打開控制面板</h3><p>打開控制面板，找到安全性→證書<br><img src="https://resources.r2wind.com/img/202202/20220215112517.png" alt="證書"></p>
+<h3 id="上傳證書"><a href="#上傳證書" class="headerlink" title="上傳證書"></a>上傳證書</h3><p>1、點擊新增，選擇添加新證書<br><img src="https://resources.r2wind.com/img/202202/20220215114245.png" alt="新增證書"><br>2、導入證書<br>選擇導入證書並勾選設為默認證書<br><img src="https://resources.r2wind.com/img/202202/20220215120031.png" alt="導入證書"><br>3、導入證書文件<br><img src="https://resources.r2wind.com/img/202202/20220215120757.png" alt="導入證書文件"><br>私鑰為證書文件夾中.key結尾的文件，證書為證書文件夾中.pem結尾的文件，上傳完成後點擊確定保存<br>5、點擊配置，將所有證書都選擇成我們上傳的SSL證書<br><img src="https://resources.r2wind.com/img/202202/20220215121424.png" alt="配置證書"></p>
+<blockquote>
+<p>到此就基本已經結束了，訪問域名即可看到安全小鎖啦</p>
+</blockquote>
+<h2 id="設置HTTP重定向HTTPS"><a href="#設置HTTP重定向HTTPS" class="headerlink" title="設置HTTP重定向HTTPS"></a>設置HTTP重定向HTTPS</h2><h3 id="DSM7-0"><a href="#DSM7-0" class="headerlink" title="DSM7.0"></a>DSM7.0</h3><p>打開控制面板找到登錄門戶，在網頁服務處勾選自動將DSM桌面的HTTP連接重定向到HTTPS後點擊保存。<br><img src="https://resources.r2wind.com/img/202202/20220215124700.png" alt="重定向"></p>
+<h3 id="DSM6-x"><a href="#DSM6-x" class="headerlink" title="DSM6.x"></a>DSM6.x</h3><p>打開控制面板找到網絡並點擊DSM設置，在DSM端口處勾選自動將DSM桌面的HTTP連接重定向到HTTPS和啟用HTTP&#x2F;2後點擊應用。<br><img src="https://resources.r2wind.com/img/202202/20220215125219.png" alt="重定向"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://yjz.hk">小澤</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章連結: </span><span class="post-copyright-info"><a href="https://yjz.hk/articles/20220214.html">https://yjz.hk/articles/20220214.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版權聲明: </span><span class="post-copyright-info">本部落格所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 許可協議。轉載請註明來自 <a href="https://yjz.hk" target="_blank">歸去如風</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/DNSPOD/">DNSPOD</a><a class="post-meta__tags" href="/tags/%E9%A8%B0%E8%A8%8A%E9%9B%B2/">騰訊雲</a><a class="post-meta__tags" href="/tags/%E5%9F%9F%E5%90%8D/">域名</a><a class="post-meta__tags" href="/tags/%E8%A7%A3%E6%9E%90/">解析</a><a class="post-meta__tags" href="/tags/SSL/">SSL</a><a class="post-meta__tags" href="/tags/%E7%BE%A4%E6%9A%89/">群暉</a></div><div class="post_share"><div class="social-share" data-image="https://resources.r2wind.com/img/202202/hills-2836301_1280.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://mirrors.r2wind.com/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://mirrors.r2wind.com/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/articles/20220215.html" title="群暉設置DDNS並實現騰訊雲免費SSL證書的自動申請與部署"><img class="cover" src="https://resources.r2wind.com/img/202202/tree-6792528_1280.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">群暉設置DDNS並實現騰訊雲免費SSL證書的自動申請與部署</div></div></a></div><div class="next-post pull-right"><a href="/articles/20211214.html" title="如何使用騰訊雲COS+CDN搭建一個屬於自己的圖床"><img class="cover" src="https://resources.r2wind.com/img/sky-6852497_1920.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">如何使用騰訊雲COS+CDN搭建一個屬於自己的圖床</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相關推薦</span></div><div class="relatedPosts-list"><div><a href="/articles/20220215.html" title="群暉設置DDNS並實現騰訊雲免費SSL證書的自動申請與部署"><img class="cover" src="https://resources.r2wind.com/img/202202/tree-6792528_1280.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-02-15</div><div class="title">群暉設置DDNS並實現騰訊雲免費SSL證書的自動申請與部署</div></div></a></div><div><a href="/articles/20211030.html" title="在DNSPod解析的域名如何設置DDNS(動態域名解析)"><img class="cover" src="https://resources.r2wind.com/img/sea-164989_1280.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-10-30</div><div class="title">在DNSPod解析的域名如何設置DDNS(動態域名解析)</div></div></a></div><div><a href="/articles/20210809.html" title="DNS解析出現問題怎麼辦？"><img class="cover" src="https://resources.r2wind.com/img/mountain-6320288_1280.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-08-10</div><div class="title">DNS解析出現問題怎麼辦？</div></div></a></div><div><a href="/articles/20220522.html" title="DNS+IGTM實現訪問流量智能調度"><img class="cover" src="https://resources.r2wind.com/img/202205/seascape-4636549_1920.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-05-22</div><div class="title">DNS+IGTM實現訪問流量智能調度</div></div></a></div><div><a href="/articles/20221020.html" title="如何正確變更 DNSPod 解析套餐（降級場景）"><img class="cover" src="https://resources.r2wind.com/img/202210/bridge-7504605_1920.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-10-20</div><div class="title">如何正確變更 DNSPod 解析套餐（降級場景）</div></div></a></div><div><a href="/articles/20220624.html" title="愛名網(22.cn)、HKDNR、GoogleDomains、AWSRoute53註冊域名開啟DNSSEC（解析託管在DNSPod）"><img class="cover" src="https://resources.r2wind.com/img/202206/hd-wallpaper-3625405_1920.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-06-24</div><div class="title">愛名網(22.cn)、HKDNR、GoogleDomains、AWSRoute53註冊域名開啟DNSSEC（解析託管在DNSPod）</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://resources.r2wind.com/img/background.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">小澤</div><div class="author-info__description">一個自由自在的互聯網民工</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">42</div></a><a href="/tags/"><div class="headline">標籤</div><div class="length-num">33</div></a><a href="/categories/"><div class="headline">分類</div><div class="length-num">10</div></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/KincaidYang" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:yjz@r2wind.org" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">Welcome</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目錄</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%B3%E8%AB%8BSSL%E8%AD%89%E6%9B%B8"><span class="toc-number">1.</span> <span class="toc-text">申請SSL證書</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E5%BE%80SSL%E6%8E%A7%E5%88%B6%E5%8F%B0%EF%BC%8C%E4%B8%A6%E5%A1%AB%E5%AF%AB%E7%9B%B8%E9%97%9C%E8%A8%8A%E6%81%AF"><span class="toc-number">1.1.</span> <span class="toc-text">前往SSL控制台，並填寫相關訊息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%81%B8%E6%93%87%E9%A9%97%E8%AD%89%E6%96%B9%E5%BC%8F"><span class="toc-number">1.2.</span> <span class="toc-text">選擇驗證方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AD%89%E5%BE%85%E7%B0%BD%E7%99%BC"><span class="toc-number">1.3.</span> <span class="toc-text">等待簽發</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BC%89%E8%AD%89%E6%9B%B8"><span class="toc-number">1.4.</span> <span class="toc-text">下載證書</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E5%82%B3%E8%AD%89%E6%9B%B8%E4%B8%A6%E9%83%A8%E7%BD%B2"><span class="toc-number">2.</span> <span class="toc-text">上傳證書並部署</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%93%E9%96%8B%E6%8E%A7%E5%88%B6%E9%9D%A2%E6%9D%BF"><span class="toc-number">2.1.</span> <span class="toc-text">打開控制面板</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E5%82%B3%E8%AD%89%E6%9B%B8"><span class="toc-number">2.2.</span> <span class="toc-text">上傳證書</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A8%AD%E7%BD%AEHTTP%E9%87%8D%E5%AE%9A%E5%90%91HTTPS"><span class="toc-number">3.</span> <span class="toc-text">設置HTTP重定向HTTPS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#DSM7-0"><span class="toc-number">3.1.</span> <span class="toc-text">DSM7.0</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DSM6-x"><span class="toc-number">3.2.</span> <span class="toc-text">DSM6.x</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/articles/20230526.html" title="Nginx 編譯開啟 Quic 或 HTTP/3"><img src="https://resources.r2wind.com/img/202305/dandelion-445228_1920.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nginx 編譯開啟 Quic 或 HTTP/3"/></a><div class="content"><a class="title" href="/articles/20230526.html" title="Nginx 編譯開啟 Quic 或 HTTP/3">Nginx 編譯開啟 Quic 或 HTTP/3</a><time datetime="2023-05-26T14:30:30.000Z" title="發表於 2023-05-26 22:30:30">2023-05-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/20230508.html" title="利用 Nginx 搭建 IP 查詢接口"><img src="https://resources.r2wind.com/img/202305/nature-7602212_1920.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="利用 Nginx 搭建 IP 查詢接口"/></a><div class="content"><a class="title" href="/articles/20230508.html" title="利用 Nginx 搭建 IP 查詢接口">利用 Nginx 搭建 IP 查詢接口</a><time datetime="2023-05-08T13:27:04.000Z" title="發表於 2023-05-08 21:27:04">2023-05-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/20230227.html" title="騰訊雲建站 CloudPages 記錄（編輯網站）"><img src="https://resources.r2wind.com/img/202302/aurora-1197753_1920.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="騰訊雲建站 CloudPages 記錄（編輯網站）"/></a><div class="content"><a class="title" href="/articles/20230227.html" title="騰訊雲建站 CloudPages 記錄（編輯網站）">騰訊雲建站 CloudPages 記錄（編輯網站）</a><time datetime="2023-02-27T02:35:33.000Z" title="發表於 2023-02-27 10:35:33">2023-02-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/20230208.html" title="點樣創建個性化嘅DNS服務器地址（用自己嘅域名做DNS服務器地址）"><img src="https://resources.r2wind.com/img/202302/landscape-7744216_1920.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="點樣創建個性化嘅DNS服務器地址（用自己嘅域名做DNS服務器地址）"/></a><div class="content"><a class="title" href="/articles/20230208.html" title="點樣創建個性化嘅DNS服務器地址（用自己嘅域名做DNS服務器地址）">點樣創建個性化嘅DNS服務器地址（用自己嘅域名做DNS服務器地址）</a><time datetime="2023-02-08T12:45:00.000Z" title="發表於 2023-02-08 20:45:00">2023-02-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/20230109.html" title="使用华為雲DNS拉平CNAME記錄（CDN場景）"><img src="https://resources.r2wind.com/img/202301/ship-7679100_1920.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="使用华為雲DNS拉平CNAME記錄（CDN場景）"/></a><div class="content"><a class="title" href="/articles/20230109.html" title="使用华為雲DNS拉平CNAME記錄（CDN場景）">使用华為雲DNS拉平CNAME記錄（CDN場景）</a><time datetime="2023-01-09T04:29:50.000Z" title="發表於 2023-01-09 12:29:50">2023-01-09</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://resources.r2wind.com/img/background.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2017 - 2024 By 小澤</div><div class="framework-info"><span>Power By </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme By </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a><span class="footer-separator">|</span><span>CoverImage By </span><a target="_blank" rel="noopener" href="https://pixabay.com/">Pixabay</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="閱讀模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="淺色和深色模式轉換"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="單欄和雙欄切換"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="設定"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目錄"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到頂部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://mirrors.r2wind.com/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://mirrors.r2wind.com/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

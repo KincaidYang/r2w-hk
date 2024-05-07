@@ -1,0 +1,179 @@
+<!DOCTYPE html><html lang="zh-TW" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>使用Caddy搭建輕量的Web伺服器 | 歸去如風</title><meta name="author" content="小澤"><meta name="copyright" content="小澤"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="本來很早就想寫這篇文章了，但一直沒有機會，藉着今次Lighthouse徵文的機會順便寫一下，怎麼購買Lighthouse服務在這裏就不再多說了，去騰訊雲官網秒殺頁面購買即可，這裏不再過多介紹了,本文系統鏡像為Debian11.1,其他系統環境請勿參考本教程（PS：尤其是新手~）  關於Caddy一個簡單，輕量，且對新手友好的web伺服器，甚至可以自動幫你部署SSL證書，對於新手來說相對友好。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用Caddy搭建輕量的Web伺服器">
+<meta property="og:url" content="https://yjz.hk/articles/20220412.html">
+<meta property="og:site_name" content="歸去如風">
+<meta property="og:description" content="本來很早就想寫這篇文章了，但一直沒有機會，藉着今次Lighthouse徵文的機會順便寫一下，怎麼購買Lighthouse服務在這裏就不再多說了，去騰訊雲官網秒殺頁面購買即可，這裏不再過多介紹了,本文系統鏡像為Debian11.1,其他系統環境請勿參考本教程（PS：尤其是新手~）  關於Caddy一個簡單，輕量，且對新手友好的web伺服器，甚至可以自動幫你部署SSL證書，對於新手來說相對友好。">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://resources.r2wind.com/img/202204/grass-5212125_1920.jpg">
+<meta property="article:published_time" content="2022-04-12T04:41:53.000Z">
+<meta property="article:modified_time" content="2024-05-07T14:00:43.570Z">
+<meta property="article:author" content="小澤">
+<meta property="article:tag" content="Caddy">
+<meta property="article:tag" content="Web伺服器">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://resources.r2wind.com/img/202204/grass-5212125_1920.jpg"><link rel="shortcut icon" href="https://resources.r2wind.com/img/logo.ico"><link rel="canonical" href="https://yjz.hk/articles/20220412.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta/><meta/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://mirrors.r2wind.com/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://mirrors.r2wind.com/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-KTYYZFG31D"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-KTYYZFG31D');
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '複製成功',
+    error: '複製錯誤',
+    noSupport: '瀏覽器不支援'
+  },
+  relativeDate: {
+    homepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '剛剛',
+    min: '分鐘前',
+    hour: '小時前',
+    day: '天前',
+    month: '個月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '使用Caddy搭建輕量的Web伺服器',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-05-07 22:00:43'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="https://fonts.r2wind.com/fonts.css"><script src="https://cdn-go.cn/aegis/aegis-sdk/latest/aegis.min.js"></script><script src="https://resources.r2wind.com/js/rumhk.js"></script><meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="歸去如風" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://resources.r2wind.com/img/background.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">42</div></a><a href="/tags/"><div class="headline">標籤</div><div class="length-num">33</div></a><a href="/categories/"><div class="headline">分類</div><div class="length-num">10</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/Gallery"><i class="fa-fw fa fa-image"></i><span> 相冊</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 歸檔</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 標籤</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></div><div class="menus_item"><a class="site-page" href="/friends/"><i class="fa-fw fas fa-thumbs-up"></i><span> 友鏈</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-language"></i><span> 語言</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://r2wind.cn"><span> 简体中文</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://r2wind.com"><span> English</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="歸去如風"><span class="site-name">歸去如風</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/Gallery"><i class="fa-fw fa fa-image"></i><span> 相冊</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 歸檔</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 標籤</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></div><div class="menus_item"><a class="site-page" href="/friends/"><i class="fa-fw fas fa-thumbs-up"></i><span> 友鏈</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-language"></i><span> 語言</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://r2wind.cn"><span> 简体中文</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://r2wind.com"><span> English</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">使用Caddy搭建輕量的Web伺服器</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">發表於</span><time class="post-meta-date-created" datetime="2022-04-12T04:41:53.000Z" title="發表於 2022-04-12 12:41:53">2022-04-12</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新於</span><time class="post-meta-date-updated" datetime="2024-05-07T14:00:43.570Z" title="更新於 2024-05-07 22:00:43">2024-05-07</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字數總計:</span><span class="word-count">1.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">閱讀時長:</span><span>5分鐘</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="使用Caddy搭建輕量的Web伺服器"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">閱讀量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="post-content" id="article-container"><blockquote>
+<p>本來很早就想寫這篇文章了，但一直沒有機會，藉着今次Lighthouse徵文的機會順便寫一下，怎麼購買Lighthouse服務在這裏就不再多說了，去騰訊雲官網秒殺頁面購買即可，這裏不再過多介紹了,本文系統鏡像為Debian11.1,其他系統環境請勿參考本教程（PS：尤其是新手~）</p>
+</blockquote>
+<h2 id="關於Caddy"><a href="#關於Caddy" class="headerlink" title="關於Caddy"></a>關於Caddy</h2><p>一個簡單，輕量，且對新手友好的web伺服器，甚至可以自動幫你部署SSL證書，對於新手來說相對友好。</p>
+<blockquote>
+<p>PS:不過我現在並不用它了，Caddy當前版本對HTTP&#x2F;3支持存在一定的問題，所以我現在使用Nginx-quic了，哪天有機會再另寫教程~</p>
+</blockquote>
+<h2 id="安裝Caddy"><a href="#安裝Caddy" class="headerlink" title="安裝Caddy"></a>安裝Caddy</h2><h3 id="配置軟件源"><a href="#配置軟件源" class="headerlink" title="配置軟件源"></a>配置軟件源</h3><p>安裝必要依賴：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install -y debian-keyring debian-archive-keyring apt-transport-https</span><br></pre></td></tr></table></figure>
+<p>安裝密鑰及鏡像源：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -1sLf &#x27;https://dl.cloudsmith.io/public/caddy/stable/gpg.key&#x27; | sudo tee /etc/apt/trusted.gpg.d/caddy-stable.asc</span><br><span class="line">curl -1sLf &#x27;https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt&#x27; | sudo tee /etc/apt/sources.list.d/caddy-stable.list</span><br></pre></td></tr></table></figure>
+<p>最後更新軟件源並安裝Caddy即可：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt update</span><br><span class="line">apt install caddy</span><br></pre></td></tr></table></figure>
+<p>看到如下提示就完成啦：<br><img src="https://resources.r2wind.com/img/202204/20220412140018.png" alt="安裝完成"></p>
+<h2 id="配置Caddy"><a href="#配置Caddy" class="headerlink" title="配置Caddy"></a>配置Caddy</h2><h3 id="創建網站及證書目錄"><a href="#創建網站及證書目錄" class="headerlink" title="創建網站及證書目錄"></a>創建網站及證書目錄</h3><h4 id="創建證書目錄"><a href="#創建證書目錄" class="headerlink" title="創建證書目錄"></a>創建證書目錄</h4><p>其實Caddy可以自動申請證書的，不過如果你要用自己的證書就需要創建一個文件夾來證書啦~</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/ssl</span><br><span class="line">mkdir caddy</span><br></pre></td></tr></table></figure>
+<h4 id="創建網站目錄"><a href="#創建網站目錄" class="headerlink" title="創建網站目錄"></a>創建網站目錄</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd /</span><br><span class="line">mkdir www</span><br><span class="line">cd www</span><br><span class="line">mkdir wwwroot</span><br><span class="line">mkdir log</span><br></pre></td></tr></table></figure>
+<p>其中wwwroot用了放置網站根目錄，log用來存儲網站日誌。</p>
+<h4 id="賦予權限"><a href="#賦予權限" class="headerlink" title="賦予權限"></a>賦予權限</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R www-data:root /www</span><br><span class="line">sudo chmod 0777 /www/log</span><br></pre></td></tr></table></figure>
+<h3 id="編輯Caddy配置文件"><a href="#編輯Caddy配置文件" class="headerlink" title="編輯Caddy配置文件"></a>編輯Caddy配置文件</h3><p>Caddy的配置文件Caddyfile在&#x2F;etc&#x2F;caddy中，可以下載後編輯完再上傳或直接用vim來進行編輯，看個人喜好，Mobaxterm軟件左側其實是個文件瀏覽器，可以在此處進行文件的瀏覽和上傳下載，下面是一份示例文件，更多使用方法請參考<a target="_blank" rel="noopener" href="https://caddyserver.com/docs/getting-started">官方文檔</a>:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br></pre></td><td class="code"><pre><span class="line">// 此處的配置是用來支持HTTP3的,若不需要刪除即可</span><br><span class="line">&#123;</span><br><span class="line">	servers &#123;</span><br><span class="line">		protocol &#123;</span><br><span class="line">			experimental_http3</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">// 一個普通的網站示例，r2wind.com替換成你喜歡的域名</span><br><span class="line">r2wind.com &#123;</span><br><span class="line">  // 此處配置網站根目錄，請將頁面文件上傳至網站根目錄</span><br><span class="line">	root * /www/wwwroot/r2wind.com/public</span><br><span class="line">  // 配置SSL證書路徑，若不配置，Caddy會幫你自動申請並配上</span><br><span class="line">	tls /etc/ssl/caddy/r2wind.cn.crt /etc/ssl/caddy/r2wind.cn.key</span><br><span class="line">  // 自定義錯誤頁文件，若不需要刪除即可</span><br><span class="line">	handle_errors &#123;</span><br><span class="line">		rewrite * /&#123;http.error.status_code&#125;.html</span><br><span class="line">		file_server</span><br><span class="line">	&#125;</span><br><span class="line">  // 日誌保存路徑，如不需要保存訪問日誌可刪除</span><br><span class="line">	log &#123;</span><br><span class="line">		output file /www/log/r2wind_com.log</span><br><span class="line">	&#125;</span><br><span class="line">  // 開啟Gzip壓縮，若不需要可刪除</span><br><span class="line">	encode gzip</span><br><span class="line">	file_server</span><br><span class="line">  // 用來添加響應頭</span><br><span class="line">	header &#123;</span><br><span class="line">    // 禁用了客戶端的 MIME 類型嗅探行為，若不需要請刪除</span><br><span class="line">		X-content-type-tptions nosniff</span><br><span class="line">    // 拒絕嵌入其他網站，若不需要請刪除</span><br><span class="line">		X-frame-options DENY</span><br><span class="line">    // HSTS響應頭，若不需要請刪除</span><br><span class="line">		Strict-Transport-Security max-age=63072000;includeSubDomains;preload</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">// 一個反向代理示意配置</span><br><span class="line">yjz.hk &#123;</span><br><span class="line">  // 指定代理網頁訪問地址https://xx.r2w.dev</span><br><span class="line">	reverse_proxy https://xx.r2w.dev &#123;</span><br><span class="line">    // 指定請求域名hk.r2w.dev</span><br><span class="line">		header_up Host &#123;hk.r2w.dev&#125;</span><br><span class="line">	&#125;</span><br><span class="line">  // 下面的配置在上面已經介紹過了，這裏不再過多贅述</span><br><span class="line">	tls /etc/ssl/caddy/r2wind.cn.crt /etc/ssl/caddy/r2wind.cn.key</span><br><span class="line">	handle_errors &#123;</span><br><span class="line">		rewrite * /&#123;http.error.status_code&#125;.html</span><br><span class="line">		file_server</span><br><span class="line">	&#125;</span><br><span class="line">	log &#123;</span><br><span class="line">		output file /www/log/yjz_hk.log</span><br><span class="line">	&#125;</span><br><span class="line">	encode gzip</span><br><span class="line">	file_server</span><br><span class="line">	header &#123;</span><br><span class="line">		X-content-type-tptions nosniff</span><br><span class="line">		x-xss-protection: 1; mode=block</span><br><span class="line">		Strict-Transport-Security max-age=63072000;includeSubDomains;preload</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">// 一個重定向示例配置</span><br><span class="line">www.yjz.hk &#123;</span><br><span class="line">  // 指定重定向後的網站地址並攜帶相關參數</span><br><span class="line">	redir https://yjz.hk&#123;uri&#125;</span><br><span class="line">&#125;</span><br><span class="line">// 一個多域名重定向示例配置，多個域名記得用&quot;,&quot;隔開，逗號後記得先打空格再輸入域名</span><br><span class="line">dnstest.cc, www.dnstest.cc, r2wind.net, www.r2wind.net &#123;</span><br><span class="line">	redir https://r2wind.cn</span><br><span class="line">&#125;</span><br><span class="line">// 一個多域名網站示例配置，和普通網站配置一樣，只不過多了幾個域名</span><br><span class="line">r2wind.com，r2wind.net, r2wind.cn &#123;</span><br><span class="line">  // 此處配置網站根目錄，請將頁面文件上傳至網站根目錄</span><br><span class="line">	root * /www/wwwroot/r2wind.com/public</span><br><span class="line">  // 配置SSL證書路徑，若不配置，Caddy會幫你自動申請並配上,注意：此處最好不要指定SSL證書，除非你的證書是多域名的</span><br><span class="line">	tls /etc/ssl/caddy/r2wind.cn.crt /etc/ssl/caddy/r2wind.cn.key</span><br><span class="line">  // 自定義錯誤頁文件，若不需要刪除即可</span><br><span class="line">	handle_errors &#123;</span><br><span class="line">		rewrite * /&#123;http.error.status_code&#125;.html</span><br><span class="line">		file_server</span><br><span class="line">	&#125;</span><br><span class="line">  // 日誌保存路徑，如不需要保存訪問日誌可刪除</span><br><span class="line">	log &#123;</span><br><span class="line">		output file /www/log/r2wind_com.log</span><br><span class="line">	&#125;</span><br><span class="line">  // 開啟Gzip壓縮，若不需要可刪除</span><br><span class="line">	encode gzip</span><br><span class="line">	file_server</span><br><span class="line">  // 用來添加響應頭</span><br><span class="line">	header &#123;</span><br><span class="line">    // 禁用了客戶端的 MIME 類型嗅探行為，若不需要請刪除</span><br><span class="line">		X-content-type-tptions nosniff</span><br><span class="line">    // 拒絕嵌入其他網站，若不需要請刪除</span><br><span class="line">		X-frame-options DENY</span><br><span class="line">    // HSTS響應頭，若不需要請刪除</span><br><span class="line">		Strict-Transport-Security max-age=63072000;includeSubDomains;preload</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="重新加載配置文件"><a href="#重新加載配置文件" class="headerlink" title="重新加載配置文件"></a>重新加載配置文件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl reload caddy</span><br></pre></td></tr></table></figure>
+<p>若配置沒錯則回車後不會出現任何提示</p>
+<h3 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h3><p>這裏就不展示了哈哈哈，將網站文件上傳至網站根目錄修改一下配置的文件重加載Caddy就好啦，然後配置域名解析後訪問對應的域名即可。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://yjz.hk">小澤</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章連結: </span><span class="post-copyright-info"><a href="https://yjz.hk/articles/20220412.html">https://yjz.hk/articles/20220412.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版權聲明: </span><span class="post-copyright-info">本部落格所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 許可協議。轉載請註明來自 <a href="https://yjz.hk" target="_blank">歸去如風</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Caddy/">Caddy</a><a class="post-meta__tags" href="/tags/Web%E4%BC%BA%E6%9C%8D%E5%99%A8/">Web伺服器</a></div><div class="post_share"><div class="social-share" data-image="https://resources.r2wind.com/img/202204/grass-5212125_1920.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://mirrors.r2wind.com/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://mirrors.r2wind.com/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/articles/20220416.html" title="AS205794"><img class="cover" src="https://resources.r2wind.com/img/202204/flowers-7050948_1920.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">AS205794</div></div></a></div><div class="next-post pull-right"><a href="/articles/20220328.html" title="關於騰訊雲免費SSL證書在IIS部署中提示&quot;證書鏈中的一個或多個中間證書丟失&quot;的解決辦法"><img class="cover" src="https://resources.r2wind.com/img/202203/ocean-6530523_1280.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">關於騰訊雲免費SSL證書在IIS部署中提示&quot;證書鏈中的一個或多個中間證書丟失&quot;的解決辦法</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://resources.r2wind.com/img/background.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">小澤</div><div class="author-info__description">一個自由自在的互聯網民工</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">42</div></a><a href="/tags/"><div class="headline">標籤</div><div class="length-num">33</div></a><a href="/categories/"><div class="headline">分類</div><div class="length-num">10</div></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/KincaidYang" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:yjz@r2wind.org" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">Welcome</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目錄</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%9C%E6%96%BCCaddy"><span class="toc-number">1.</span> <span class="toc-text">關於Caddy</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%9DCaddy"><span class="toc-number">2.</span> <span class="toc-text">安裝Caddy</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E8%BB%9F%E4%BB%B6%E6%BA%90"><span class="toc-number">2.1.</span> <span class="toc-text">配置軟件源</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AECaddy"><span class="toc-number">3.</span> <span class="toc-text">配置Caddy</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%B5%E5%BB%BA%E7%B6%B2%E7%AB%99%E5%8F%8A%E8%AD%89%E6%9B%B8%E7%9B%AE%E9%8C%84"><span class="toc-number">3.1.</span> <span class="toc-text">創建網站及證書目錄</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%89%B5%E5%BB%BA%E8%AD%89%E6%9B%B8%E7%9B%AE%E9%8C%84"><span class="toc-number">3.1.1.</span> <span class="toc-text">創建證書目錄</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%89%B5%E5%BB%BA%E7%B6%B2%E7%AB%99%E7%9B%AE%E9%8C%84"><span class="toc-number">3.1.2.</span> <span class="toc-text">創建網站目錄</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B3%A6%E4%BA%88%E6%AC%8A%E9%99%90"><span class="toc-number">3.1.3.</span> <span class="toc-text">賦予權限</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B7%A8%E8%BC%AFCaddy%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">3.2.</span> <span class="toc-text">編輯Caddy配置文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E6%96%B0%E5%8A%A0%E8%BC%89%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">3.3.</span> <span class="toc-text">重新加載配置文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA"><span class="toc-number">3.4.</span> <span class="toc-text">效果展示</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/articles/20230526.html" title="Nginx 編譯開啟 Quic 或 HTTP/3"><img src="https://resources.r2wind.com/img/202305/dandelion-445228_1920.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nginx 編譯開啟 Quic 或 HTTP/3"/></a><div class="content"><a class="title" href="/articles/20230526.html" title="Nginx 編譯開啟 Quic 或 HTTP/3">Nginx 編譯開啟 Quic 或 HTTP/3</a><time datetime="2023-05-26T14:30:30.000Z" title="發表於 2023-05-26 22:30:30">2023-05-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/20230508.html" title="利用 Nginx 搭建 IP 查詢接口"><img src="https://resources.r2wind.com/img/202305/nature-7602212_1920.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="利用 Nginx 搭建 IP 查詢接口"/></a><div class="content"><a class="title" href="/articles/20230508.html" title="利用 Nginx 搭建 IP 查詢接口">利用 Nginx 搭建 IP 查詢接口</a><time datetime="2023-05-08T13:27:04.000Z" title="發表於 2023-05-08 21:27:04">2023-05-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/20230227.html" title="騰訊雲建站 CloudPages 記錄（編輯網站）"><img src="https://resources.r2wind.com/img/202302/aurora-1197753_1920.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="騰訊雲建站 CloudPages 記錄（編輯網站）"/></a><div class="content"><a class="title" href="/articles/20230227.html" title="騰訊雲建站 CloudPages 記錄（編輯網站）">騰訊雲建站 CloudPages 記錄（編輯網站）</a><time datetime="2023-02-27T02:35:33.000Z" title="發表於 2023-02-27 10:35:33">2023-02-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/20230208.html" title="點樣創建個性化嘅DNS服務器地址（用自己嘅域名做DNS服務器地址）"><img src="https://resources.r2wind.com/img/202302/landscape-7744216_1920.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="點樣創建個性化嘅DNS服務器地址（用自己嘅域名做DNS服務器地址）"/></a><div class="content"><a class="title" href="/articles/20230208.html" title="點樣創建個性化嘅DNS服務器地址（用自己嘅域名做DNS服務器地址）">點樣創建個性化嘅DNS服務器地址（用自己嘅域名做DNS服務器地址）</a><time datetime="2023-02-08T12:45:00.000Z" title="發表於 2023-02-08 20:45:00">2023-02-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/20230109.html" title="使用华為雲DNS拉平CNAME記錄（CDN場景）"><img src="https://resources.r2wind.com/img/202301/ship-7679100_1920.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="使用华為雲DNS拉平CNAME記錄（CDN場景）"/></a><div class="content"><a class="title" href="/articles/20230109.html" title="使用华為雲DNS拉平CNAME記錄（CDN場景）">使用华為雲DNS拉平CNAME記錄（CDN場景）</a><time datetime="2023-01-09T04:29:50.000Z" title="發表於 2023-01-09 12:29:50">2023-01-09</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://resources.r2wind.com/img/background.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2017 - 2024 By 小澤</div><div class="framework-info"><span>Power By </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme By </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a><span class="footer-separator">|</span><span>CoverImage By </span><a target="_blank" rel="noopener" href="https://pixabay.com/">Pixabay</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="閱讀模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="淺色和深色模式轉換"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="單欄和雙欄切換"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="設定"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目錄"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到頂部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://mirrors.r2wind.com/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://mirrors.r2wind.com/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

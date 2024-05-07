@@ -1,0 +1,210 @@
+<!DOCTYPE html><html lang="zh-TW" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>如何正確變更 DNSPod 解析套餐（降級場景） | 歸去如風</title><meta name="author" content="小澤"><meta name="copyright" content="小澤"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="操作場景本文將指導您如何完成 DNSPod 解析套餐的變更，適用於降級場景（將套餐由高版本改至低版本，如企業版更換為專業版）。 前提條件 擁有需變更套餐域名的管理權限。 已購買其他版本套餐，若降級至免費版本，請忽略。  操作步驟將域名 DNS 伺服器更改為免費版本 說明：由於降級 DNS 套餐版本需要解綁當前套餐，解綁套餐後若域名 DNS 伺服器仍為原套餐版本的 DNS 伺服器地址將導致域名無法解">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何正確變更 DNSPod 解析套餐（降級場景）">
+<meta property="og:url" content="https://yjz.hk/articles/20221020.html">
+<meta property="og:site_name" content="歸去如風">
+<meta property="og:description" content="操作場景本文將指導您如何完成 DNSPod 解析套餐的變更，適用於降級場景（將套餐由高版本改至低版本，如企業版更換為專業版）。 前提條件 擁有需變更套餐域名的管理權限。 已購買其他版本套餐，若降級至免費版本，請忽略。  操作步驟將域名 DNS 伺服器更改為免費版本 說明：由於降級 DNS 套餐版本需要解綁當前套餐，解綁套餐後若域名 DNS 伺服器仍為原套餐版本的 DNS 伺服器地址將導致域名無法解">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://resources.r2wind.com/img/202210/bridge-7504605_1920.jpg">
+<meta property="article:published_time" content="2022-10-20T13:15:26.000Z">
+<meta property="article:modified_time" content="2022-10-20T15:15:26.000Z">
+<meta property="article:author" content="小澤">
+<meta property="article:tag" content="DNSPOD">
+<meta property="article:tag" content="騰訊雲">
+<meta property="article:tag" content="域名">
+<meta property="article:tag" content="解析">
+<meta property="article:tag" content="作品集">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://resources.r2wind.com/img/202210/bridge-7504605_1920.jpg"><link rel="shortcut icon" href="https://resources.r2wind.com/img/logo.ico"><link rel="canonical" href="https://yjz.hk/articles/20221020.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta/><meta/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://mirrors.r2wind.com/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://mirrors.r2wind.com/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-KTYYZFG31D"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-KTYYZFG31D');
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '複製成功',
+    error: '複製錯誤',
+    noSupport: '瀏覽器不支援'
+  },
+  relativeDate: {
+    homepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '剛剛',
+    min: '分鐘前',
+    hour: '小時前',
+    day: '天前',
+    month: '個月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '如何正確變更 DNSPod 解析套餐（降級場景）',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-10-20 23:15:26'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="https://fonts.r2wind.com/fonts.css"><script src="https://cdn-go.cn/aegis/aegis-sdk/latest/aegis.min.js"></script><script src="https://resources.r2wind.com/js/rumhk.js"></script><meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="歸去如風" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://resources.r2wind.com/img/background.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">42</div></a><a href="/tags/"><div class="headline">標籤</div><div class="length-num">33</div></a><a href="/categories/"><div class="headline">分類</div><div class="length-num">10</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/Gallery"><i class="fa-fw fa fa-image"></i><span> 相冊</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 歸檔</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 標籤</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></div><div class="menus_item"><a class="site-page" href="/friends/"><i class="fa-fw fas fa-thumbs-up"></i><span> 友鏈</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-language"></i><span> 語言</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://r2wind.cn"><span> 简体中文</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://r2wind.com"><span> English</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="歸去如風"><span class="site-name">歸去如風</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/Gallery"><i class="fa-fw fa fa-image"></i><span> 相冊</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 歸檔</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 標籤</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></div><div class="menus_item"><a class="site-page" href="/friends/"><i class="fa-fw fas fa-thumbs-up"></i><span> 友鏈</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-language"></i><span> 語言</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://r2wind.cn"><span> 简体中文</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://r2wind.com"><span> English</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">如何正確變更 DNSPod 解析套餐（降級場景）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">發表於</span><time class="post-meta-date-created" datetime="2022-10-20T13:15:26.000Z" title="發表於 2022-10-20 21:15:26">2022-10-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新於</span><time class="post-meta-date-updated" datetime="2022-10-20T15:15:26.000Z" title="更新於 2022-10-20 23:15:26">2022-10-20</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字數總計:</span><span class="word-count">900</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">閱讀時長:</span><span>2分鐘</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="如何正確變更 DNSPod 解析套餐（降級場景）"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">閱讀量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="post-content" id="article-container"><h2 id="操作場景"><a href="#操作場景" class="headerlink" title="操作場景"></a>操作場景</h2><p>本文將指導您如何完成 DNSPod 解析套餐的變更，適用於降級場景（將套餐由高版本改至低版本，如企業版更換為專業版）。</p>
+<h2 id="前提條件"><a href="#前提條件" class="headerlink" title="前提條件"></a>前提條件</h2><ul>
+<li>擁有需變更套餐域名的管理權限。</li>
+<li>已購買其他版本套餐，若降級至免費版本，請忽略。</li>
+</ul>
+<h2 id="操作步驟"><a href="#操作步驟" class="headerlink" title="操作步驟"></a>操作步驟</h2><h3 id="將域名-DNS-伺服器更改為免費版本"><a href="#將域名-DNS-伺服器更改為免費版本" class="headerlink" title="將域名 DNS 伺服器更改為免費版本"></a>將域名 DNS 伺服器更改為免費版本</h3><blockquote>
+<p>說明：<br>由於降級 DNS 套餐版本需要解綁當前套餐，解綁套餐後若域名 DNS 伺服器仍為原套餐版本的 DNS 伺服器地址將導致域名無法解析；且受各地運營商遞歸 DNS 緩存影響，即使在變更套餐後及時修改域名 DNS 伺服器地址為當前版本套餐地址，也可能導致在 72 小時內出現解析異常等影響業務的情況。所以在變更套餐前請您將域名 DNS 伺服器更換為免費版本，以確保降級套餐不會影響正常解析。</p>
+</blockquote>
+<h4 id="獲取免費版本-DNS-伺服器地址"><a href="#獲取免費版本-DNS-伺服器地址" class="headerlink" title="獲取免費版本 DNS 伺服器地址"></a>獲取免費版本 DNS 伺服器地址</h4><ol>
+<li>登錄<a target="_blank" rel="noopener" href="https://console.dnspod.cn/dns/list">騰訊雲 DNSPod控制台</a>。<br><img src="https://resources.r2wind.com/img/202210/20221020213203.png" alt="解析控制台"></li>
+<li>單擊 <strong>DNS解析</strong>，在<strong>我的域名</strong>頁面點擊需要變更套餐的域名。<br><img src="https://resources.r2wind.com/img/202210/20221020213908.png" alt="選擇域名"></li>
+<li>進入後單擊<strong>域名設置</strong>並點擊<strong>查看免費版的 DNS 伺服器</strong>。<br><img src="https://resources.r2wind.com/img/202210/20221020214130.png" alt="查看免費版域名伺服器"></li>
+<li>記錄免費版本 DNS 伺服器並前往域名註冊商將 DNS 伺服器變更為免費版本。<br><img src="https://resources.r2wind.com/img/202210/20221020214511.png" alt="免費版本 NS 地址"></li>
+</ol>
+<h4 id="更改域名-DNS-伺服器"><a href="#更改域名-DNS-伺服器" class="headerlink" title="更改域名 DNS 伺服器"></a>更改域名 DNS 伺服器</h4><h5 id="域名在騰訊雲"><a href="#域名在騰訊雲" class="headerlink" title="域名在騰訊雲"></a>域名在騰訊雲</h5><p>若您為騰訊雲平台註冊域名，請登錄<a target="_blank" rel="noopener" href="https://console.cloud.tencent.com/domain/all-domain">騰訊雲域名控制台</a>，找到需要設置的域名，單擊<strong>更多</strong>→<strong>修改 DNS 伺服器</strong>→<strong>自定義 DNS</strong>，輸入免費版 DNS 並點擊保存，如下述圖片所示：<br><img src="https://resources.r2wind.com/img/202210/20221020230311.png" alt="修改 DNS"><br><img src="https://resources.r2wind.com/img/202210/20221020230711.png" alt="保存修改"></p>
+<h5 id="域名不在騰訊雲"><a href="#域名不在騰訊雲" class="headerlink" title="域名不在騰訊雲"></a>域名不在騰訊雲</h5><p>若您的域名註冊平台非騰訊雲，請參考<a target="_blank" rel="noopener" href="https://docs.dnspod.cn/dns/paid-dns-downgrade-free-dns/#%E6%AD%A5%E9%AA%A4%E4%BA%8C%EF%BC%9A%E5%9F%9F%E5%90%8D-dns-%E4%BF%AE%E6%94%B9%E4%B8%BA%E5%85%8D%E8%B4%B9%E7%89%88-dns-%E6%9C%8D%E5%8A%A1%E5%99%A8">付費套餐 DNS 修改為免費套餐 DNS地址</a>完成修改，若文檔中未包含您的域名註冊商，請諮詢您的域名註冊商客服完成修改。</p>
+<h3 id="變更套餐"><a href="#變更套餐" class="headerlink" title="變更套餐"></a>變更套餐</h3><blockquote>
+<p>重要提示：<br>警告，請在修改域名 DNS 伺服器為免費版 72 小時後再繼續進行操作，否則可能影響解析！<br>警告，請在修改域名 DNS 伺服器為免費版 72 小時後再繼續進行操作，否則可能影響解析！<br>警告，請在修改域名 DNS 伺服器為免費版 72 小時後再繼續進行操作，否則可能影響解析！</p>
+</blockquote>
+<h4 id="解綁套餐"><a href="#解綁套餐" class="headerlink" title="解綁套餐"></a>解綁套餐</h4><ol>
+<li>登錄<a target="_blank" rel="noopener" href="https://console.dnspod.cn/dns/plans">DNSPod 控制台——套餐管理</a>，找到需要變更套餐的域名，單擊<strong>解綁</strong><br><img src="https://resources.r2wind.com/img/202210/20221020231303.png" alt="解綁套餐"></li>
+<li>按照界面提示再次確認是否<strong>已經將域名 DNS 伺服器切換為免費版本</strong>，<strong>確認無誤</strong>後點擊<strong>確定解綁</strong>。<br><img src="https://resources.r2wind.com/img/202210/16662790897535.png" alt="確定解綁"></li>
+</ol>
+<h4 id="綁定套餐"><a href="#綁定套餐" class="headerlink" title="綁定套餐"></a>綁定套餐</h4><ol>
+<li>找到變更後的套餐並單擊<strong>綁定</strong><br><img src="https://resources.r2wind.com/img/202210/20221020232128.png" alt="綁定"></li>
+<li>選擇需要變更套餐的域名單擊<strong>確定</strong>完成綁定<br><img src="https://resources.r2wind.com/img/202210/20221020232234.png" alt="完成綁定"></li>
+</ol>
+<h4 id="更改域名-DNS-伺服器為當前套餐對應地址"><a href="#更改域名-DNS-伺服器為當前套餐對應地址" class="headerlink" title="更改域名 DNS 伺服器為當前套餐對應地址"></a>更改域名 DNS 伺服器為當前套餐對應地址</h4><p>完成綁定後請前往域名註冊商將域名 DNS 伺服器地址修改為當前套餐所對應的 DNS 伺服器地址，具體可參考：<a target="_blank" rel="noopener" href="https://docs.dnspod.cn/dns/changedns/">域名如何配置為 DNSPod 的 DNS 伺服器</a>。<br><strong>各版本對應 DNS 伺服器地址如下：</strong></p>
+<table>
+<thead>
+<tr>
+<th>解析套餐版本</th>
+<th>DNS 地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>免費版</td>
+<td>DNS 解析 DNSPod 為每個用戶隨機分配了2個組合 DNS 地址，若需要查詢您專屬的 DNS 地址，請您 <a target="_blank" rel="noopener" href="https://cloud.tencent.com/document/product/302/5518#.E6.9F.A5.E7.9C.8B-dns-.E6.9C.8D.E5.8A.A1.E5.99.A8">查看 DNS 伺服器</a>。</td>
+</tr>
+<tr>
+<td>專業版</td>
+<td>ns3.dnsv2.com&#x2F;ns4.dnsv2.com</td>
+</tr>
+<tr>
+<td>企業版</td>
+<td>ns3.dnsv4.com&#x2F;ns4.dnsv4.com</td>
+</tr>
+<tr>
+<td>尊享版</td>
+<td>ns3.dnsv5.com&#x2F;ns4.dnsv5.com</td>
+</tr>
+</tbody></table>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://yjz.hk">小澤</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章連結: </span><span class="post-copyright-info"><a href="https://yjz.hk/articles/20221020.html">https://yjz.hk/articles/20221020.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版權聲明: </span><span class="post-copyright-info">本部落格所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 許可協議。轉載請註明來自 <a href="https://yjz.hk" target="_blank">歸去如風</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/DNSPOD/">DNSPOD</a><a class="post-meta__tags" href="/tags/%E9%A8%B0%E8%A8%8A%E9%9B%B2/">騰訊雲</a><a class="post-meta__tags" href="/tags/%E5%9F%9F%E5%90%8D/">域名</a><a class="post-meta__tags" href="/tags/%E8%A7%A3%E6%9E%90/">解析</a><a class="post-meta__tags" href="/tags/%E4%BD%9C%E5%93%81%E9%9B%86/">作品集</a></div><div class="post_share"><div class="social-share" data-image="https://resources.r2wind.com/img/202210/bridge-7504605_1920.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://mirrors.r2wind.com/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://mirrors.r2wind.com/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/articles/20221111.html" title="本站現已支持 HTTPS 記錄（Type65)"><img class="cover" src="https://resources.r2wind.com/img/202211/hd-wallpaper-7496901_1920.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">本站現已支持 HTTPS 記錄（Type65)</div></div></a></div><div class="next-post pull-right"><a href="/articles/20221006.html" title="關於“指向 Github 靜態託管頁面引起騰訊雲免費證書無法簽發”問題的解決方案"><img class="cover" src="https://resources.r2wind.com/img/202210/little-boom-7362108_1920.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">關於“指向 Github 靜態託管頁面引起騰訊雲免費證書無法簽發”問題的解決方案</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相關推薦</span></div><div class="relatedPosts-list"><div><a href="/articles/20220522.html" title="DNS+IGTM實現訪問流量智能調度"><img class="cover" src="https://resources.r2wind.com/img/202205/seascape-4636549_1920.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-05-22</div><div class="title">DNS+IGTM實現訪問流量智能調度</div></div></a></div><div><a href="/articles/20220624.html" title="愛名網(22.cn)、HKDNR、GoogleDomains、AWSRoute53註冊域名開啟DNSSEC（解析託管在DNSPod）"><img class="cover" src="https://resources.r2wind.com/img/202206/hd-wallpaper-3625405_1920.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-06-24</div><div class="title">愛名網(22.cn)、HKDNR、GoogleDomains、AWSRoute53註冊域名開啟DNSSEC（解析託管在DNSPod）</div></div></a></div><div><a href="/articles/20220810.html" title="騰訊企業郵箱向 Gmail（Google郵箱）發送郵件被退回（550 5.7.26）問題的解決方案"><img class="cover" src="https://resources.r2wind.com/img/202208/hohenzollern-7370477_1920.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-08-10</div><div class="title">騰訊企業郵箱向 Gmail（Google郵箱）發送郵件被退回（550 5.7.26）問題的解決方案</div></div></a></div><div><a href="/articles/20211030.html" title="在DNSPod解析的域名如何設置DDNS(動態域名解析)"><img class="cover" src="https://resources.r2wind.com/img/sea-164989_1280.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-10-30</div><div class="title">在DNSPod解析的域名如何設置DDNS(動態域名解析)</div></div></a></div><div><a href="/articles/20210809.html" title="DNS解析出現問題怎麼辦？"><img class="cover" src="https://resources.r2wind.com/img/mountain-6320288_1280.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-08-10</div><div class="title">DNS解析出現問題怎麼辦？</div></div></a></div><div><a href="/articles/20221006.html" title="關於“指向 Github 靜態託管頁面引起騰訊雲免費證書無法簽發”問題的解決方案"><img class="cover" src="https://resources.r2wind.com/img/202210/little-boom-7362108_1920.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-10-06</div><div class="title">關於“指向 Github 靜態託管頁面引起騰訊雲免費證書無法簽發”問題的解決方案</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://resources.r2wind.com/img/background.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">小澤</div><div class="author-info__description">一個自由自在的互聯網民工</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">42</div></a><a href="/tags/"><div class="headline">標籤</div><div class="length-num">33</div></a><a href="/categories/"><div class="headline">分類</div><div class="length-num">10</div></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/KincaidYang" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:yjz@r2wind.org" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">Welcome</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目錄</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E5%A0%B4%E6%99%AF"><span class="toc-number">1.</span> <span class="toc-text">操作場景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E6%8F%90%E6%A2%9D%E4%BB%B6"><span class="toc-number">2.</span> <span class="toc-text">前提條件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%A9%9F"><span class="toc-number">3.</span> <span class="toc-text">操作步驟</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%87%E5%9F%9F%E5%90%8D-DNS-%E4%BC%BA%E6%9C%8D%E5%99%A8%E6%9B%B4%E6%94%B9%E7%82%BA%E5%85%8D%E8%B2%BB%E7%89%88%E6%9C%AC"><span class="toc-number">3.1.</span> <span class="toc-text">將域名 DNS 伺服器更改為免費版本</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%8D%B2%E5%8F%96%E5%85%8D%E8%B2%BB%E7%89%88%E6%9C%AC-DNS-%E4%BC%BA%E6%9C%8D%E5%99%A8%E5%9C%B0%E5%9D%80"><span class="toc-number">3.1.1.</span> <span class="toc-text">獲取免費版本 DNS 伺服器地址</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9B%B4%E6%94%B9%E5%9F%9F%E5%90%8D-DNS-%E4%BC%BA%E6%9C%8D%E5%99%A8"><span class="toc-number">3.1.2.</span> <span class="toc-text">更改域名 DNS 伺服器</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9F%9F%E5%90%8D%E5%9C%A8%E9%A8%B0%E8%A8%8A%E9%9B%B2"><span class="toc-number">3.1.2.1.</span> <span class="toc-text">域名在騰訊雲</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9F%9F%E5%90%8D%E4%B8%8D%E5%9C%A8%E9%A8%B0%E8%A8%8A%E9%9B%B2"><span class="toc-number">3.1.2.2.</span> <span class="toc-text">域名不在騰訊雲</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%8A%E6%9B%B4%E5%A5%97%E9%A4%90"><span class="toc-number">3.2.</span> <span class="toc-text">變更套餐</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A3%E7%B6%81%E5%A5%97%E9%A4%90"><span class="toc-number">3.2.1.</span> <span class="toc-text">解綁套餐</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B6%81%E5%AE%9A%E5%A5%97%E9%A4%90"><span class="toc-number">3.2.2.</span> <span class="toc-text">綁定套餐</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9B%B4%E6%94%B9%E5%9F%9F%E5%90%8D-DNS-%E4%BC%BA%E6%9C%8D%E5%99%A8%E7%82%BA%E7%95%B6%E5%89%8D%E5%A5%97%E9%A4%90%E5%B0%8D%E6%87%89%E5%9C%B0%E5%9D%80"><span class="toc-number">3.2.3.</span> <span class="toc-text">更改域名 DNS 伺服器為當前套餐對應地址</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/articles/20230526.html" title="Nginx 編譯開啟 Quic 或 HTTP/3"><img src="https://resources.r2wind.com/img/202305/dandelion-445228_1920.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nginx 編譯開啟 Quic 或 HTTP/3"/></a><div class="content"><a class="title" href="/articles/20230526.html" title="Nginx 編譯開啟 Quic 或 HTTP/3">Nginx 編譯開啟 Quic 或 HTTP/3</a><time datetime="2023-05-26T14:30:30.000Z" title="發表於 2023-05-26 22:30:30">2023-05-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/20230508.html" title="利用 Nginx 搭建 IP 查詢接口"><img src="https://resources.r2wind.com/img/202305/nature-7602212_1920.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="利用 Nginx 搭建 IP 查詢接口"/></a><div class="content"><a class="title" href="/articles/20230508.html" title="利用 Nginx 搭建 IP 查詢接口">利用 Nginx 搭建 IP 查詢接口</a><time datetime="2023-05-08T13:27:04.000Z" title="發表於 2023-05-08 21:27:04">2023-05-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/20230227.html" title="騰訊雲建站 CloudPages 記錄（編輯網站）"><img src="https://resources.r2wind.com/img/202302/aurora-1197753_1920.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="騰訊雲建站 CloudPages 記錄（編輯網站）"/></a><div class="content"><a class="title" href="/articles/20230227.html" title="騰訊雲建站 CloudPages 記錄（編輯網站）">騰訊雲建站 CloudPages 記錄（編輯網站）</a><time datetime="2023-02-27T02:35:33.000Z" title="發表於 2023-02-27 10:35:33">2023-02-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/20230208.html" title="點樣創建個性化嘅DNS服務器地址（用自己嘅域名做DNS服務器地址）"><img src="https://resources.r2wind.com/img/202302/landscape-7744216_1920.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="點樣創建個性化嘅DNS服務器地址（用自己嘅域名做DNS服務器地址）"/></a><div class="content"><a class="title" href="/articles/20230208.html" title="點樣創建個性化嘅DNS服務器地址（用自己嘅域名做DNS服務器地址）">點樣創建個性化嘅DNS服務器地址（用自己嘅域名做DNS服務器地址）</a><time datetime="2023-02-08T12:45:00.000Z" title="發表於 2023-02-08 20:45:00">2023-02-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/20230109.html" title="使用华為雲DNS拉平CNAME記錄（CDN場景）"><img src="https://resources.r2wind.com/img/202301/ship-7679100_1920.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="使用华為雲DNS拉平CNAME記錄（CDN場景）"/></a><div class="content"><a class="title" href="/articles/20230109.html" title="使用华為雲DNS拉平CNAME記錄（CDN場景）">使用华為雲DNS拉平CNAME記錄（CDN場景）</a><time datetime="2023-01-09T04:29:50.000Z" title="發表於 2023-01-09 12:29:50">2023-01-09</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://resources.r2wind.com/img/background.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2017 - 2024 By 小澤</div><div class="framework-info"><span>Power By </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme By </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a><span class="footer-separator">|</span><span>CoverImage By </span><a target="_blank" rel="noopener" href="https://pixabay.com/">Pixabay</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="閱讀模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="淺色和深色模式轉換"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="單欄和雙欄切換"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="設定"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目錄"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到頂部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://mirrors.r2wind.com/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://mirrors.r2wind.com/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
